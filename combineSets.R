@@ -18,6 +18,8 @@ stateResults <- rbind(stateResults, allResults)
 load("set6/results.Rdata")
 stateResults <- rbind(stateResults, allResults)
 
+stateResults <- stateResults[!is.na(stateResults$estimate), ]
+
 ## Save per state result into a worksheet in a single workbook
 allResults <- openxlsx::createWorkbook()
 
@@ -26,4 +28,4 @@ for(i in unique(stateResults$State)) {
   openxlsx::writeData(wb = allResults, sheet = i, stateResults[stateResults$State == i, ])
 }
 
-openxlsx::saveWorkbook(allResults, file = "_byStatesMNresults.xlsx")
+openxlsx::saveWorkbook(allResults, file = "_byStatesMNresults.xlsx", overwrite = TRUE)
