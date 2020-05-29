@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rflow [
+<!ENTITY lt "&#38;#60;">
+<!ENTITY gt "&#62;">
+<!ENTITY amp "&#38;#38;">
+<!ENTITY apos "&#39;">
+<!ENTITY quot "&#34;">
+]>
+<rflow>
+	<graph version="0.8" width="860" height="331" locationtype="a" offsetx="0" offsety="-374">
+		<setting>
+			<entry key="USE_GRID">true</entry>
+			<entry key="FOLDER">manageData</entry>
+			<entry key="GRID_DISTANCE2">10</entry>
+		</setting>
+<properties>
+<v key="packages"/>
+</properties>
+		<node id="0" date="1590699906987" uid="fce58d5074d68525" x="170" y="240">
+			<command>## Add elevation data to mnData
+mnData &lt;- merge(psuData[ , c(&quot;psu&quot;, &quot;longitude&quot;, &quot;latitude&quot;)], mnData, by = &quot;psu&quot;, all.y = TRUE)
+
+sudanAlt_subset &lt;- intersect(sudanSRTM, sudan01)
+sudanAlt_subset &lt;- mask(sudanAlt_subset, sudan01)
+
+mnData_spdf &lt;- SpatialPointsDataFrame(coords = mnData[ , c(&quot;longitude&quot;, &quot;latitude&quot;)], 
+	data = mnData,
+	proj4string = CRS(proj4string(sudan01)))
+
+## Get corresponding altitude from SRTM data
+altitude &lt;- extract(sudanAlt_subset, mnData_spdf)
+
+## Add altitude to mnData
+mnData &lt;- data.frame(mnData, altitude, stringsAsFactors = FALSE)
+
+## Adjust hb based on altitude
+adjHb &lt;- with(mnData, {
+	ifelse(altitude &gt;= 1000 &amp; altitude &lt; 1500, hb - 2,
+	  ifelse(altitude &gt;= 1500 &amp; altitude &lt; 2000, hb - 5,
+	    ifelse(altitude &gt;= 2000 &amp; altitude &lt; 2500, hb - 8,
+	      ifelse(altitude &gt;= 2500 &amp; altitude &lt; 3000, hb - 13,
+	        ifelse(altitude &gt;= 3000 &amp; altitude &lt; 3500, hb - 19,
+	          ifelse(altitude &gt;= 3500 &amp; altitude &lt; 4000, hb - 27,
+	            ifelse(altitude &gt;= 4000 &amp; altitude &lt; 4500, hb - 35,
+	             ifelse(altitude &gt;= 4500, hb - 45, hb))))))))
+})
+
+## Adjust ferritin based on crp value
+adjFerritin &lt;- with(mnData, {
+	ifelse(crp &gt; 5, ferritin * 0.65, ferritin)
+})
+
+## Add to mnData
+mnData &lt;- data.frame(mnData, adjHb, adjFerritin, stringsAsFactors = FALSE)
+
+## Create indicators concatenating data.frame
+indicators &lt;- mnData[ , c(&quot;stateID&quot;, &quot;localityID&quot;, &quot;psu&quot;, &quot;longitude&quot;, &quot;latitude&quot;, 
+                          &quot;ageGrp&quot;, &quot;pregnant&quot;, &quot;lactating&quot;, &quot;plw&quot;,
+                          &quot;hb&quot;, &quot;adjHb&quot;, &quot;ferritin&quot;, &quot;adjFerritin&quot;, 
+                          &quot;crp&quot;, &quot;calcium&quot;, &quot;iodine&quot;, &quot;retinol&quot;, &quot;vitd&quot;)]
+
+## Clean-up
+rm(sudanAlt_subset, mnData_spdf, altitude, adjHb, adjFerritin)
+</command>
+			<property title="Structure data" shape="TRANSFORM"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="1" date="1590757744029" uid="9bedb7abfae90023" x="290" y="560">
+			<command>## Bootstrap anaemia indicators ################################################
+
+## Subset indicators to 3 states data - State 1, 7, 13
+subDF &lt;- subset(indicators, stateID %in% c(1, 7, 13))
+
+## Create anaemia indicator groups
+subDF$indicatorGroup &lt;- with(subDF, {
+  ifelse(pregnant == 1, &quot;pregnant&quot;,
+    ifelse(pregnant == 2 &amp; lactating == 2, &quot;notPregnantNotLactating&quot;,
+      ifelse(pregnant == 2 &amp; lactating == 1, &quot;notPregnantLactating&quot;, NA)))
+})
+
+## Get state names
+stateNames &lt;- unique(locNames$state[locNames$stateID %in% c(1, 7, 13)])
+
+## indicator name vector
+params &lt;- c(&quot;iodine&quot;, &quot;ID1A&quot;, &quot;ID1B&quot;, &quot;ID2&quot;, &quot;ID3&quot;, &quot;ID4&quot;, &quot;ID5&quot;, &quot;ID6&quot;)
+
+## Create empty data.frame for concatenating boot results
+#bootDF &lt;- data.frame(matrix(nrow = 399, ncol = 36, byrow = TRUE))
+bootDF &lt;- data.frame(matrix(nrow = 9, ncol = 72, byrow = TRUE))
+
+names(bootDF) &lt;- c(paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnantNotLactating&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnantLactating&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnantNotLactating&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnantLactating&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnantNotLactating&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnantLactating&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;))
+
+## Cycle through states
+for(i in sort(unique(subDF$stateID))) {
+  ## Get current state name
+  currentStateName &lt;- unique(locNames$state[locNames$stateID == i])
+  ## Cycle through grouping categrories
+  for(j in c(&quot;pregnant&quot;, &quot;notPregnantNotLactating&quot;, &quot;notPregnantLactating&quot;)) {
+    ## Subset to current grouping category
+    currentGroup &lt;- subset(subDF, stateID == i &amp; indicatorGroup == j)
+    ## Cycle through indicators
+    for(k in params) {
+      ## Create empty concatenating vector for current bootstrap outputs
+      currentBoot &lt;- NA
+      ## Check if current group is not empty and then bootstrap
+      if(nrow(currentGroup) &gt; 0) {
+        ## Boot
+        currentBoot &lt;- bootBW(x = currentGroup, 
+                              w = psuData[psuData$psu %in% currentGroup$psu, ],
+                              statistic = bootClassic, 
+                              params = k,
+                              outputColumns = paste(k, 
+                                                    j, 
+                                                    currentStateName, 
+                                                    sep = &quot;_&quot;),
+                              replicates = REPLICATES)
+      }
+      bootDF[[paste(k, j, currentStateName, sep = &quot;_&quot;)]] &lt;- currentBoot
+    }
+  }
+}
+
+## Get estimates and CIs
+bootResults &lt;- apply(X = bootDF, MARGIN = 2, 
+                     FUN = quantile, 
+                     probs = c(0.5, 0.025, 0.975), 
+                     na.rm = TRUE)
+
+## Convert output to long form
+xx &lt;- data.frame(t(bootResults))
+
+## Rename rows
+row.names(xx) &lt;- 1:nrow(xx)
+
+## Rename results
+names(xx) &lt;- c(&quot;estimate&quot;, &quot;lcl&quot;, &quot;ucl&quot;)
+
+## Calculate number of indicator groups
+nIndicatorGroups &lt;- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+nStateGroups &lt;- length(stateNames) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+
+## Create proper data.frames
+State &lt;- c(rep(stateNames[1], nIndicatorGroups),
+           rep(stateNames[2], nIndicatorGroups),
+           rep(stateNames[3], nIndicatorGroups))
+
+Indicator &lt;- c(paste(&quot;Pregnant: &quot;, 
+                     c(&quot;Mean urinary iodine concentration (microgram/L)&quot;, 
+                       &quot;Insufficient iodine&quot;, 
+                       &quot;Insufficient iodine&quot;, 
+                       &quot;Mild iodine deficiency&quot;,
+                       &quot;Moderate iodine deficiency&quot;,
+                       &quot;Severe iodine deficiency&quot;,
+                       &quot;Iodine above requirements&quot;,
+                       &quot;Iodine excessive&quot;), 
+                     sep = &quot;&quot;),
+               paste(&quot;Non-pregnant non-lactating: &quot;,
+                     c(&quot;Mean urinary iodine concentration (microgram/L)&quot;, 
+                       &quot;Insufficient iodine&quot;, 
+                       &quot;Insufficient iodine&quot;, 
+                       &quot;Mild iodine deficiency&quot;,
+                       &quot;Moderate iodine deficiency&quot;,
+                       &quot;Severe iodine deficiency&quot;,
+                       &quot;Iodine above requirements&quot;,
+                       &quot;Iodine excessive&quot;),
+                     sep = &quot;&quot;),
+               paste(&quot;Non-pregnant lactating: &quot;,
+                     c(&quot;Mean urinary iodine concentration (microgram/L)&quot;, 
+                       &quot;Insufficient iodine&quot;, 
+                       &quot;Insufficient iodine&quot;, 
+                       &quot;Mild iodine deficiency&quot;,
+                       &quot;Moderate iodine deficiency&quot;,
+                       &quot;Severe iodine deficiency&quot;,
+                       &quot;Iodine above requirements&quot;,
+                       &quot;Iodine excessive&quot;),
+                     sep = &quot;&quot;))
+
+Type &lt;- c(rep(c(&quot;Mean&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;,
+                &quot;Proportion&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;), 
+              nStateGroups))
+
+iodineResults &lt;- data.frame(State, Indicator, Type, xx)
+</command>
+			<property title="Bootstrap iodine" shape="MODEL"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="2" date="1590733210079" uid="4f8d17142376c640" x="290" y="310">
+			<command>## Recode calcium
+##   1 = Hypocalcemia
+##   2 = Hypercalcemia
+##   3 = Normocalcemia
+
+CA &lt;- with(mnData, {
+	ifelse(ageGrp == 1 &amp; childAge %in% 12:60 &amp; calcium &lt; 9.4, 1,
+	  ifelse(ageGrp == 2 &amp; calcium &lt; 8.8, 1,
+	    ifelse(ageGrp == 1 &amp; childAge %in% 12:60 &amp; calcium &gt; 10.8, 2,
+	      ifelse(ageGrp == 2 &amp; calcium &gt; 10, 2,
+	        ifelse(ageGrp == 1 &amp; childAge %in% 12:60 &amp; calcium &gt;= 9.4 &amp; calcium &lt;= 10.8, 3,
+	          ifelse(ageGrp == 2 &amp; calcium &gt;= 8.8 &amp; calcium &gt;= 10, 3, NA))))))
+})
+
+## Check - Randomly checked 10 lines of data - all checks out
+cbind(mnData[ , c(&quot;ageGrp&quot;, &quot;childAge&quot;, &quot;calcium&quot;)], CA)
+
+## Recode to hypocalcemia
+CA1 &lt;- ifelse(CA == 1, 1, 0)
+
+## Recode to hypercalcemia
+CA2 &lt;- ifelse(CA == 2, 1, 0)
+
+## Add to indicators data.frame
+indicators &lt;- data.frame(indicators, CA, CA1, CA2, stringsAsFactors = FALSE)
+
+## Clean-up
+rm(CA, CA1, CA2)
+
+</command>
+			<property title="Calcium" shape="TRANSFORM"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="3" date="1590568350990" uid="13f85130e81f3ef9" x="150" y="150">
+			<command>## Create &apos;ageGrp&apos;
+mnData$ageGrp &lt;- NA
+## Children
+mnData$ageGrp[mnData$childAge &lt;= 60 &amp; is.na(mnData$womanAge)] &lt;- 1
+mnData$ageGrp[is.na(mnData$childAge) &amp; is.na(mnData$womanAge) &amp; mnData$group == &quot;Child&quot;] &lt;- 1
+## Adults (women)
+mnData$ageGrp[mnData$womanAge %in% 15:49 &amp; is.na(mnData$childAge)] &lt;- 2
+mnData$ageGrp[is.na(mnData$childAge) &amp; is.na(mnData$womanAge) &amp; mnData$group != &quot;Child&quot;] &lt;- 2 ## fix [was: 1]
+
+## Check for NAs in ageGrp
+table(mnData$ageGrp, useNA = &quot;always&quot;)
+## Investigate NAs
+temp &lt;- subset(mnData, is.na(ageGrp), select = c(childAge, womanAge, group, ageGrp))
+View(temp) ## Problems with missing / out of range ages ... *** We will probably need to censor these ***
+rm(temp)
+
+
+## Special classifications: Pregnant
+##   1 = YES
+##   2 = NO
+##   9 = Don&apos;t know ## Added by MM
+##   NA = not known status or status does not apply
+mnData$pregnant &lt;- NA
+mnData$pregnant[mnData$group == &quot;Pregnant Principal carer&quot;]                                          &lt;- 1
+mnData$pregnant[mnData$group == &quot;Pregnant Not Principal Carer&quot;]                                      &lt;- 1 ## fixed &quot;carer&quot;
+mnData$pregnant[mnData$group == &quot;Pregnant and lactating Principal Carer&quot;]                            &lt;- 1 ## Fixed &quot;Lactating&quot;
+mnData$pregnant[mnData$group == &quot;Principal carer nighther pregnant nor lactating&quot;]                   &lt;- 2
+mnData$pregnant[mnData$group == &quot;Lactating Principal carer&quot;]                                         &lt;- 2
+mnData$pregnant[mnData$group == &quot;Woman in child bearing age (pregnancy/lactation status not known)&quot;] &lt;- 9 ## added by MM
+
+table(mnData$group, mnData$pregnant)
+
+## Special classifications: lactating
+##   1 = YES
+##   2 = NO
+##   9 = Don&apos;t know ## Added by MM
+##   NA = not known status or status does not apply
+mnData$lactating &lt;- NA
+mnData$lactating[mnData$group == &quot;Pregnant Principal carer&quot;]                                          &lt;- 2
+mnData$lactating[mnData$group == &quot;Pregnant Not Principal Carer&quot;]                                      &lt;- 2 ## fixed &quot;carer&quot;
+mnData$lactating[mnData$group == &quot;Pregnant and lactating Principal Carer&quot;]                            &lt;- 1 ## Fixed &quot;Lactating&quot;
+mnData$lactating[mnData$group == &quot;Principal carer nighther pregnant nor lactating&quot;]                   &lt;- 2
+mnData$lactating[mnData$group == &quot;Lactating Principal carer&quot;]                                         &lt;- 1
+mnData$lactating[mnData$group == &quot;Woman in child bearing age (pregnancy/lactation status not known)&quot;] &lt;- 9 ## added by MM
+
+table(mnData$group, mnData$lactating)
+
+## Special classifications: Pregnant OR Lactating Woman (PLW) ## Added by MM ... may be useful
+##   1 = YES
+##   2 = NO
+##   9 = Don&apos;t know ## Added by MM
+##   NA = not known status or status does not apply
+mnData$plw &lt;- NA
+mnData$plw[mnData$group == &quot;Pregnant Principal carer&quot;]                                          &lt;- 1
+mnData$plw[mnData$group == &quot;Pregnant Not Principal Carer&quot;]                                      &lt;- 1 ## Fixed &quot;carer&quot;
+mnData$plw[mnData$group == &quot;Pregnant and lactating Principal Carer&quot;]                            &lt;- 1 ## Fixed &quot;Lactating&quot;
+mnData$plw[mnData$group == &quot;Principal carer nighther pregnant nor lactating&quot;]                   &lt;- 2
+mnData$plw[mnData$group == &quot;Lactating Principal carer&quot;]                                         &lt;- 1
+mnData$plw[mnData$group == &quot;Woman in child bearing age (pregnancy/lactation status not known)&quot;] &lt;- 9 ## added by MM
+
+table(mnData$group, mnData$plw)
+
+</command>
+			<property title="cleanData"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="4" date="1590757342405" uid="b74331b92f96ade7" x="70" y="470">
+			<command>## Load indicators data
+load(&quot;indicators.Rdata&quot;)
+
+## Set bootstrap replicates ####################################################
+REPLICATES &lt;- 9
+
+</command>
+			<property title="Load indicators data" shape="INOUT"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="5" date="1590700938492" uid="21646fd4fd79af90" x="170" y="400">
+			<command>## AI: Acute inflammation indicators
+##   1 = Inflammation
+##   0 = No inflammation
+
+AI &lt;- findInterval(mnData$crp, vec = c(0, 5, Inf), rightmost.closed = TRUE, left.open = TRUE)
+AI &lt;- AI - 1
+
+## Add AI to indicators
+indicators &lt;- data.frame(indicators, AI, stringsAsFactors = FALSE)
+
+## Clean-up
+rm(AI)</command>
+			<property title="CRP" shape="TRANSFORM"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="6" date="1590757721021" uid="98d25988341f9c95" x="290" y="470">
+			<command>## Bootstrap calcium indicators ################################################
+
+## Subset indicators to 3 states data - State 1, 7, 13
+subDF &lt;- subset(indicators, stateID %in% c(1, 7, 13))
+
+## Create anaemia indicator groups
+subDF$indicatorGroup &lt;- ifelse(subDF$ageGrp == 1, &quot;child&quot;,
+                               ifelse(subDF$pregnant == 1, &quot;pregnant&quot;,
+                                      ifelse(subDF$pregnant == 2, &quot;notPregnant&quot;, NA)))
+
+## Get state names
+stateNames &lt;- unique(locNames$state[locNames$stateID %in% c(1, 7, 13)])
+
+## indicator name vector
+params &lt;- c(&quot;calcium&quot;, &quot;CA1&quot;, &quot;CA2&quot;)
+
+## Create empty data.frame for concatenating boot results
+#bootDF &lt;- data.frame(matrix(nrow = 399, ncol = 36, byrow = TRUE))
+bootDF &lt;- data.frame(matrix(nrow = 9, ncol = 27, byrow = TRUE))
+
+names(bootDF) &lt;- c(paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;))
+
+## Cycle through states
+for(i in sort(unique(subDF$stateID))) {
+  ## Get current state name
+  currentStateName &lt;- unique(locNames$state[locNames$stateID == i])
+  ## Cycle through grouping categrories
+  for(j in c(&quot;child&quot;, &quot;pregnant&quot;, &quot;notPregnant&quot;)) {
+    ## Subset to current grouping category
+    currentGroup &lt;- subset(subDF, stateID == i &amp; indicatorGroup == j)
+    ## Cycle through indicators
+    for(k in params) {
+      ## Create empty concatenating vector for current bootstrap outputs
+      currentBoot &lt;- NA
+      ## Check if current group is not empty and then bootstrap
+      if(nrow(currentGroup) &gt; 0) {
+        ## Boot
+        currentBoot &lt;- bootBW(x = currentGroup, 
+                              w = psuData[psuData$psu %in% currentGroup$psu, ],
+                              statistic = bootClassic, 
+                              params = k,
+                              outputColumns = paste(k, 
+                                                    j, 
+                                                    currentStateName, 
+                                                    sep = &quot;_&quot;),
+                              replicates = REPLICATES)
+      }
+      bootDF[[paste(k, j, currentStateName, sep = &quot;_&quot;)]] &lt;- currentBoot
+    }
+  }
+}
+
+## Get estimates and CIs
+bootResults &lt;- apply(X = bootDF, MARGIN = 2, 
+                     FUN = quantile, 
+                     probs = c(0.5, 0.025, 0.975), 
+                     na.rm = TRUE)
+
+## Convert output to long form
+xx &lt;- data.frame(t(bootResults))
+
+## Rename rows
+row.names(xx) &lt;- 1:nrow(xx)
+
+## Rename results
+names(xx) &lt;- c(&quot;estimate&quot;, &quot;lcl&quot;, &quot;ucl&quot;)
+
+## Calculate number of indicator groups
+nIndicatorGroups &lt;- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+nStateGroups &lt;- length(stateNames) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+
+## Create proper data.frames
+State &lt;- c(rep(stateNames[1], nIndicatorGroups),
+           rep(stateNames[2], nIndicatorGroups),
+           rep(stateNames[3], nIndicatorGroups))
+
+Indicator &lt;- c(paste(&quot;Child: &quot;, 
+                     c(&quot;Mean serum calcium concentration (mg/dL)&quot;, 
+                       &quot;Hypocalcemia&quot;, 
+                       &quot;Hypercalcemia&quot;), 
+                     sep = &quot;&quot;),
+               paste(&quot;Pregnant: &quot;,
+                     c(&quot;Mean serum calcium concentration (mg/dL)&quot;, 
+                       &quot;Hypocalcemia&quot;, 
+                       &quot;Hypercalcemia&quot;),
+                     sep = &quot;&quot;),
+               paste(&quot;Non-pregnant: &quot;,
+                     c(&quot;Mean serum calcium concentration (mg/dL)&quot;, 
+                       &quot;Hypocalcemia&quot;, 
+                       &quot;Hypercalcemia&quot;),
+                     sep = &quot;&quot;))
+
+Type &lt;- c(rep(c(&quot;Mean&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;), nStateGroups))
+
+calciumResults &lt;- data.frame(State, Indicator, Type, xx)
+</command>
+			<property title="Bootstrap calcium" shape="MODEL"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="7" date="1590667891107" uid="3ec68feff9156a61" x="150" y="60">
+			<command>################################################################################
+#
+#  Recode function
+#
+################################################################################
+#
+#  Parameters :
+#
+#    var	  Variable to recode
+#
+#    recodes  Character string of recode specifications :
+#
+#             Recode specifications in a character string separated by
+#             semicolons of the form input=output as in:
+#
+#                 &quot;1=1;2=1;3:6=2;else=NA&quot;
+#
+#             If an input value satisfies more than one specification, then
+#             the first (reading from left to right) is applied.
+#
+#             If no specification is satisfied, then the input value in &apos;var&apos;
+#             is carried over to the result unchanged.
+#
+#             NA is allowed on both input and output.
+#
+#             The following recode specifications are supported :
+#
+#             +---------------+------------------+---------------------------+
+#             | Specification | Example          | Notes                     |
+#             +---------------+------------------+---------------------------+
+#             | Single values | 9=NA             |                           |
+#             +---------------+------------------+---------------------------+
+#             | Set of values | c(1,2,5)=1       | The left-hand-side is any |
+#             |               | seq(1,9,2)=&apos;odd&apos; | R function call that      |
+#             |               | 1:10=1           | returns a vector          |
+#             +---------------+------------------+---------------------------+
+#             | Range of      | 7:9=3            | Special values lo and hi  |
+#             | values        | lo:115=1         | may be used               |
+#             +---------------+------------------+---------------------------+
+#             | Other values  | else=NA          |                           |
+#             +---------------+------------------+---------------------------+
+#
+#             Character values are quoted as in :
+#
+#                 recodes = &quot;c(1,2,5)=&apos;sanitary&apos;;else=&apos;unsanitary&apos;&quot;
+#
+#             The output may be the (scalar) result of a function call as in:
+#
+#                 recodes = &quot;999=median(var, na.rm = TRUE)&quot;
+#
+#            Users are strongly advised to carefully check the results of
+#            recode() calls with any outputs that are the results of a function
+#            call.
+#
+#            The ouput may be the (scalar) value of a variable as in:
+#
+#                recodes = &quot;999=scalarVariable&quot;
+#
+#            If all of the output values are numeric, and if &apos;afr&apos; is FALSE,
+#            then a numeric result is returned; if var is a factor then
+#            (by default) so is the result.
+#
+#    afr     Return a factor
+#
+#            Default is TRUE if &apos;var&apos; is a factor and is FALSE otherwise
+#
+#    anr     Coerce result to numeric (default is TRUE)
+#
+#    levels  Order of the levels in the returned factor; the default is to use
+#            the sort order of the level names.
+#
+################################################################################
+#
+#  Returns :
+#
+#    Recoded variable
+#
+################################################################################
+
+recode &lt;- function(var, recodes, afr, anr = TRUE, levels)
+{
+	squeezeBlanks &lt;- function(text)
+	{
+		gsub(&quot; *&quot;, &quot;&quot;,  text)
+	}
+	recodes &lt;- gsub(&quot;\n|\t&quot;, &quot; &quot;, recodes)
+	recode.list &lt;- rev(strsplit(recodes, &quot;;&quot;)[[1]])
+	is.fac &lt;- is.factor(var)
+	if (missing(afr)) afr &lt;- is.fac
+	if (is.fac) var &lt;- as.character(var)
+	result &lt;- var
+	if (is.numeric(var))
+	{
+		lo &lt;- min(var, na.rm = TRUE)
+		hi &lt;- max(var, na.rm = TRUE)
+	}
+	for (term in recode.list)
+	{
+		if (0 &lt; length(grep(&quot;:&quot;, term)))
+		{
+			range &lt;- strsplit(strsplit(term, &quot;=&quot;)[[1]][1], &quot;:&quot;)
+			low &lt;- eval(parse(text = range[[1]][1]))
+			high &lt;- eval(parse(text = range[[1]][2]))
+			target &lt;- eval(parse(text = strsplit(term, &quot;=&quot;)[[1]][2]))
+			result[(var &gt;= low) &amp; (var &lt;= high)] &lt;- target
+		}
+		else if (0 &lt; length(grep(&quot;^else=&quot;, squeezeBlanks(term))))
+		{
+			target &lt;- eval(parse(text = strsplit(term, &quot;=&quot;)[[1]][2]))
+			result[1:length(var)] &lt;- target
+		}
+		else
+		{
+			set &lt;- eval(parse(text = strsplit(term, &quot;=&quot;)[[1]][1]))
+			target &lt;- eval(parse(text = strsplit(term, &quot;=&quot;)[[1]][2]))
+			for (val in set)
+			{
+				if (is.na(val)) result[is.na(var)] &lt;- target else result[var == val] &lt;- target
+			}
+		}
+	}
+	if (afr)
+	{
+		result &lt;- if (!missing(levels)) factor(result, levels = levels) else as.factor(result)
+	}
+	else if (anr &amp;&amp; (!is.numeric(result)))
+	{
+		result.valid &lt;- na.omit(result)
+		opt &lt;- options(warn = -1)
+		result.valid &lt;- as.numeric(result.valid)
+		options(opt)
+		if (!any(is.na(result.valid))) result &lt;- as.numeric(result)
+	}
+	return(result)
+}
+
+###############################################################################
+#
+# Simple hash function
+#
+###############################################################################
+#
+#   x     A character vector to hash
+#
+#   A     Default value is:
+#
+#             (sqrt(5) - 1) / 2
+#
+#         See Donald Knuth, &apos;The Art of Computer Programming&apos;, 1968
+#
+#   M     Hash table size (limits the range of hash values)
+#
+#   skip  If TRUE then pick every second byte (i.e. drop the UTF code page)
+#
+#   N     Modular scaling for character codes
+#
+###############################################################################
+#
+#  Return a numeric vector of hash values
+#
+###############################################################################
+
+hash &lt;- function(x, A = 0.618034, M = 1E6, skip = TRUE, N = 11)
+{
+	frac &lt;- function(x)                   ## Function to get fractional part
+	{
+		return(abs(x - trunc(x)))
+	}
+	result &lt;- vector(mode = &quot;numeric&quot;, length = length(x))
+	for(i in 1:length(x))
+	{
+		y &lt;- x[i]  
+		y &lt;- as.numeric(charToRaw(y))     ## Convert string to a vector of raw bytes (as base-10 integers)
+		y &lt;- y[y != 32]                   ## Remove spaces
+		if(skip)
+		{
+			y &lt;- y[seq(0, length(y), 2)]  ## Drop the UTF &quot;code page&quot; by taking every second byte
+		}
+		y &lt;- y[1:16] + 1:16               ## Generate a hash code from first 16 characters and character position
+		y &lt;- (y %% N) + 0.1               ## Hash each character code by the division method
+		y &lt;- prod(y, na.rm = TRUE)        ## Product of hashed character codes
+		y &lt;- floor(M * frac(y * A))       ## Hash product by the multiplication method
+		result[i] &lt;- y
+	}
+	return(result)
+}
+
+## bootBW
+################################################################################
+#
+#  Blocking Weighted Bootstrap
+#
+################################################################################
+#
+#  Parameters :
+#
+#    x                A data.frame with PSU in column named &apos;psu&apos;
+#
+#    w                A data.frame with PSU in column named &apos;psu&apos; and survey
+#                     weight (i.e. PSU population) in column named &apos;pop&apos;
+#
+#    statistic        A function operating on data in &apos;x&apos; (see Example)
+#
+#    params           Parameters (named columns in &apos;x&apos;) passed to the
+#                     function specified in &apos;statistic&apos;
+#
+#    outputColumns    Names of columns in output data.frame
+#
+#    replicates       Number of bootstrap replicates (default = 400)
+#
+################################################################################
+#
+#  Returns :
+#
+#    A data.frame with :
+#
+#      ncol  = length(outputColumns)
+#      nrow  = replicates
+#      names = outputColumns
+#
+################################################################################
+#
+#  Example :
+#
+#    Example function (estimate a proportion for a binary (0/1) variable) :
+#
+#      oneP &lt;- function(x, params)
+#        {
+#        v1 &lt;- params[1]
+#        v1Data &lt;- x[[v1]]
+#        oneP &lt;- mean(v1Data, na.rm = TRUE)
+#        return(oneP)
+#        }
+#
+#  Example call to bootBW function:
+#
+#    bootP &lt;- bootBW(x = data,
+#                    w = pops,
+#                    statistic = oneP,
+#                    params = &quot;nameOfVariable&quot;,
+#                    outputColumns = &quot;p&quot;,
+#                    replicates = 400)
+#
+#  Example estimate with 95% CI :
+#
+#    quantile(bootP, probs = c(0.500, 0.025, 0.975), na.rm = TRUE)
+#
+################################################################################
+#
+#  Version : 16/05/2014
+#
+################################################################################
+
+bootBW &lt;- function(x, w, statistic, params, outputColumns, replicates = 399)
+{
+	#
+	# Scale and accumulate weights
+	#
+	w$weight &lt;- w$pop / sum(w$pop)
+	w$cumWeight &lt;- cumsum(w$weight)
+	#
+	# Create data.frame with named columns for output
+	#
+	boot &lt;- data.frame(matrix(ncol = length(outputColumns), nrow = replicates))
+	names(boot) &lt;- outputColumns
+	#
+	# Create an empty data.frame with same structure of &apos;x&apos; with sufficient rows
+	# to hold the largest possible survey replicate (i.e. the number of clusters
+	# in &apos;x&apos; multiplied by the size of the largest cluster in &apos;x&apos;)
+	#
+	nClusters &lt;- nrow(w)
+	maxRows &lt;- nClusters * max(table(x$psu))
+	emptyDF &lt;- rbind(as.data.frame(lapply(x, function(x) rep.int(NA, maxRows))))
+	#
+	# Vector to hold clusters to be included in a survey replicate
+	#
+	sampledClusters &lt;- vector(mode = mode(x$psu), length = nClusters)
+	#
+	# And now ... resample!
+	#
+	for(i in 1:replicates)
+	{
+		#
+		# Create a dataframe to hold a survey replicate
+		#
+		xBW &lt;- emptyDF
+		#
+		# Blocking Bootstrap from &apos;x&apos; (blocking on x$psu = cluster identifier)
+		#
+		for(j in 1:nClusters)
+		{
+			#
+			# &quot;Roulette Wheel&quot; algorithm (to select a weighted sample of clusters)
+			#
+			sampledClusters[j] &lt;- w$psu[which.max(w$cumWeight &gt;= runif(n = 1, min = 0, max = 1))]
+		}
+		#
+		# Pointer for inserting selected clusters into the survey replicate
+		#
+		rowIndex &lt;- 1
+		#
+		# Build a (blocking weighted) bootstrap replicate from the selected clusters
+		#
+		for(k in 1:nClusters)
+		{
+			#
+			# Extract data for cluster and resample within the cluster
+			#
+			y &lt;- subset(x, psu == sampledClusters[k])
+			clusterN &lt;- nrow(y)
+			y &lt;- y[sample(1:clusterN, replace = TRUE), ]
+			#
+			# Insert cluster replicate into survey replicate
+			#
+			endRow &lt;- rowIndex + clusterN
+			xBW[rowIndex:(endRow - 1), ] &lt;- y
+			#
+			# Update pointer
+			#
+			rowIndex &lt;- endRow
+		}
+		#
+		# Select data for analysis
+		#
+		xBW &lt;- xBW[1:(rowIndex - 1), ]
+		#
+		# Apply statistic
+		#
+		boot[i, ] &lt;- statistic(xBW, params)
+	}
+	return(boot)
+}
+
+################################################################################
+#
+# Statistic function (simple proportion) for bootstrap estimation
+#
+bootClassic &lt;- function(x, params)
+{
+	result &lt;- vector(mode = &quot;numeric&quot;, length = length(params))
+	for(i in 1:length(params))
+	{
+		result[i]  &lt;- mean(x[[params[i]]], na.rm = TRUE)
+	}
+	return(result)
+}
+
+################################################################################
+#
+# Statistic function (PROBIT) for bootstrap estimation
+#
+bootPROBIT &lt;- function(x, params, threshold = THRESHOLD)
+{
+	#
+	# Get data
+	#
+	d &lt;- x[[params[1]]]
+	m &lt;- median(d, na.rm = TRUE)
+	s &lt;- IQR(d, na.rm = TRUE) / 1.34898 
+	x &lt;- pnorm(q = threshold, mean = m, sd = s)
+	return(x)
+}
+
+
+## estimates
+###############################################################################
+#
+# Estimate indicators
+#
+###############################################################################
+#
+#   EA          Selection criteria as used in the &apos;subset&apos; parameter of the base
+#               subset() R function. This is specified as a quoted character
+#               string. Such as:
+#
+#                  &quot;state == 2 &amp; locality == 8&quot;
+#
+#               Specifying:
+#
+#                  EA = TRUE
+#
+#               works with all data.
+#
+#   REPLICATES  Number of bootstrap replicates
+#
+###############################################################################
+
+estimate &lt;- function(EA, REPLICATES = BOOTSTRAP.REPLICATES)
+{	
+	cat(&quot;\nEstimating for : &quot;, EA, &quot;\n&quot;, sep = &quot;&quot;)
+	## Cycle through indicator sets
+	resultsForEA &lt;- 1:REPLICATES
+	for(i in unique(indicatorList$varSet))
+	{
+		## Report Progress
+		cat(&quot;\n&quot;, i, &quot;\n\n&quot;, sep = &quot;&quot;); flush.console()
+		## Get specification for indicator set
+		indicatorSet &lt;- subset(indicatorList, varSet == i)
+		## Get the name of the data.frame holing indicator data for the specified indicator set
+		indicatorDF &lt;- indicatorSet[1,1]
+		## Get indicator data for the specified EA
+		EA.data &lt;- subset(get(indicatorDF), eval(parse(text = EA)))
+		## Get PSU data for the specified EA
+		EA.psuData &lt;- subset(psu, eval(parse(text = EA)))
+		## Remove rows with missing PSU
+		EA.psuData &lt;- EA.psuData[!is.na(EA.psuData$psu), ]
+		## Replace missing PSU population with median population for in selected EA
+		EA.psuData$pop[is.na(EA.psuData$pop)] &lt;- median(EA.psuData$pop, na.rm = TRUE)
+		## Fix data to match PSUs in &apos;EA.psuData&apos; and &apos;EA.data&apos;
+		EA.data &lt;- EA.data[EA.data$psu %in% unique(EA.psuData$psu), ]
+		EA.psuData &lt;- EA.psuData[EA.psuData$psu %in% unique(EA.data$psu), ]
+		## Some PSUs have no data for some indicators (so we skip that indicator set)
+		if(nrow(EA.data) &gt; 0)
+		{
+			## Cycle through indicators in current indicator set
+			resultsForSet &lt;- 1:REPLICATES
+			for(j in 1:nrow(indicatorSet))
+			{
+				## Get column name for indicator
+				params &lt;- indicatorSet$varNames[j]
+				## Report Progress
+				cat(&quot;\t&quot;, params, &quot;\n&quot;, sep = &quot;&quot;); flush.console()
+				if(indicatorSet$varType[j] == &quot;PROBIT&quot;)
+				{
+					## Mean indicator value
+					bootMean &lt;- bootBW(x = EA.data, w = EA.psuData, statistic = bootClassic, params = params, outputColumns = params, replicates = REPLICATES)
+					names(bootMean) &lt;- paste(indicatorDF, &quot;.&quot;, params, &quot;.mean&quot;, sep = &quot;&quot;)
+					## Get thresholds for PROBIT estimator
+					thresholds &lt;- as.numeric(strsplit(indicatorSet$probitClasses[j],&quot;;&quot;)[[1]])
+					## proportion below upper thresold
+					THRESHOLD &lt;&lt;- thresholds[1]
+					bootUpper &lt;- bootBW(x = EA.data, w = EA.psuData, statistic = bootPROBIT, params = params, outputColumns = params, replicates = REPLICATES)
+					names(bootUpper) &lt;- paste(indicatorDF, &quot;.&quot;, params, &quot;.1&quot;, sep = &quot;&quot;)
+					## Proportion below lower threshold
+					THRESHOLD &lt;&lt;- thresholds[2]
+					bootLower &lt;- bootBW(x = EA.data, w = EA.psuData, statistic = bootPROBIT, params = params, outputColumns = params, replicates = REPLICATES)
+					names(bootLower) &lt;- paste(indicatorDF, &quot;.&quot;, params, &quot;.3&quot;, sep = &quot;&quot;)
+					## Proportion between upper and lower thesholds
+					bootMiddle &lt;- bootUpper - bootLower
+					names(bootMiddle) &lt;- paste(indicatorDF, &quot;.&quot;, params, &quot;.2&quot;, sep = &quot;&quot;)
+					## Combine the four estimates
+					boot &lt;- cbind(bootMean, bootUpper, bootMiddle, bootLower)
+				}
+				if(indicatorSet$varType[j] == &quot;Mean&quot; | indicatorSet$varType[j] == &quot;Proportion&quot;)
+				{
+					boot &lt;- bootBW(x = EA.data, w = EA.psuData, statistic = bootClassic, params = params, outputColumns = params, replicates = REPLICATES)
+					names(boot) &lt;- paste(indicatorDF, &quot;.&quot;, params, sep = &quot;&quot;)
+				}
+				if(indicatorSet$varType[j] == &quot;LOESS&quot;) ## Special case for &quot;Child : Circumcised (FGM) : 14 years of age&quot;
+				{
+					outputColumns &lt;- params
+					boot &lt;- bootBW(x = EA.data, w = EA.psuData, statistic = bootFinalProp, params = c(&quot;age&quot;, params), outputColumns = outputColumns, replicates = REPLICATES)
+					names(boot) &lt;- paste(indicatorDF, &quot;.&quot;, params, sep = &quot;&quot;)
+				}
+				## Accumulate results for the selected indicator set
+				resultsForSet &lt;- cbind(resultsForSet, boot)
+			}
+			resultsForEA &lt;- cbind(resultsForEA, resultsForSet[2:ncol(resultsForSet)])
+		}
+	}
+	## Estimates with 95% confidence limits
+	estimatesForEA &lt;- round(data.frame(t(apply(resultsForEA[2:ncol(resultsForEA)], 2, quantile, probs = c(0.5, 0.025, 0.975), na.rm = TRUE))), digits = 4)
+	estimatesForEA &lt;- cbind(rownames(estimatesForEA), estimatesForEA)
+	rownames(estimatesForEA) &lt;- 1:nrow(estimatesForEA)
+	names(estimatesForEA) &lt;- c(&quot;Indicator&quot;, &quot;Estimate&quot;, &quot;95% LCL&quot;, &quot;95% UCL&quot;)
+	estimatesForEA &lt;- fixEstimates(estimatesForEA)
+	return(estimatesForEA)
+}
+
+
+################################################################################
+#
+# Indicator recoding functions
+#
+################################################################################
+
+## Get anaemia status based on Hb value adjusted by altitude for children under 5
+recode_hb_u5 &lt;- function(x, factor = 1) {
+	## Classify based on altitude
+	altClass &lt;- findInterval(x = x$altitude, 
+		vec = c(0, seq(from = 0, to = 4500, by = 500), Inf),
+		left.open = FALSE, rightmost.closed = FALSE)
+	
+	##
+	anaemiaStatus &lt;- vector(mode = &quot;numeric&quot;, length = nrow(x))
+	
+	## Classify anaemia for those in class 1 altitude (altitude &lt; 1000)
+	anaemiaStatus[altClass == 1] &lt;- findInterval(x = (x$hb * factor)[altClass == 1],
+		vec = c(0, 69, 99, 109, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 2 altitude (altitude [1000,1500))
+	anaemiaStatus[altClass == 2] &lt;- findInterval(x = (x$hb * factor)[altClass == 2],
+		vec = c(0, 71, 101, 111, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)	
+	
+	## Classify anaemia for those in class 3 altitude (altitude [1500,2000))
+	anaemiaStatus[altClass == 3] &lt;- findInterval(x = (x$hb * factor)[altClass == 3],
+		vec = c(0, 74, 104, 114, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 4 altitude (altitude [2000,2500))
+	anaemiaStatus[altClass == 4] &lt;- findInterval(x = (x$hb * factor)[altClass == 4],
+		vec = c(0, 77, 107, 117, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 5 altitude (altitude [2500,3000))
+	anaemiaStatus[altClass == 5] &lt;- findInterval(x = (x$hb * factor)[altClass == 5],
+		vec = c(0, 82, 112, 122, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 6 altitude (altitude [3000,3500))
+	anaemiaStatus[altClass == 6] &lt;- findInterval(x = (x$hb * factor)[altClass == 6],
+		vec = c(0, 88, 118, 128, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 7 altitude (altitude [3500,4000))
+	anaemiaStatus[altClass == 7] &lt;- findInterval(x = (x$hb * factor)[altClass == 7],
+		vec = c(0, 96, 126, 136, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 8 altitude (altitude [4000,4500))
+	anaemiaStatus[altClass == 8] &lt;- findInterval(x = (x$hb * factor)[altClass == 8],
+		vec = c(0, 103, 134, 144, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 9 altitude (altitude [4500,higher))
+	anaemiaStatus[altClass == 9] &lt;- findInterval(x = (x$hb * factor)[altClass == 9],
+		vec = c(0, 114, 144, 154, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	return(anaemiaStatus)
+}
+
+
+## Get anaemia status based on Hb value adjusted by altitude for pregnant women
+recode_hb_pregnant &lt;- function(x, factor = 1) {
+	## Classify based on altitude
+	altClass &lt;- findInterval(x = x$altitude, 
+		vec = c(0, seq(from = 0, to = 4500, by = 500), Inf),
+		left.open = FALSE, rightmost.closed = FALSE)
+	
+	##
+	anaemiaStatus &lt;- vector(mode = &quot;numeric&quot;, length = nrow(x))
+	
+	## Classify anaemia for those in class 1 altitude (altitude &lt; 1000)
+	anaemiaStatus[altClass == 1] &lt;- findInterval(x = (x$hb * factor)[altClass == 1],
+		vec = c(0, 69, 99, 109, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 2 altitude (altitude [1000,1500))
+	anaemiaStatus[altClass == 2] &lt;- findInterval(x = (x$hb * factor)[altClass == 2],
+		vec = c(0, 71, 101, 111, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)	
+	
+	## Classify anaemia for those in class 3 altitude (altitude [1500,2000))
+	anaemiaStatus[altClass == 3] &lt;- findInterval(x = (x$hb * factor)[altClass == 3],
+		vec = c(0, 74, 104, 114, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 4 altitude (altitude [2000,2500))
+	anaemiaStatus[altClass == 4] &lt;- findInterval(x = (x$hb * factor)[altClass == 4],
+		vec = c(0, 77, 107, 117, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 5 altitude (altitude [2500,3000))
+	anaemiaStatus[altClass == 5] &lt;- findInterval(x = (x$hb * factor)[altClass == 5],
+		vec = c(0, 82, 112, 122, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 6 altitude (altitude [3000,3500))
+	anaemiaStatus[altClass == 6] &lt;- findInterval(x = (x$hb * factor)[altClass == 6],
+		vec = c(0, 88, 118, 128, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 7 altitude (altitude [3500,4000))
+	anaemiaStatus[altClass == 7] &lt;- findInterval(x = (x$hb * factor)[altClass == 7],
+		vec = c(0, 96, 126, 136, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 8 altitude (altitude [4000,4500))
+	anaemiaStatus[altClass == 8] &lt;- findInterval(x = (x$hb * factor)[altClass == 8],
+		vec = c(0, 103, 134, 144, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 9 altitude (altitude [4500,higher))
+	anaemiaStatus[altClass == 9] &lt;- findInterval(x = (x$hb * factor)[altClass == 9],
+		vec = c(0, 114, 144, 154, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	return(anaemiaStatus)
+}
+
+
+## Get anaemia status based on Hb value adjusted by altitude for non-pregnant WRA
+recode_hb_wra &lt;- function(x, factor = 1) {
+	## Classify based on altitude
+	altClass &lt;- findInterval(x = x$altitude, 
+		vec = c(0, seq(from = 0, to = 4500, by = 500), Inf),
+		left.open = FALSE, rightmost.closed = FALSE)
+	
+	##
+	anaemiaStatus &lt;- vector(mode = &quot;numeric&quot;, length = nrow(x))
+	
+	## Classify anaemia for those in class 1 altitude (altitude &lt; 1000)
+	anaemiaStatus[altClass == 1] &lt;- findInterval(x = (x$hb * factor)[altClass == 1],
+		vec = c(0, 79, 109, 119, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 2 altitude (altitude [1000,1500))
+	anaemiaStatus[altClass == 2] &lt;- findInterval(x = (x$hb * factor)[altClass == 2],
+		vec = c(0, 81, 111, 121, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)	
+	
+	## Classify anaemia for those in class 3 altitude (altitude [1500,2000))
+	anaemiaStatus[altClass == 3] &lt;- findInterval(x = (x$hb * factor)[altClass == 3],
+		vec = c(0, 84, 114, 124, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 4 altitude (altitude [2000,2500))
+	anaemiaStatus[altClass == 4] &lt;- findInterval(x = (x$hb * factor)[altClass == 4],
+		vec = c(0, 87, 117, 127, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 5 altitude (altitude [2500,3000))
+	anaemiaStatus[altClass == 5] &lt;- findInterval(x = (x$hb * factor)[altClass == 5],
+		vec = c(0, 92, 122, 132, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 6 altitude (altitude [3000,3500))
+	anaemiaStatus[altClass == 6] &lt;- findInterval(x = (x$hb * factor)[altClass == 6],
+		vec = c(0, 98, 128, 138, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 7 altitude (altitude [3500,4000))
+	anaemiaStatus[altClass == 7] &lt;- findInterval(x = (x$hb * factor)[altClass == 7],
+		vec = c(0, 106, 136, 146, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 8 altitude (altitude [4000,4500))
+	anaemiaStatus[altClass == 8] &lt;- findInterval(x = (x$hb * factor)[altClass == 8],
+		vec = c(0, 113, 144, 154, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	## Classify anaemia for those in class 9 altitude (altitude [4500,higher))
+	anaemiaStatus[altClass == 9] &lt;- findInterval(x = (x$hb * factor)[altClass == 9],
+		vec = c(0, 124, 154, 164, Inf),
+		left.open = TRUE,
+		rightmost.closed = TRUE)
+	
+	return(anaemiaStatus)
+}
+
+
+</command>
+			<property title="Functions"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="8" date="1590567987053" uid="601967411aca41c1" x="60" y="150">
+			<command>## Read micronutrient data
+mnData &lt;- read.xlsx(&quot;data/mnData_master_Sudan_V12.xlsx&quot;, sheet = 1)
+
+## Read PSU data
+psuData &lt;- read.csv(&quot;data/updatedPSU.csv&quot;, stringsAsFactors = FALSE)
+
+## Read locality and state administrative structure data
+locNames &lt;- read.csv(&quot;data/locNames.csv&quot;, stringsAsFactors = FALSE)
+
+## Remove arabic names for states and localities
+locNames &lt;- subset(locNames, select = c(-stateAR, -localityAR))
+
+## Read SRTM raster for elevation data
+sudanSRTM &lt;- raster(x = &quot;data/srtm/SDN_alt.vrt&quot;)
+
+## Read Sudan locality shapefile
+#sudan02 &lt;- readOGR(dsn = &quot;data/locality/&quot;, layer = &quot;sudan02&quot;)
+
+## Check that all numeric variables are numeric and change accordingly and
+## rename variables to more coherent labels
+mnData &lt;- data.frame(stateID = as.integer(mnData$state),
+	barcode = as.integer(mnData$bc),
+	localityID = as.integer(mnData$locality),
+	psu = as.integer(mnData$psu),
+	womanAge = as.numeric(mnData$m.age),
+	childAge = as.numeric(mnData$ch.age),
+	sex = as.integer(mnData$sex),
+	muac = as.numeric(mnData$muac),
+	weight = as.numeric(mnData$ch.weight),
+	height = as.numeric(mnData$ch.height),
+	oedema = as.numeric(mnData$ch.oedema),
+	hb = as.numeric(mnData$hb),
+	group = mnData$group,
+	calcium = as.numeric(mnData$calcium),
+	crp = as.numeric(mnData$crp),
+	ferritin = as.numeric(mnData$ferritin),
+	iodine = as.numeric(mnData$iodine),
+	retinol = as.numeric(mnData$retinol),
+	vitd = as.numeric(mnData$vitD))</command>
+			<property title="getData" shape="INPUT"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="9" date="1590757398023" uid="903bfa862403828f" x="170" y="470">
+			<command>## Bootstrap anaemia indicators ################################################
+
+## Subset indicators to 3 states data - State 1, 7, 13
+#subDF &lt;- subset(indicators, stateID %in% c(1, 7, 13))
+subDF &lt;- indicators
+
+## Create anaemia indicator groups
+subDF$indicatorGroup &lt;- ifelse(subDF$ageGrp == 1, &quot;child&quot;,
+                               ifelse(subDF$pregnant == 1, &quot;pregnant&quot;,
+                                      ifelse(subDF$pregnant == 2, &quot;notPregnant&quot;, NA)))
+
+## Get state names
+stateNames &lt;- unique(locNames$state)
+
+## indicator name vector
+params &lt;- c(&quot;adjHb&quot;, &quot;AN1&quot;, &quot;AN2&quot;, &quot;AN3&quot;)
+
+## Create empty data.frame for concatenating boot results
+bootDF &lt;- data.frame(matrix(nrow = REPLICATES, 
+                            ncol = length(params) * 3 * 18, 
+                            byrow = TRUE))
+
+names(bootDF) &lt;- c(paste(params, &quot;child&quot;, stateNames[1], sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, stateNames[1], sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, stateNames[1], sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, stateNames[2], sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, stateNames[2], sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, stateNames[2], sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, stateNames[3], sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, stateNames[3], sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, stateNames[3], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[4], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[4], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[4], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[5], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[5], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[5], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[6], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[6], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[6], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[7], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[7], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[7], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[8], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[8], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[8], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[9], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[9], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[9], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[10], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[10], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[10], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[11], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[11], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[11], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[12], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[12], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[12], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[13], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[13], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[13], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[14], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[14], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[14], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[15], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[15], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[15], sep = &quot;_&quot;),
+		         paste(params, &quot;child&quot;, stateNames[16], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[16], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[16], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[17], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[17], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[17], sep = &quot;_&quot;),
+			    paste(params, &quot;child&quot;, stateNames[18], sep = &quot;_&quot;),
+			    paste(params, &quot;pregnant&quot;, stateNames[18], sep = &quot;_&quot;),
+			    paste(params, &quot;notPregnant&quot;, stateNames[18], sep = &quot;_&quot;))
+
+## Cycle through states
+for(i in sort(unique(subDF$stateID))) {
+  ## Get current state name
+  currentStateName &lt;- unique(locNames$state[locNames$stateID == i])
+  ## Cycle through grouping categrories
+  for(j in c(&quot;child&quot;, &quot;pregnant&quot;, &quot;notPregnant&quot;)) {
+    ## Subset to current grouping category
+    currentGroup &lt;- subset(subDF, stateID == i &amp; indicatorGroup == j)
+    ## Cycle through indicators
+    for(k in params) {
+      ## Create empty concatenating vector for current bootstrap outputs
+      currentBoot &lt;- NA
+      ## Check if current group is not empty and then bootstrap
+      if(nrow(currentGroup) &gt; 0) {
+        ## Boot
+        currentBoot &lt;- bootBW(x = currentGroup, 
+                              w = psuData[psuData$psu %in% currentGroup$psu, ],
+                              statistic = bootClassic, 
+                              params = k,
+                              outputColumns = paste(k, 
+                                                    j, 
+                                                    currentStateName, 
+                                                    sep = &quot;_&quot;),
+                              replicates = REPLICATES)
+      }
+      bootDF[[paste(k, j, currentStateName, sep = &quot;_&quot;)]] &lt;- currentBoot
+    }
+  }
+}
+
+## Get estimates and CIs
+bootResults &lt;- apply(X = bootDF, MARGIN = 2, 
+                     FUN = quantile, 
+                     probs = c(0.5, 0.025, 0.975), 
+                     na.rm = TRUE)
+
+## Convert output to long form
+xx &lt;- data.frame(t(bootResults))
+
+## Rename rows
+row.names(xx) &lt;- 1:nrow(xx)
+
+## Rename results
+names(xx) &lt;- c(&quot;estimate&quot;, &quot;lcl&quot;, &quot;ucl&quot;)
+
+## Calculate number of indicator groups
+nIndicatorGroups &lt;- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+nStateGroups &lt;- length(stateNames) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+
+## Create proper data.frames
+State &lt;- c(rep(stateNames[1],  nIndicatorGroups),
+           rep(stateNames[2],  nIndicatorGroups),
+           rep(stateNames[3],  nIndicatorGroups), 
+		 rep(stateNames[4],  nIndicatorGroups),
+		 rep(stateNames[5],  nIndicatorGroups),
+		 rep(stateNames[6],  nIndicatorGroups),
+		 rep(stateNames[7],  nIndicatorGroups),
+		 rep(stateNames[8],  nIndicatorGroups),
+		 rep(stateNames[9],  nIndicatorGroups),
+		 rep(stateNames[10], nIndicatorGroups),
+		 rep(stateNames[11], nIndicatorGroups),
+		 rep(stateNames[12], nIndicatorGroups),
+		 rep(stateNames[13], nIndicatorGroups),
+		 rep(stateNames[14], nIndicatorGroups),
+		 rep(stateNames[15], nIndicatorGroups),
+		 rep(stateNames[16], nIndicatorGroups),
+		 rep(stateNames[17], nIndicatorGroups),
+		 rep(stateNames[18], nIndicatorGroups))
+
+Indicator &lt;- rep(c(paste(&quot;Child: &quot;, 
+                     c(&quot;Mean adjusted serum haemoglobin concentration (g/dL)&quot;, 
+                       &quot;Mild anaemia&quot;, 
+                       &quot;Moderate anaemia&quot;, 
+                       &quot;Severe anaemia&quot;), 
+                     sep = &quot;&quot;),
+               paste(&quot;Pregnant: &quot;,
+                     c(&quot;Mean adjusted serum haemoglobin concentration (g/dL)&quot;, 
+                       &quot;Mild anaemia&quot;, 
+                       &quot;Moderate anaemia&quot;, 
+                       &quot;Severe anaemia&quot;),
+                     sep = &quot;&quot;),
+               paste(&quot;Non-pregnant: &quot;,
+                     c(&quot;Mean adjusted haemoglobin concentration (g/dL)&quot;, 
+                       &quot;Mild anaemia&quot;, 
+                       &quot;Moderate anaemia&quot;, 
+                       &quot;Severe anaemia&quot;),
+                     sep = &quot;&quot;)), 18)
+
+Type &lt;- c(rep(c(&quot;Mean&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;), nStateGroups))
+
+anaemiaResults &lt;- data.frame(State, Indicator, Type, xx)
+</command>
+			<property title="Bootstrap anaemia" shape="MODEL"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="10" date="1590739159560" uid="5d642172d6c86830" x="390" y="390">
+			<command>save(list = ls(), file = &quot;indicators.Rdata&quot;)</command>
+			<property title="Save indicators" shape="INOUT"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="11" date="1590566707813" uid="6a1718ed489cd273" x="70" y="60">
+			<command>## Clear workspace
+rm(list = ls())
+gc()
+
+## Load libraries
+library(openxlsx)
+library(rgdal)
+library(rgeos)
+library(raster)
+if(require(remotes)) install.packages(&quot;remotes&quot;)
+if(require(sudan)) remotes::install_github(&quot;spatialworks/sudan&quot;)
+if(require(spatialsampler)) remotes::install_github(&quot;spatialworks/spatialsampler&quot;)
+
+</command>
+			<property title="reset"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="12" date="1590701462549" uid="306ee55cb0087e89" x="290" y="240">
+			<command>## Recode iron stores indicators
+##   1 = Iron deficiency
+##   2 = Normal iron levels
+##   3 = Iron overload
+
+IR &lt;- with(mnData, {
+	ifelse(ageGrp == 1 &amp; crp &gt; 5 &amp; (ferritin * 0.65) &lt; 12, 1,
+	  ifelse(ageGrp == 1 &amp; crp &lt;= 5 &amp; ferritin &lt; 12, 1,
+	    ifelse(ageGrp == 2 &amp; crp &gt; 5 &amp; (ferritin * 0.65) &lt; 15, 1,
+	      ifelse(ageGrp == 2 &amp; crp &lt;= 5 &amp; ferritin &lt; 15, 1,
+	        ifelse(ageGrp == 2 &amp; crp &gt; 5 &amp; (ferritin * 0.65) &gt; 150, 3,
+	          ifelse(ageGrp == 2 &amp; crp &lt; 5 &amp; ferritin &gt; 150, 3, 2))))))
+})
+
+
+## IR1: Iron deficiency
+IR1 &lt;- recode(var = IR, recodes = &quot;1=1;2=0&quot;)
+
+## IR2: Iron overload
+IR2 &lt;- ifelse(mnData$ageGrp == 2 &amp; IR == 3, 1,
+         ifelse(mnData$ageGrp == 2 &amp; IR != 3, 0, NA))
+         
+## IDA: iron-deficiency anaemia
+IDA &lt;- ifelse(IR == 1 &amp; indicators$AN != 4, 1, 0)
+
+
+## Add IR indicators to indicators data.frame
+indicators &lt;- data.frame(indicators, IR, IR1, IR2, IDA, stringsAsFactors = FALSE)
+
+## clean-up
+rm(IR, IR1, IR2, IDA)</command>
+			<property title="Ferritin" shape="TRANSFORM"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="13" date="1590735853005" uid="81aebffac63ada5e" x="290" y="390">
+			<command>## Recode iodine indicators
+##   1 = Severe iodine deficiency - non-pregnant non-lactating WRA
+##   2 = Moderate iodine deficiency - non-pregnant non-lactating WRA
+##   3 = Mild iodine deficiency - non-pregnant non-lactating WRA
+##   4 = Iodine insufficiency - pregnant (lactating or not) WRA
+##   5 = Iodine insufficiency - lactating non-pregnant WRA
+##   6 = Above requirements - any group
+##   7 = Excessive - any group
+##   8 = Adequate - any group
+
+ID &lt;- with(mnData, {
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 2 &amp; iodine &lt; 20, 1,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 2 &amp; iodine &gt;= 20 &amp; iodine &lt; 50, 2,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 2 &amp; iodine &gt;= 50 &amp; iodine &lt; 100, 3,
+  ifelse(ageGrp == 2 &amp; pregnant == 1 &amp; iodine &lt; 150, 4,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 1 &amp; iodine &lt; 100, 5,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 2 &amp; iodine &gt;= 200 &amp; iodine &lt; 300, 6,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 2 &amp; iodine &gt;= 300, 7,
+  ifelse(ageGrp == 2 &amp; pregnant == 1 &amp; iodine &gt;= 250 &amp; iodine &lt; 500, 6,
+  ifelse(ageGrp == 2 &amp; pregnant == 1 &amp; iodine &gt;= 500, 7,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 2 &amp; iodine &gt;= 100 &amp; iodine &lt; 200, 8,
+  ifelse(ageGrp == 2 &amp; pregnant == 1 &amp; iodine &gt;= 150 &amp; iodine &lt; 250, 8,
+  ifelse(ageGrp == 2 &amp; pregnant == 2 &amp; lactating == 1 &amp; iodine &gt;= 100, 8, NA))))))))))))
+})
+
+## Recode ID into specific indicators
+
+## ID1A: Insufficient iodine in non-pregnant lactating WRA
+ID1A &lt;- ifelse(mnData$lactating == 1 &amp; mnData$pregnant == 2 &amp; ID == 5, 1,
+          ifelse(mnData$lactating == 1 &amp; mnData$pregnant == 2 &amp; ID != 5, 0, NA))
+
+## Check recode - all values check out
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID1A)
+
+## ID1B: Insufficient iodine in pregnant WRA
+ID1B &lt;- ifelse(mnData$pregnant == 1 &amp; ID == 4, 1,
+	     ifelse(mnData$pregnant == 2 &amp; ID != 4, 0, NA))
+
+## Check recode - all values check out
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID1B)
+
+## ID2: Mild iodine deficiency in non-pregnant non-lactating WRA
+ID2 &lt;- ifelse(mnData$pregnant == 2 &amp; mnData$lactating == 2 &amp; ID == 3, 1,
+         ifelse(mnData$pregnant == 2 &amp; mnData$lactating == 2 &amp; ID != 3, 0, NA))
+
+## Check recode
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID2)
+
+## ID3: Moderate iodine deficiency in non-pregnant non-lactating WRA
+ID3 &lt;- ifelse(mnData$pregnant == 2 &amp; mnData$lactating == 2 &amp; ID == 2, 1,
+	    ifelse(mnData$pregnant == 2 &amp; mnData$lactating == 2 &amp; ID != 2, 0, NA))
+
+## Check recode
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID3)
+
+## ID4: Severe iodine deficiency in non-pregnant non-lactating WRA
+ID4 &lt;- ifelse(mnData$pregnant == 2 &amp; mnData$lactating == 2 &amp; ID == 1, 1,
+	ifelse(mnData$pregnant == 2 &amp; mnData$lactating == 2 &amp; ID != 1, 0, NA))
+
+## Check recode
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID4)
+
+## ID5: Above requirements
+ID5 &lt;- ifelse(ID == 6, 1, 0)
+
+## check recode
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID5)
+
+## ID6: Excessive
+ID6 &lt;- ifelse(ID == 7, 1, 0)
+
+## check recode
+cbind(mnData[ , c(&quot;pregnant&quot;, &quot;lactating&quot;)], ID, ID6)
+
+## Add to indicators
+indicators &lt;- data.frame(indicators, ID, ID1A, ID1B, ID2, ID3, ID4, ID5, ID6, stringsAsFactors = FALSE)
+
+## Clean-up
+rm(ID, ID1A, ID1B, ID2, ID3, ID4, ID5, ID6)
+
+
+
+</command>
+			<property title="Iodine" shape="TRANSFORM"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="14" date="1590573116525" uid="e3791151bdf45128" x="240" y="150">
+			<command>## Code here to censor data that canot be used and to save &apos;mnData&apos; to disk
+
+## Check data for missing values for psu
+table(is.na(mnData$psu) | !mnData$psu %in% psuData$psu)
+
+## 962 rows of data with NA value for PSU or with PSU not in the survey data. 
+## There is no known way to determine PSU through other data. These data will
+## be removed/censored
+
+## Remove data with missing PSUs or PSUs not mathcing 
+mnData &lt;- mnData[!is.na(mnData$psu), ]
+mnData &lt;- mnData[mnData$psu %in% psuData$psu, ]
+
+## Check for data with missing locality or with localityID not in survey data
+table(is.na(mnData$localityID) | !mnData$localityID %in% psuData$locality)
+
+## No missing locality information
+
+## Check for data with missing state or with stateID not in survey data
+table(is.na(mnData$stateID) | !mnData$stateID %in% psuData$state)
+
+## No missing state information
+
+## Check for data that has none of the micronutrient data
+table(apply(is.na(mnData[ c(&quot;hb&quot;, &quot;calcium&quot;, &quot;crp&quot;, &quot;ferritin&quot;, &quot;iodine&quot;)]), MARGIN = 1, FUN = all))
+
+## 25 rows of data have no information on any micronutrients. These rows will be
+## removed
+mnData &lt;- mnData[!apply(is.na(mnData[ c(&quot;hb&quot;, &quot;calcium&quot;, &quot;crp&quot;, &quot;ferritin&quot;, &quot;iodine&quot;)]), MARGIN = 1, FUN = all), ]
+
+## Remove records with no age group
+mnData &lt;- mnData[!is.na(mnData$ageGrp), ]
+
+## Check micronutrient values for haemoglobin (hb)
+##   - hb measured in g/dL
+
+hist(mnData$hb) 
+
+## long upper tail - most likely a few very high values upwards to 100 - check
+
+summary(mnData$hb)
+
+## There is one value as high as 106 which is not a likely value for hb at units of g/dL
+## Likely that this an encoding issue where the decimal point was not entered
+## Most likely safe to convert this value to 10.6
+
+mnData$hb[mnData$hb == 106] &lt;- 10.6
+
+## Check hb data again
+hist(mnData$hb)
+summary(mnData$hb)
+
+## Still some high values of 27.6 for a woman age 27 years old; and
+## 25 for a child 25 months old and low values of 2
+
+mnData[mnData$hb == 27.6 &amp; !is.na(mnData$hb), ]
+mnData[mnData$hb == 25 &amp; !is.na(mnData$hb), ]
+mnData[mnData$hb == 2 &amp; !is.na(mnData$hb), ]
+
+## Extremely unlikely as this level of Hb is more commonly seen in 
+## newborns or those with chronic diseases (e.g. COPD) or someone
+## who is actively hemolysing or someone who has rare genetic
+## conditions such as polycythemia vera
+##
+## Possible that this is an encoding issue where 2 was typed instead
+## of a 1 at the bebinning to give a value of 17.6. A women with this
+## Hb is still considered on the higher end but is more compatible
+## with someone who is still ambulant and not in distress. The other
+## option will be to censor these hb values by making them NAs
+
+#mnData$hb &lt;- ifelse(mnData$hb &gt;= 25 | mnData$hb == 2, NA, mnData$hb)
+
+
+## Check micronutrient values for calcium (units mg/dL)
+
+hist(mnData$calcium)
+summary(mnData$calcium)
+
+## calcium looks OK with no note of any extreme values.
+## Consider keeping calcium as is
+
+
+## Check CRP (mg/L)
+
+hist(mnData$crp)
+summary(mnData$crp)
+
+## There are a few values of CRP above 100 which can still be
+## feasible/plausible values. No reason to change or censor
+## these values
+
+## Check ferritin (ng/mL)
+
+hist(mnData$ferritin)
+summary(mnData$ferritin)
+
+## Thare a few values above 400 but these are plausible values.
+## Keep these values.
+
+
+## Check iodine (microgram / L)
+
+hist(mnData$iodine)
+summary(mnData$iodine)
+
+## Urinary iodine values are plausible. Keep
+
+## Save data
+save(list = ls(), file = &quot;work.Rdata&quot;)
+
+</command>
+			<property title="censor"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="15" date="1590757528501" uid="ff30b8232459d7a0" x="170" y="550">
+			<command>## Bootstrap inflammation indicators ################################################
+
+## Subset indicators to 3 states data - State 1, 7, 13
+subDF &lt;- subset(indicators, stateID %in% c(1, 7, 13))
+
+## Create anaemia indicator groups
+subDF$indicatorGroup &lt;- ifelse(subDF$ageGrp == 1, &quot;child&quot;,
+                               ifelse(subDF$pregnant == 1, &quot;pregnant&quot;,
+                                      ifelse(subDF$pregnant == 2, &quot;notPregnant&quot;, NA)))
+
+## Get state names
+stateNames &lt;- unique(locNames$state[locNames$stateID %in% c(1, 7, 13)])
+
+## indicator name vector
+params &lt;- c(&quot;crp&quot;, &quot;AI&quot;)
+
+## Create empty data.frame for concatenating boot results
+bootDF &lt;- data.frame(matrix(nrow = REPLICATES, ncol = 18, byrow = TRUE))
+
+names(bootDF) &lt;- c(paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;))
+
+## Cycle through states
+for(i in sort(unique(subDF$stateID))) {
+  ## Get current state name
+  currentStateName &lt;- unique(locNames$state[locNames$stateID == i])
+  ## Cycle through grouping categrories
+  for(j in c(&quot;child&quot;, &quot;pregnant&quot;, &quot;notPregnant&quot;)) {
+    ## Subset to current grouping category
+    currentGroup &lt;- subset(subDF, stateID == i &amp; indicatorGroup == j)
+    ## Cycle through indicators
+    for(k in params) {
+      ## Create empty concatenating vector for current bootstrap outputs
+      currentBoot &lt;- NA
+      ## Check if current group is not empty and then bootstrap
+      if(nrow(currentGroup) &gt; 0) {
+        ## Boot
+        currentBoot &lt;- bootBW(x = currentGroup, 
+                              w = psuData[psuData$psu %in% currentGroup$psu, ],
+                              statistic = bootClassic, 
+                              params = k,
+                              outputColumns = paste(k, 
+                                                    j, 
+                                                    currentStateName, 
+                                                    sep = &quot;_&quot;),
+                              replicates = REPLICATES)
+      }
+      bootDF[[paste(k, j, currentStateName, sep = &quot;_&quot;)]] &lt;- currentBoot
+    }
+  }
+}
+
+## Get estimates and CIs
+bootResults &lt;- apply(X = bootDF, MARGIN = 2, 
+                     FUN = quantile, 
+                     probs = c(0.5, 0.025, 0.975), 
+                     na.rm = TRUE)
+
+## Convert output to long form
+xx &lt;- data.frame(t(bootResults))
+
+## Rename rows
+row.names(xx) &lt;- 1:nrow(xx)
+
+## Rename results
+names(xx) &lt;- c(&quot;estimate&quot;, &quot;lcl&quot;, &quot;ucl&quot;)
+
+## Calculate number of indicator groups
+nIndicatorGroups &lt;- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+nStateGroups &lt;- length(stateNames) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+
+## Create proper data.frames
+State &lt;- c(rep(stateNames[1], nIndicatorGroups),
+           rep(stateNames[2], nIndicatorGroups),
+           rep(stateNames[3], nIndicatorGroups))
+
+Indicator &lt;- c(paste(&quot;Child: &quot;, 
+                     c(&quot;Mean serum c-reactive protein concentration (mg/L)&quot;, 
+                       &quot;Prevalence of acute inflammation&quot;), 
+                     sep = &quot;&quot;),
+               paste(&quot;Pregnant: &quot;,
+                     c(&quot;Mean serum c-reactive protein concentration (mg/L)&quot;, 
+                       &quot;Prevalence of acute inflammation&quot;),
+                     sep = &quot;&quot;),
+               paste(&quot;Non-pregnant: &quot;,
+                     c(&quot;Mean serum c-reactive protein concentration (mg/L)&quot;, 
+                       &quot;Prevalence of acute inflammation&quot;),
+                     sep = &quot;&quot;))
+
+Type &lt;- c(rep(c(&quot;Mean&quot;, &quot;Proportion&quot;), nStateGroups))
+
+inflammationResults &lt;- data.frame(State, Indicator, Type, xx)
+</command>
+			<property title="Bootstrap inflammation" shape="MODEL"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="16" date="1590757589949" uid="54dbcec1d70f2947" x="170" y="640">
+			<command>## Bootstrap iron indicators ################################################
+
+## Subset indicators to 3 states data - State 1, 7, 13
+subDF &lt;- subset(indicators, stateID %in% c(1, 7, 13))
+
+## Create anaemia indicator groups
+subDF$indicatorGroup &lt;- ifelse(subDF$ageGrp == 1, &quot;child&quot;,
+                               ifelse(subDF$pregnant == 1, &quot;pregnant&quot;,
+                                      ifelse(subDF$pregnant == 2, &quot;notPregnant&quot;, NA)))
+
+## Get state names
+stateNames &lt;- unique(locNames$state[locNames$stateID %in% c(1, 7, 13)])
+
+## indicator name vector
+params &lt;- c(&quot;adjFerritin&quot;, &quot;IR1&quot;, &quot;IR2&quot;, &quot;IDA&quot;)
+
+## Create empty data.frame for concatenating boot results
+#bootDF &lt;- data.frame(matrix(nrow = 399, ncol = 36, byrow = TRUE))
+bootDF &lt;- data.frame(matrix(nrow = 9, ncol = 36, byrow = TRUE))
+
+names(bootDF) &lt;- c(paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 1]), sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 7]), sep = &quot;_&quot;),
+                   paste(params, &quot;child&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;pregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;),
+                   paste(params, &quot;notPregnant&quot;, unique(locNames$state[locNames$stateID == 13]), sep = &quot;_&quot;))
+
+## Cycle through states
+for(i in sort(unique(subDF$stateID))) {
+  ## Get current state name
+  currentStateName &lt;- unique(locNames$state[locNames$stateID == i])
+  ## Cycle through grouping categrories
+  for(j in c(&quot;child&quot;, &quot;pregnant&quot;, &quot;notPregnant&quot;)) {
+    ## Subset to current grouping category
+    currentGroup &lt;- subset(subDF, stateID == i &amp; indicatorGroup == j)
+    ## Cycle through indicators
+    for(k in params) {
+      ## Create empty concatenating vector for current bootstrap outputs
+      currentBoot &lt;- NA
+      ## Check if current group is not empty and then bootstrap
+      if(nrow(currentGroup) &gt; 0) {
+        ## Boot
+        currentBoot &lt;- bootBW(x = currentGroup, 
+                              w = psuData[psuData$psu %in% currentGroup$psu, ],
+                              statistic = bootClassic, 
+                              params = k,
+                              outputColumns = paste(k, 
+                                                    j, 
+                                                    currentStateName, 
+                                                    sep = &quot;_&quot;),
+                              replicates = REPLICATES)
+      }
+      bootDF[[paste(k, j, currentStateName, sep = &quot;_&quot;)]] &lt;- currentBoot
+    }
+  }
+}
+
+## Get estimates and CIs
+bootResults &lt;- apply(X = bootDF, MARGIN = 2, 
+                     FUN = quantile, 
+                     probs = c(0.5, 0.025, 0.975), 
+                     na.rm = TRUE)
+
+## Convert output to long form
+xx &lt;- data.frame(t(bootResults))
+
+## Rename rows
+row.names(xx) &lt;- 1:nrow(xx)
+
+## Rename results
+names(xx) &lt;- c(&quot;estimate&quot;, &quot;lcl&quot;, &quot;ucl&quot;)
+
+## Calculate number of indicator groups
+nIndicatorGroups &lt;- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+nStateGroups &lt;- length(stateNames) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+
+## Create proper data.frames
+State &lt;- c(rep(stateNames[1], nIndicatorGroups),
+           rep(stateNames[2], nIndicatorGroups),
+           rep(stateNames[3], nIndicatorGroups))
+
+Indicator &lt;- c(paste(&quot;Child: &quot;, 
+                     c(&quot;Mean serum ferritin concentration (ng/mL)&quot;, 
+                       &quot;Iron deficiency&quot;, 
+                       &quot;Iron overload&quot;, 
+                       &quot;Iron deficiency anaemia&quot;), 
+                     sep = &quot;&quot;),
+               paste(&quot;Pregnant: &quot;,
+                     c(&quot;Mean serum ferritin concentration (ng/mL)&quot;, 
+                       &quot;Iron deficiency&quot;, 
+                       &quot;Iron overload&quot;, 
+                       &quot;Iron deficiency anaemia&quot;),
+                     sep = &quot;&quot;),
+               paste(&quot;Non-pregnant: &quot;,
+                     c(&quot;Mean serum ferritin concentration (ng/mL)&quot;, 
+                       &quot;Iron deficiency&quot;, 
+                       &quot;Iron overload&quot;, 
+                       &quot;Iron deficiency anaemia&quot;),
+                     sep = &quot;&quot;))
+
+Type &lt;- c(rep(c(&quot;Mean&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;, &quot;Proportion&quot;), nStateGroups))
+
+ironResults &lt;- data.frame(State, Indicator, Type, xx)
+</command>
+			<property title="Boostrap iron" shape="MODEL"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="17" date="1590669186353" uid="56dc4623f894f14d" x="170" y="310">
+			<command>## Recode anaemia indicators ###################################
+##   1 = Severe anaemia
+##   2 = Moderate anaemaia
+##   3 = Mild anaemia
+##   4 = No anaemia
+
+## AN: Anaemia status
+AN &lt;- NA
+
+## under 5 children
+AN[mnData$ageGrp == 1] &lt;- recode_hb_u5(x = mnData[mnData$ageGr == 1, ], factor = 10)
+                                          
+## non-pregnant WRA
+AN[mnData$ageGrp == 2 &amp; mnData$pregnant == 2] &lt;- recode_hb_wra(x = mnData[mnData$ageGrp == 2 &amp; mnData$pregnant == 2, ], factor = 10)
+   
+## pregnant WRA
+AN[mnData$ageGrp == 2 &amp; mnData$pregnant == 1] &lt;- recode_hb_pregnant(x = mnData[mnData$ageGrp == 2 &amp; mnData$pregnant == 1, ], factor = 10)
+
+## AN1: Mild anaemia
+AN1 &lt;- recode(var = AN, recodes = &quot;1:2=0;3=1;4=0&quot;)                                                                                     
+## AN2: Moderate anaemia
+AN2 &lt;- recode(var = AN, recodes = &quot;1=0;2=1;3:4=0&quot;)
+
+## AN3: Severe anaemia
+AN3 &lt;- recode(var = AN, recodes = &quot;1=1;2:4=0&quot;)
+
+## Concatenate recoded indicators into indicators data.frame
+indicators &lt;- data.frame(indicators, AN, AN1, AN2, AN3, stringsAsFactors = FALSE)
+
+rm(AN, AN1, AN2, AN3)
+                                                                                                                           
+
+
+
+
+
+
+</command>
+			<property title="Anaemia" shape="TRANSFORM"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<node id="18" date="1590739211142" uid="5eec23be8f37c3ba" x="60" y="240">
+			<command>load(&quot;work.Rdata&quot;)</command>
+			<property title="Load raw data" shape="INOUT"/>
+			<option type="com.ef_prime.rflow.node.base.FreeNodeModel"/>
+		</node>
+		<edge from="3" to="14"/>
+		<edge from="9" to="15"/>
+		<edge from="13" to="10"/>
+		<edge from="12" to="2"/>
+		<edge from="11" to="7"/>
+		<edge from="17" to="5"/>
+		<edge from="18" to="0"/>
+		<edge from="15" to="16"/>
+		<edge from="0" to="17"/>
+		<edge from="4" to="9"/>
+		<edge from="5" to="12"/>
+		<edge from="6" to="1"/>
+		<edge from="2" to="13"/>
+		<edge from="16" to="6"/>
+		<edge from="8" to="3"/>
+	</graph>
+	<task>
+		<taskgroup>
+			<taskproperty/>
+			<taskentry node="11">
+				<taskproperty>
+					<entry key="title">reset</entry>
+				</taskproperty>
+			</taskentry>
+		</taskgroup>
+	</task>
+</rflow>

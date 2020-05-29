@@ -1,0 +1,19 @@
+"State","Indicator","Type","estimate","lcl","ucl"
+"Northern","Child: Mean c-reactive protein concentration (mg/L)","Mean",2.59325301204819,2.08009965220021,3.39254691888671
+"Northern","Child: Prevalence of acute inflammation","Proportion",0.103658536585366,0.0609131095455173,0.173794678141741
+"Northern","Pregnant: Mean c-reactive protein concentration (mg/L)","Mean",2.61594202898551,2.03228310502283,3.56194035947712
+"Northern","Pregnant: Prevalence of acute inflammation","Proportion",0.114285714285714,0.0399736842105263,0.211515036162924
+"Northern","Non-pregnant: Mean c-reactive protein concentration (mg/L)","Mean",2.80373831775701,2.20048488372093,3.63407836990596
+"Northern","Non-pregnant: Prevalence of acute inflammation","Proportion",0.107255520504732,0.0672969402801671,0.181731055206293
+"Al-Gadarif","Child: Mean c-reactive protein concentration (mg/L)","Mean",4.97274336283186,4.09310373100818,6.71479480931384
+"Al-Gadarif","Child: Prevalence of acute inflammation","Proportion",0.2996632996633,0.231042002823719,0.37200488112937
+"Al-Gadarif","Pregnant: Mean c-reactive protein concentration (mg/L)","Mean",5.16235294117647,4.16244975744976,6.45252502780868
+"Al-Gadarif","Pregnant: Prevalence of acute inflammation","Proportion",0.511904761904762,0.348484848484849,0.657212543554007
+"Al-Gadarif","Non-pregnant: Mean c-reactive protein concentration (mg/L)","Mean",4.68069306930693,3.87436573959503,5.87938812406596
+"Al-Gadarif","Non-pregnant: Prevalence of acute inflammation","Proportion",0.303178484107579,0.227546941870478,0.384437581882837
+"West Kourdofan","Child: Mean c-reactive protein concentration (mg/L)","Mean",4.65853427895981,3.52078408628409,6.32762016726716
+"West Kourdofan","Child: Prevalence of acute inflammation","Proportion",0.24234693877551,0.17854870956016,0.314306091288975
+"West Kourdofan","Pregnant: Mean c-reactive protein concentration (mg/L)","Mean",5.9822641509434,4.82389104561067,7.48105401383527
+"West Kourdofan","Pregnant: Prevalence of acute inflammation","Proportion",0.405172413793103,0.285644257703081,0.518554131054131
+"West Kourdofan","Non-pregnant: Mean c-reactive protein concentration (mg/L)","Mean",4.9344964028777,3.77590705128205,6.61666414980368
+"West Kourdofan","Non-pregnant: Prevalence of acute inflammation","Proportion",0.246105919003115,0.176461161387632,0.321324621149631
