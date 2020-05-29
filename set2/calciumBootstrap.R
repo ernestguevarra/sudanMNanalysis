@@ -65,14 +65,17 @@ bootResults <- apply(X = bootDF, MARGIN = 2,
                      probs = c(0.5, 0.025, 0.975), 
                      na.rm = TRUE)
 
+## Get robust SD
+bootSD <- apply(X = bootDF, MARGIN = 2, FUN = robustSD)
+
 ## Convert output to long form
-xx <- data.frame(t(bootResults))
+xx <- data.frame(t(bootResults), bootSD)
 
 ## Rename rows
 row.names(xx) <- 1:nrow(xx)
 
 ## Rename results
-names(xx) <- c("estimate", "lcl", "ucl")
+names(xx) <- c("estimate", "lcl", "ucl", "sd")
 
 ## Calculate number of indicator groups
 nIndicatorGroups <- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))

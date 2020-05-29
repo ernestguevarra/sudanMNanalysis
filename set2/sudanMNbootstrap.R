@@ -158,3 +158,13 @@ bootClassic <- function(x, params)
   return(result)
 }
 
+################################################################################
+#
+# Statistic function (robust SD) 
+#
+robustSD <- function(x)
+{
+  robustSD <- IQR(x, na.rm = TRUE) / 1.34898
+  ##
+  return(robustSD)
+}
