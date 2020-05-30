@@ -183,3 +183,8 @@ robustSD <- function(x)
   return(robustSD)
 }
 
+load("indicators.Rdata")
+
+REPLICATES <- 9
+
+STATES <- c(1, 7, 13)

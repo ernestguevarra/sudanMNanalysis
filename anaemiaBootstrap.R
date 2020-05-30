@@ -12,10 +12,10 @@ subDF$indicatorGroup <- ifelse(subDF$ageGrp == 1, "child",
 stateNames <- unique(locNames$state[locNames$stateID %in% STATES])
 
 ## indicator name vector
-params <- c("adjHb", "AN1", "AN2", "AN3")
+params <- c("AN1", "AN2", "AN3")
 
 ## Create empty data.frame for concatenating boot results
-bootDF <- data.frame(matrix(nrow = REPLICATES, ncol = 36, byrow = TRUE))
+bootDF <- data.frame(matrix(nrow = REPLICATES, ncol = 27, byrow = TRUE))
 
 names(bootDF) <- c(paste(params, "child", stateNames[1], sep = "_"),
                    paste(params, "pregnant", stateNames[1], sep = "_"),
