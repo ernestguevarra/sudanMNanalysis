@@ -1,0 +1,38 @@
+"Indicator","Type","Estimate","LCL","UCL"
+"Child: Mild anaemia","Proportion",22.52,7.51,37.52
+"Child: Moderate anaemia","Proportion",22.01,5.74,38.28
+"Child: Severe Anaemia","Proportion",1.57,0.01,6.82
+"Pregnant: Mild anaemia","Proportion",19.3,0.01,48.35
+"Pregnant: Moderate anaemia","Proportion",12.69,0.01,40.23
+"Pregnant: Severe Anaemia","Proportion",0.98,0.01,11.35
+"Non-pregnant: Mild anaemia","Proportion",16.49,1.48,31.51
+"Non-pregnant: Moderate anaemia","Proportion",10.47,0.01,24.55
+"Non-pregnant: Severe Anaemia","Proportion",0.76,0.01,4.95
+"Child: Acute inflammation","Proportion",30.05,7.73,52.38
+"Pregnant: Acute inflammation","Proportion",34.61,0.01,70.51
+"Non-pregnant: Acute inflammation","Proportion",30.98,11.38,50.58
+"Child: Iron deficiency","Proportion",51.29,29.43,73.16
+"Child: Iron deficiency anaemia","Proportion",23.63,5.53,41.74
+"Pregnant: Iron deficiency","Proportion",57.76,16.22,99.3
+"Pregnant: Iron overload","Proportion",0.39,0.01,7.97
+"Pregnant: Iron deficiency anaemia","Proportion",20.56,0.01,51.64
+"Non-pregnant: Iron deficiency","Proportion",44.19,20.87,67.51
+"Non-pregnant: Iron overload","Proportion",0.83,0.01,6.15
+"Non-pregnant: Iron deficiency anaemia","Proportion",15.06,0.04,30.08
+"Child: Hypocalcaemia","Proportion",38.89,20.06,57.73
+"Child: Hpercalcaemia","Proportion",5.65,0.01,16.79
+"Pregnant: Hypocalcaemia","Proportion",60.69,30.14,91.25
+"Pregnant: Hpercalcaemia","Proportion",12.85,0.01,41.05
+"Non-pregnant: Hypocalcaemia","Proportion",51.85,26.79,76.92
+"Non-pregnant: Hpercalcaemia","Proportion",24.75,0.15,49.36
+"Pregnant: Iodine intake above requirements","Proportion",7.91,0.01,32.41
+"Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Non-pregnant non-lactating: Iodine intake above requirements","Proportion",13.85,0.01,36.84
+"Non-pregnant non-lactating: Iodine intake excessive","Proportion",5.81,0.01,26.93
+"Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Non-pregnant non-lactating: Mild iodine deficiency","Proportion",16.91,0.01,45.21
+"Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",10.7,0.01,34.45
+"Non-pregnant non-lactating: Severe iodine deficiency","Proportion",15.67,0.01,41.58
+"Non-pregnant lactating: Iodine insufficiency","Proportion",57.85,32.64,83.07
+"Pregnant: Iodine insufficiency","Proportion",92.12,92.12,92.12

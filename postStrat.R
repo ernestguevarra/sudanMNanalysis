@@ -70,9 +70,11 @@ for(i in unique(localityResults$State))
   names(stateResults) <- c("Indicator", "Type", "Estimate", "LCL", "UCL")
   row.names(stateResults) <- 1:nrow(stateResults)
   writeData(wb = resultsWB, sheet = i, x = stateResults)
+  stateResults <- data.frame(State = i, stateResults, stringsAsFactors = FALSE)
   allResults <- rbind(allResults, stateResults)
 }
 
+write.csv(allResults, "_stateResults.csv", row.names = FALSE)
 saveWorkbook(wb = resultsWB, file = "_byStates.xlsx", overwrite = TRUE)
 
 ######################### Perform national estimation ##########################
@@ -128,4 +130,5 @@ row.names(nationalResults) <- 1:nrow(nationalResults)
 
 writeData(wb = resultsWB, sheet = "national", x = nationalResults)
 
+write.csv(nationalResults, "_nationalResults.csv", row.names = FALSE)
 saveWorkbook(wb = resultsWB, file = "_national.xlsx", overwrite = TRUE)

@@ -1,0 +1,667 @@
+"State","Indicator","Type","Estimate","LCL","UCL"
+"Northern","Child: Mild anaemia","Proportion",23.63,8.54,38.72
+"Northern","Child: Moderate anaemia","Proportion",19.98,7.78,32.17
+"Northern","Child: Severe Anaemia","Proportion",0.96,0.01,3.97
+"Northern","Pregnant: Mild anaemia","Proportion",16.61,0.01,57.42
+"Northern","Pregnant: Moderate anaemia","Proportion",9.62,0.01,35.26
+"Northern","Pregnant: Severe Anaemia","Proportion",0.82,0.01,7.86
+"Northern","Non-pregnant: Mild anaemia","Proportion",9.31,0.01,20.99
+"Northern","Non-pregnant: Moderate anaemia","Proportion",11.89,1.39,22.39
+"Northern","Non-pregnant: Severe Anaemia","Proportion",0,0,2.01
+"Northern","Child: Acute inflammation","Proportion",9.76,0.01,21.72
+"Northern","Pregnant: Acute inflammation","Proportion",11.54,0.01,42.06
+"Northern","Non-pregnant: Acute inflammation","Proportion",9.33,0.01,21.11
+"Northern","Child: Iron deficiency","Proportion",57.98,41.32,74.63
+"Northern","Child: Iron deficiency anaemia","Proportion",23.08,8.63,37.53
+"Northern","Pregnant: Iron deficiency","Proportion",58.52,13.27,99.99
+"Northern","Pregnant: Iron overload","Proportion",0,0,0
+"Northern","Pregnant: Iron deficiency anaemia","Proportion",19.36,0.01,47.22
+"Northern","Non-pregnant: Iron deficiency","Proportion",39.53,18.95,60.11
+"Northern","Non-pregnant: Iron overload","Proportion",0,0,0
+"Northern","Non-pregnant: Iron deficiency anaemia","Proportion",14.78,3.43,26.12
+"Northern","Child: Hypocalcaemia","Proportion",21.09,7.02,35.16
+"Northern","Child: Hpercalcaemia","Proportion",16.97,1.74,32.19
+"Northern","Pregnant: Hypocalcaemia","Proportion",57.75,31.02,84.48
+"Northern","Pregnant: Hpercalcaemia","Proportion",41.54,15.33,67.76
+"Northern","Non-pregnant: Hypocalcaemia","Proportion",27.65,0.01,56.7
+"Northern","Non-pregnant: Hpercalcaemia","Proportion",65.23,35.01,95.45
+"Northern","Pregnant: Iodine intake above requirements","Proportion",5.47,0.01,19.74
+"Northern","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Northern","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",17.4,0.01,40.69
+"Northern","Non-pregnant non-lactating: Iodine intake excessive","Proportion",0.33,0.01,3.84
+"Northern","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Northern","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Northern","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",17.66,0.01,53.88
+"Northern","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",3.09,0.01,13.24
+"Northern","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",1.73,0.01,11.69
+"Northern","Non-pregnant lactating: Iodine insufficiency","Proportion",45.43,14.39,76.47
+"Northern","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"Al-Gadarif","Child: Mild anaemia","Proportion",23.67,9.75,37.59
+"Al-Gadarif","Child: Moderate anaemia","Proportion",20.18,6.28,34.08
+"Al-Gadarif","Child: Severe Anaemia","Proportion",2.64,0.01,7.8
+"Al-Gadarif","Pregnant: Mild anaemia","Proportion",23.82,0.01,65.59
+"Al-Gadarif","Pregnant: Moderate anaemia","Proportion",2,0.01,12.53
+"Al-Gadarif","Pregnant: Severe Anaemia","Proportion",0,0,0
+"Al-Gadarif","Non-pregnant: Mild anaemia","Proportion",16.59,0.83,32.35
+"Al-Gadarif","Non-pregnant: Moderate anaemia","Proportion",10.19,0.01,23.34
+"Al-Gadarif","Non-pregnant: Severe Anaemia","Proportion",0.28,0.01,2.57
+"Al-Gadarif","Child: Acute inflammation","Proportion",33.24,16.92,49.56
+"Al-Gadarif","Pregnant: Acute inflammation","Proportion",45.73,5.02,86.44
+"Al-Gadarif","Non-pregnant: Acute inflammation","Proportion",32.04,10.97,53.1
+"Al-Gadarif","Child: Iron deficiency","Proportion",48.9,29.3,68.5
+"Al-Gadarif","Child: Iron deficiency anaemia","Proportion",26.36,9.57,43.15
+"Al-Gadarif","Pregnant: Iron deficiency","Proportion",68.88,19.73,99.99
+"Al-Gadarif","Pregnant: Iron overload","Proportion",0,0,0
+"Al-Gadarif","Pregnant: Iron deficiency anaemia","Proportion",20.89,0.01,59.24
+"Al-Gadarif","Non-pregnant: Iron deficiency","Proportion",37,17.2,56.81
+"Al-Gadarif","Non-pregnant: Iron overload","Proportion",0.85,0.01,6.13
+"Al-Gadarif","Non-pregnant: Iron deficiency anaemia","Proportion",14.58,1.05,28.11
+"Al-Gadarif","Child: Hypocalcaemia","Proportion",56.11,35.08,77.14
+"Al-Gadarif","Child: Hpercalcaemia","Proportion",2.67,0.01,9.88
+"Al-Gadarif","Pregnant: Hypocalcaemia","Proportion",88.44,51.2,99.99
+"Al-Gadarif","Pregnant: Hpercalcaemia","Proportion",9.33,0.01,55.2
+"Al-Gadarif","Non-pregnant: Hypocalcaemia","Proportion",79.98,52.66,99.99
+"Al-Gadarif","Non-pregnant: Hpercalcaemia","Proportion",10.99,0.01,36.43
+"Al-Gadarif","Pregnant: Iodine intake above requirements","Proportion",4.59,0.01,20.08
+"Al-Gadarif","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Al-Gadarif","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",8.03,0.01,27.11
+"Al-Gadarif","Non-pregnant non-lactating: Iodine intake excessive","Proportion",1.71,0.01,9.01
+"Al-Gadarif","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Al-Gadarif","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Al-Gadarif","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",25.95,0.01,59.92
+"Al-Gadarif","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",11.17,0.01,35.4
+"Al-Gadarif","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",6.59,0.01,27.05
+"Al-Gadarif","Non-pregnant lactating: Iodine insufficiency","Proportion",65.2,37.72,92.68
+"Al-Gadarif","Pregnant: Iodine insufficiency","Proportion",95.68,95.68,95.68
+"West Kourdofan","Child: Mild anaemia","Proportion",23.58,7.96,39.19
+"West Kourdofan","Child: Moderate anaemia","Proportion",16.11,0.22,32
+"West Kourdofan","Child: Severe Anaemia","Proportion",1.14,0.01,6.79
+"West Kourdofan","Pregnant: Mild anaemia","Proportion",20.52,0.01,50.86
+"West Kourdofan","Pregnant: Moderate anaemia","Proportion",9.29,0.01,33.11
+"West Kourdofan","Pregnant: Severe Anaemia","Proportion",0,0,0
+"West Kourdofan","Non-pregnant: Mild anaemia","Proportion",14.32,0.01,31.46
+"West Kourdofan","Non-pregnant: Moderate anaemia","Proportion",10.21,0.01,27.41
+"West Kourdofan","Non-pregnant: Severe Anaemia","Proportion",1.6,0.01,8.68
+"West Kourdofan","Child: Acute inflammation","Proportion",24.37,6.32,42.43
+"West Kourdofan","Pregnant: Acute inflammation","Proportion",32.13,0.01,69.11
+"West Kourdofan","Non-pregnant: Acute inflammation","Proportion",20.42,0.01,41.32
+"West Kourdofan","Child: Iron deficiency","Proportion",46.1,25.72,66.48
+"West Kourdofan","Child: Iron deficiency anaemia","Proportion",27,7.9,46.1
+"West Kourdofan","Pregnant: Iron deficiency","Proportion",67.29,8,99.99
+"West Kourdofan","Pregnant: Iron overload","Proportion",2.19,0.01,17.4
+"West Kourdofan","Pregnant: Iron deficiency anaemia","Proportion",18.82,0.01,44.43
+"West Kourdofan","Non-pregnant: Iron deficiency","Proportion",36.23,9.97,62.48
+"West Kourdofan","Non-pregnant: Iron overload","Proportion",1.62,0.01,9.63
+"West Kourdofan","Non-pregnant: Iron deficiency anaemia","Proportion",14.99,0.01,31.25
+"West Kourdofan","Child: Hypocalcaemia","Proportion",61.13,31.14,91.12
+"West Kourdofan","Child: Hpercalcaemia","Proportion",3.2,0.01,13.55
+"West Kourdofan","Pregnant: Hypocalcaemia","Proportion",82.03,31,99.99
+"West Kourdofan","Pregnant: Hpercalcaemia","Proportion",16.63,0.01,59.39
+"West Kourdofan","Non-pregnant: Hypocalcaemia","Proportion",81.48,47.8,99.99
+"West Kourdofan","Non-pregnant: Hpercalcaemia","Proportion",13.79,0.01,38.75
+"West Kourdofan","Pregnant: Iodine intake above requirements","Proportion",3.34,0.01,16.49
+"West Kourdofan","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"West Kourdofan","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",6.34,0.01,24.73
+"West Kourdofan","Non-pregnant non-lactating: Iodine intake excessive","Proportion",5.95,0.01,34.27
+"West Kourdofan","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"West Kourdofan","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"West Kourdofan","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",17.38,0.01,52.57
+"West Kourdofan","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",16.2,0.01,49.56
+"West Kourdofan","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",36.56,0.01,77.58
+"West Kourdofan","Non-pregnant lactating: Iodine insufficiency","Proportion",82.12,54.13,99.99
+"West Kourdofan","Pregnant: Iodine insufficiency","Proportion",97.08,97.08,97.08
+"River Nile","Child: Mild anaemia","Proportion",27.98,14.67,41.28
+"River Nile","Child: Moderate anaemia","Proportion",28.89,14.26,43.52
+"River Nile","Child: Severe Anaemia","Proportion",0.76,0.01,3.69
+"River Nile","Pregnant: Mild anaemia","Proportion",15.65,0.01,39.47
+"River Nile","Pregnant: Moderate anaemia","Proportion",10.65,0.01,28.73
+"River Nile","Pregnant: Severe Anaemia","Proportion",0,0,0
+"River Nile","Non-pregnant: Mild anaemia","Proportion",26.49,12.05,40.92
+"River Nile","Non-pregnant: Moderate anaemia","Proportion",9.53,0.01,23.68
+"River Nile","Non-pregnant: Severe Anaemia","Proportion",0.26,0.01,2.19
+"River Nile","Child: Acute inflammation","Proportion",45.66,27.59,63.74
+"River Nile","Pregnant: Acute inflammation","Proportion",67.56,41.38,93.74
+"River Nile","Non-pregnant: Acute inflammation","Proportion",48.95,31.49,66.41
+"River Nile","Child: Iron deficiency","Proportion",62.59,43.21,81.98
+"River Nile","Child: Iron deficiency anaemia","Proportion",26.25,6.86,45.65
+"River Nile","Pregnant: Iron deficiency","Proportion",53.13,23.33,82.94
+"River Nile","Pregnant: Iron overload","Proportion",0,0,0
+"River Nile","Pregnant: Iron deficiency anaemia","Proportion",19.3,0.01,43.72
+"River Nile","Non-pregnant: Iron deficiency","Proportion",51.75,31.37,72.14
+"River Nile","Non-pregnant: Iron overload","Proportion",0,0,0
+"River Nile","Non-pregnant: Iron deficiency anaemia","Proportion",20.45,2.4,38.49
+"River Nile","Child: Hypocalcaemia","Proportion",24.98,8.43,41.52
+"River Nile","Child: Hpercalcaemia","Proportion",10.36,0.01,22.01
+"River Nile","Pregnant: Hypocalcaemia","Proportion",69.99,36.55,99.99
+"River Nile","Pregnant: Hpercalcaemia","Proportion",29.3,0.01,60.37
+"River Nile","Non-pregnant: Hypocalcaemia","Proportion",42.54,13.55,71.53
+"River Nile","Non-pregnant: Hpercalcaemia","Proportion",49.12,19.61,78.63
+"River Nile","Pregnant: Iodine intake above requirements","Proportion",0.94,0.01,11.59
+"River Nile","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"River Nile","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",12.27,0.01,30.88
+"River Nile","Non-pregnant non-lactating: Iodine intake excessive","Proportion",4.1,0.01,19.61
+"River Nile","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"River Nile","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"River Nile","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",27.18,3.4,50.95
+"River Nile","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",4.88,0.01,15.25
+"River Nile","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",1.73,0.01,7.81
+"River Nile","Non-pregnant lactating: Iodine insufficiency","Proportion",47.5,20.1,74.89
+"River Nile","Pregnant: Iodine insufficiency","Proportion",86.84,86.84,86.84
+"Sinar","Child: Mild anaemia","Proportion",26.89,15.22,38.56
+"Sinar","Child: Moderate anaemia","Proportion",23.97,12.16,35.79
+"Sinar","Child: Severe Anaemia","Proportion",0.96,0.01,3.77
+"Sinar","Pregnant: Mild anaemia","Proportion",11.75,0.01,32.27
+"Sinar","Pregnant: Moderate anaemia","Proportion",11.2,0.01,31.87
+"Sinar","Pregnant: Severe Anaemia","Proportion",0,0,0
+"Sinar","Non-pregnant: Mild anaemia","Proportion",19.13,5.28,32.98
+"Sinar","Non-pregnant: Moderate anaemia","Proportion",10.88,0.01,23.21
+"Sinar","Non-pregnant: Severe Anaemia","Proportion",0.46,0.01,4.28
+"Sinar","Child: Acute inflammation","Proportion",22.48,8.07,36.89
+"Sinar","Pregnant: Acute inflammation","Proportion",38.57,4.16,72.97
+"Sinar","Non-pregnant: Acute inflammation","Proportion",29.63,10.86,48.41
+"Sinar","Child: Iron deficiency","Proportion",56.5,39.62,73.39
+"Sinar","Child: Iron deficiency anaemia","Proportion",23.87,12.11,35.64
+"Sinar","Pregnant: Iron deficiency","Proportion",66.66,30.87,99.99
+"Sinar","Pregnant: Iron overload","Proportion",0,0,0
+"Sinar","Pregnant: Iron deficiency anaemia","Proportion",15.3,0.01,34.61
+"Sinar","Non-pregnant: Iron deficiency","Proportion",47.34,26.06,68.62
+"Sinar","Non-pregnant: Iron overload","Proportion",1.56,0.01,5.91
+"Sinar","Non-pregnant: Iron deficiency anaemia","Proportion",16.63,3.96,29.29
+"Sinar","Child: Hypocalcaemia","Proportion",65.04,43.87,86.21
+"Sinar","Child: Hpercalcaemia","Proportion",7.01,0.01,18.66
+"Sinar","Pregnant: Hypocalcaemia","Proportion",87.36,60.89,99.99
+"Sinar","Pregnant: Hpercalcaemia","Proportion",11.62,0.01,36.6
+"Sinar","Non-pregnant: Hypocalcaemia","Proportion",79.93,59.95,99.91
+"Sinar","Non-pregnant: Hpercalcaemia","Proportion",18.01,0.01,36.31
+"Sinar","Pregnant: Iodine intake above requirements","Proportion",5.88,0.01,32.84
+"Sinar","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Sinar","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",2.99,0.01,14.5
+"Sinar","Non-pregnant non-lactating: Iodine intake excessive","Proportion",2.98,0.01,20.55
+"Sinar","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Sinar","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Sinar","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",26.72,2.43,51.01
+"Sinar","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",17.06,0.01,38.54
+"Sinar","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",20.55,0.01,51.89
+"Sinar","Non-pregnant lactating: Iodine insufficiency","Proportion",78.8,58.34,99.27
+"Sinar","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"North Darfur","Child: Mild anaemia","Proportion",23.34,7.74,38.93
+"North Darfur","Child: Moderate anaemia","Proportion",15.35,1.68,29.03
+"North Darfur","Child: Severe Anaemia","Proportion",1.32,0.01,5.42
+"North Darfur","Pregnant: Mild anaemia","Proportion",21.6,0.01,55.55
+"North Darfur","Pregnant: Moderate anaemia","Proportion",20.97,0.01,61.11
+"North Darfur","Pregnant: Severe Anaemia","Proportion",2.7,0.01,19.62
+"North Darfur","Non-pregnant: Mild anaemia","Proportion",14.65,0.01,30
+"North Darfur","Non-pregnant: Moderate anaemia","Proportion",12.27,0.01,29.35
+"North Darfur","Non-pregnant: Severe Anaemia","Proportion",1.75,0.01,9.06
+"North Darfur","Child: Acute inflammation","Proportion",33.35,17.62,49.09
+"North Darfur","Pregnant: Acute inflammation","Proportion",42.66,2.45,82.88
+"North Darfur","Non-pregnant: Acute inflammation","Proportion",29.31,11.28,47.34
+"North Darfur","Child: Iron deficiency","Proportion",39.81,13.56,66.06
+"North Darfur","Child: Iron deficiency anaemia","Proportion",21.25,6.45,36.05
+"North Darfur","Pregnant: Iron deficiency","Proportion",48.76,0.01,99.99
+"North Darfur","Pregnant: Iron overload","Proportion",0.14,0.01,2.57
+"North Darfur","Pregnant: Iron deficiency anaemia","Proportion",28.28,0.01,70.82
+"North Darfur","Non-pregnant: Iron deficiency","Proportion",36.19,12.01,60.37
+"North Darfur","Non-pregnant: Iron overload","Proportion",1.1,0.01,8.66
+"North Darfur","Non-pregnant: Iron deficiency anaemia","Proportion",15.91,1.09,30.73
+"North Darfur","Child: Hypocalcaemia","Proportion",52.97,35.25,70.68
+"North Darfur","Child: Hpercalcaemia","Proportion",0.63,0.01,3.05
+"North Darfur","Pregnant: Hypocalcaemia","Proportion",75.35,48.68,99.99
+"North Darfur","Pregnant: Hpercalcaemia","Proportion",6.66,0.01,19.92
+"North Darfur","Non-pregnant: Hypocalcaemia","Proportion",71.85,52.9,90.81
+"North Darfur","Non-pregnant: Hpercalcaemia","Proportion",7.49,0.01,24.88
+"North Darfur","Pregnant: Iodine intake above requirements","Proportion",4.11,0.01,16.83
+"North Darfur","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"North Darfur","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",3.76,0.01,19.17
+"North Darfur","Non-pregnant non-lactating: Iodine intake excessive","Proportion",4.05,0.01,27.94
+"North Darfur","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"North Darfur","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"North Darfur","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",14.85,0.01,50.94
+"North Darfur","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",14.64,0.01,44.53
+"North Darfur","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",30.1,0.01,68.12
+"North Darfur","Non-pregnant lactating: Iodine insufficiency","Proportion",63.1,39.94,86.27
+"North Darfur","Pregnant: Iodine insufficiency","Proportion",78.56,78.56,78.56
+"Khartoum","Child: Mild anaemia","Proportion",18.08,3.41,32.75
+"Khartoum","Child: Moderate anaemia","Proportion",23.9,5.11,42.69
+"Khartoum","Child: Severe Anaemia","Proportion",1.68,0.01,7.01
+"Khartoum","Pregnant: Mild anaemia","Proportion",13.95,0.01,39.46
+"Khartoum","Pregnant: Moderate anaemia","Proportion",2.53,0.01,17.9
+"Khartoum","Pregnant: Severe Anaemia","Proportion",0,0,0
+"Khartoum","Non-pregnant: Mild anaemia","Proportion",13.16,0.67,25.64
+"Khartoum","Non-pregnant: Moderate anaemia","Proportion",4.82,0.01,13.08
+"Khartoum","Non-pregnant: Severe Anaemia","Proportion",0,0,1.45
+"Khartoum","Child: Acute inflammation","Proportion",33.13,14.95,51.31
+"Khartoum","Pregnant: Acute inflammation","Proportion",30.9,0.01,64.24
+"Khartoum","Non-pregnant: Acute inflammation","Proportion",39.68,21.3,58.05
+"Khartoum","Child: Iron deficiency","Proportion",59.74,39.64,79.83
+"Khartoum","Child: Iron deficiency anaemia","Proportion",31.03,9.99,52.06
+"Khartoum","Pregnant: Iron deficiency","Proportion",59.25,24.78,93.71
+"Khartoum","Pregnant: Iron overload","Proportion",0,0,0
+"Khartoum","Pregnant: Iron deficiency anaemia","Proportion",8.1,0.01,28.57
+"Khartoum","Non-pregnant: Iron deficiency","Proportion",47.21,23,71.41
+"Khartoum","Non-pregnant: Iron overload","Proportion",0.59,0.01,5.48
+"Khartoum","Non-pregnant: Iron deficiency anaemia","Proportion",11.05,0.01,22.43
+"Khartoum","Child: Hypocalcaemia","Proportion",0,0,0
+"Khartoum","Child: Hpercalcaemia","Proportion",0,0,0
+"Khartoum","Pregnant: Hypocalcaemia","Proportion",0,0,0
+"Khartoum","Pregnant: Hpercalcaemia","Proportion",0,0,0
+"Khartoum","Non-pregnant: Hypocalcaemia","Proportion",0,0,0
+"Khartoum","Non-pregnant: Hpercalcaemia","Proportion",0,0,0
+"Khartoum","Pregnant: Iodine intake above requirements","Proportion",13.73,0.01,48.48
+"Khartoum","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Khartoum","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",24.84,0.01,56.14
+"Khartoum","Non-pregnant non-lactating: Iodine intake excessive","Proportion",13.14,0.01,48.85
+"Khartoum","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Khartoum","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Khartoum","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",12.02,0.01,35.19
+"Khartoum","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",2.42,0.01,8.76
+"Khartoum","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",3.28,0.01,13.42
+"Khartoum","Non-pregnant lactating: Iodine insufficiency","Proportion",30.76,2.17,59.35
+"Khartoum","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"Blue Nile","Child: Mild anaemia","Proportion",27.84,14.52,41.16
+"Blue Nile","Child: Moderate anaemia","Proportion",29.64,15.08,44.2
+"Blue Nile","Child: Severe Anaemia","Proportion",2.92,0.01,9.8
+"Blue Nile","Pregnant: Mild anaemia","Proportion",34.87,6.3,63.44
+"Blue Nile","Pregnant: Moderate anaemia","Proportion",23.29,0.01,51.29
+"Blue Nile","Pregnant: Severe Anaemia","Proportion",0.84,0.01,6.38
+"Blue Nile","Non-pregnant: Mild anaemia","Proportion",27.4,14.17,40.63
+"Blue Nile","Non-pregnant: Moderate anaemia","Proportion",14.33,1.19,27.46
+"Blue Nile","Non-pregnant: Severe Anaemia","Proportion",1.14,0.01,5.77
+"Blue Nile","Child: Acute inflammation","Proportion",21.18,5.55,36.81
+"Blue Nile","Pregnant: Acute inflammation","Proportion",35.07,0.01,71.74
+"Blue Nile","Non-pregnant: Acute inflammation","Proportion",18.1,3.31,32.88
+"Blue Nile","Child: Iron deficiency","Proportion",32.94,11.9,53.98
+"Blue Nile","Child: Iron deficiency anaemia","Proportion",14.45,0.14,28.76
+"Blue Nile","Pregnant: Iron deficiency","Proportion",62.88,21.26,99.99
+"Blue Nile","Pregnant: Iron overload","Proportion",0.74,0.01,7.81
+"Blue Nile","Pregnant: Iron deficiency anaemia","Proportion",29.25,0.01,62.77
+"Blue Nile","Non-pregnant: Iron deficiency","Proportion",38.7,15.23,62.17
+"Blue Nile","Non-pregnant: Iron overload","Proportion",2.99,0.01,9.13
+"Blue Nile","Non-pregnant: Iron deficiency anaemia","Proportion",16.8,1.67,31.93
+"Blue Nile","Child: Hypocalcaemia","Proportion",52.84,31.17,74.5
+"Blue Nile","Child: Hpercalcaemia","Proportion",8.23,0.01,19.55
+"Blue Nile","Pregnant: Hypocalcaemia","Proportion",90.68,67.19,99.99
+"Blue Nile","Pregnant: Hpercalcaemia","Proportion",9.32,0.01,29.43
+"Blue Nile","Non-pregnant: Hypocalcaemia","Proportion",84.68,69.19,99.99
+"Blue Nile","Non-pregnant: Hpercalcaemia","Proportion",12.19,0.01,28.35
+"Blue Nile","Pregnant: Iodine intake above requirements","Proportion",3.28,0.01,22.2
+"Blue Nile","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Blue Nile","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",16.68,0.01,50.9
+"Blue Nile","Non-pregnant non-lactating: Iodine intake excessive","Proportion",0.55,0.01,8.47
+"Blue Nile","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Blue Nile","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Blue Nile","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",10.37,0.01,37.1
+"Blue Nile","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",9.56,0.01,27.1
+"Blue Nile","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",13.33,0.01,48.31
+"Blue Nile","Non-pregnant lactating: Iodine insufficiency","Proportion",58.67,32.76,84.59
+"Blue Nile","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"South Darfur","Child: Mild anaemia","Proportion",16.13,0.01,32.7
+"South Darfur","Child: Moderate anaemia","Proportion",15.39,0.01,32.81
+"South Darfur","Child: Severe Anaemia","Proportion",1.13,0.01,6.57
+"South Darfur","Pregnant: Mild anaemia","Proportion",12.62,0.01,42.71
+"South Darfur","Pregnant: Moderate anaemia","Proportion",14.37,0.01,49.11
+"South Darfur","Pregnant: Severe Anaemia","Proportion",2.6,0.01,19.35
+"South Darfur","Non-pregnant: Mild anaemia","Proportion",18.89,0.01,39.7
+"South Darfur","Non-pregnant: Moderate anaemia","Proportion",13.03,0.01,34.38
+"South Darfur","Non-pregnant: Severe Anaemia","Proportion",0.37,0.01,4.03
+"South Darfur","Child: Acute inflammation","Proportion",40.48,16.39,64.58
+"South Darfur","Pregnant: Acute inflammation","Proportion",37.47,0.01,78.15
+"South Darfur","Non-pregnant: Acute inflammation","Proportion",35.6,11.52,59.67
+"South Darfur","Child: Iron deficiency","Proportion",31.15,8.31,53.99
+"South Darfur","Child: Iron deficiency anaemia","Proportion",15.04,0.01,33.39
+"South Darfur","Pregnant: Iron deficiency","Proportion",34.02,0.01,83.92
+"South Darfur","Pregnant: Iron overload","Proportion",1.57,0.01,17.85
+"South Darfur","Pregnant: Iron deficiency anaemia","Proportion",12.05,0.01,36.44
+"South Darfur","Non-pregnant: Iron deficiency","Proportion",38.96,11.61,66.31
+"South Darfur","Non-pregnant: Iron overload","Proportion",2.18,0.01,10.94
+"South Darfur","Non-pregnant: Iron deficiency anaemia","Proportion",15.48,0.01,33.96
+"South Darfur","Child: Hypocalcaemia","Proportion",48.59,26.85,70.33
+"South Darfur","Child: Hpercalcaemia","Proportion",2.28,0.01,13.54
+"South Darfur","Pregnant: Hypocalcaemia","Proportion",61.94,29.79,94.09
+"South Darfur","Pregnant: Hpercalcaemia","Proportion",6.02,0.01,34.13
+"South Darfur","Non-pregnant: Hypocalcaemia","Proportion",66.29,39.94,92.65
+"South Darfur","Non-pregnant: Hpercalcaemia","Proportion",12.9,0.01,39.45
+"South Darfur","Pregnant: Iodine intake above requirements","Proportion",4.3,0.01,25.05
+"South Darfur","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"South Darfur","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",4.76,0.01,21.56
+"South Darfur","Non-pregnant non-lactating: Iodine intake excessive","Proportion",1.45,0.01,14.65
+"South Darfur","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"South Darfur","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"South Darfur","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",13.97,0.01,46.4
+"South Darfur","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",20.09,0.01,55.29
+"South Darfur","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",15.57,0.01,51.51
+"South Darfur","Non-pregnant lactating: Iodine insufficiency","Proportion",59.75,40.75,78.75
+"South Darfur","Pregnant: Iodine insufficiency","Proportion",70.74,70.74,70.74
+"Al-Gazeera","Child: Mild anaemia","Proportion",23.97,10.19,37.76
+"Al-Gazeera","Child: Moderate anaemia","Proportion",21.74,7.09,36.39
+"Al-Gazeera","Child: Severe Anaemia","Proportion",0.32,0.01,2.82
+"Al-Gazeera","Pregnant: Mild anaemia","Proportion",20.62,0.01,41.27
+"Al-Gazeera","Pregnant: Moderate anaemia","Proportion",8.81,0.01,23.13
+"Al-Gazeera","Pregnant: Severe Anaemia","Proportion",0,0,0
+"Al-Gazeera","Non-pregnant: Mild anaemia","Proportion",16.3,1.25,31.36
+"Al-Gazeera","Non-pregnant: Moderate anaemia","Proportion",5.51,0.01,16.57
+"Al-Gazeera","Non-pregnant: Severe Anaemia","Proportion",0,0,0
+"Al-Gazeera","Child: Acute inflammation","Proportion",16.54,0.01,33.47
+"Al-Gazeera","Pregnant: Acute inflammation","Proportion",13.76,0.01,39.4
+"Al-Gazeera","Non-pregnant: Acute inflammation","Proportion",15.57,0.01,34
+"Al-Gazeera","Child: Iron deficiency","Proportion",56.57,29.9,83.25
+"Al-Gazeera","Child: Iron deficiency anaemia","Proportion",18.46,1.99,34.94
+"Al-Gazeera","Pregnant: Iron deficiency","Proportion",47.04,10.71,83.37
+"Al-Gazeera","Pregnant: Iron overload","Proportion",0,0,10.26
+"Al-Gazeera","Pregnant: Iron deficiency anaemia","Proportion",17.05,0.01,39.99
+"Al-Gazeera","Non-pregnant: Iron deficiency","Proportion",40.86,19.82,61.89
+"Al-Gazeera","Non-pregnant: Iron overload","Proportion",0,0,0
+"Al-Gazeera","Non-pregnant: Iron deficiency anaemia","Proportion",10.05,0.01,22.56
+"Al-Gazeera","Child: Hypocalcaemia","Proportion",10.65,0.01,26.77
+"Al-Gazeera","Child: Hpercalcaemia","Proportion",16.01,0.01,33.96
+"Al-Gazeera","Pregnant: Hypocalcaemia","Proportion",55.05,16.59,93.51
+"Al-Gazeera","Pregnant: Hpercalcaemia","Proportion",21.58,0.01,45.15
+"Al-Gazeera","Non-pregnant: Hypocalcaemia","Proportion",16.87,0.01,49.1
+"Al-Gazeera","Non-pregnant: Hpercalcaemia","Proportion",76.17,40.03,99.99
+"Al-Gazeera","Pregnant: Iodine intake above requirements","Proportion",2.71,0.01,14.37
+"Al-Gazeera","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Al-Gazeera","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",8.25,0.01,30.34
+"Al-Gazeera","Non-pregnant non-lactating: Iodine intake excessive","Proportion",3.44,0.01,14.01
+"Al-Gazeera","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Al-Gazeera","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Al-Gazeera","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",26.29,5.09,47.48
+"Al-Gazeera","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",10.86,0.01,31.93
+"Al-Gazeera","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",8.08,0.01,26.76
+"Al-Gazeera","Non-pregnant lactating: Iodine insufficiency","Proportion",68.98,40.57,97.4
+"Al-Gazeera","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"White Nile","Child: Mild anaemia","Proportion",24.73,8.99,40.47
+"White Nile","Child: Moderate anaemia","Proportion",17.58,2.39,32.76
+"White Nile","Child: Severe Anaemia","Proportion",1.17,0.01,6.37
+"White Nile","Pregnant: Mild anaemia","Proportion",14.81,0.01,37.95
+"White Nile","Pregnant: Moderate anaemia","Proportion",5.9,0.01,19.45
+"White Nile","Pregnant: Severe Anaemia","Proportion",0,0,0
+"White Nile","Non-pregnant: Mild anaemia","Proportion",14.71,1.21,28.21
+"White Nile","Non-pregnant: Moderate anaemia","Proportion",6.28,0.01,17.15
+"White Nile","Non-pregnant: Severe Anaemia","Proportion",0.16,0.01,2.25
+"White Nile","Child: Acute inflammation","Proportion",12.43,0.87,23.98
+"White Nile","Pregnant: Acute inflammation","Proportion",30.21,0.01,63.17
+"White Nile","Non-pregnant: Acute inflammation","Proportion",18.06,0.67,35.46
+"White Nile","Child: Iron deficiency","Proportion",52.03,34.39,69.67
+"White Nile","Child: Iron deficiency anaemia","Proportion",23.65,7.58,39.72
+"White Nile","Pregnant: Iron deficiency","Proportion",57.44,24.25,90.63
+"White Nile","Pregnant: Iron overload","Proportion",0,0,9.67
+"White Nile","Pregnant: Iron deficiency anaemia","Proportion",7.21,0.01,28.92
+"White Nile","Non-pregnant: Iron deficiency","Proportion",47.09,27.25,66.93
+"White Nile","Non-pregnant: Iron overload","Proportion",0.52,0.01,2.79
+"White Nile","Non-pregnant: Iron deficiency anaemia","Proportion",10.62,0.01,22.88
+"White Nile","Child: Hypocalcaemia","Proportion",58.99,34.23,83.75
+"White Nile","Child: Hpercalcaemia","Proportion",2.33,0.01,8.83
+"White Nile","Pregnant: Hypocalcaemia","Proportion",85.99,57.28,99.99
+"White Nile","Pregnant: Hpercalcaemia","Proportion",11.58,0.01,31.29
+"White Nile","Non-pregnant: Hypocalcaemia","Proportion",86.17,67.87,99.99
+"White Nile","Non-pregnant: Hpercalcaemia","Proportion",10.29,0.01,29.52
+"White Nile","Pregnant: Iodine intake above requirements","Proportion",9.32,0.01,30.2
+"White Nile","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"White Nile","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",11.44,0.01,34.64
+"White Nile","Non-pregnant non-lactating: Iodine intake excessive","Proportion",1.63,0.01,10.84
+"White Nile","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"White Nile","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"White Nile","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",20.43,0.01,43.24
+"White Nile","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",12.57,0.01,36.66
+"White Nile","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",7.57,0.01,25.54
+"White Nile","Non-pregnant lactating: Iodine insufficiency","Proportion",53.12,20.57,85.67
+"White Nile","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"Central Darfur","Child: Mild anaemia","Proportion",22.91,0.01,48.59
+"Central Darfur","Child: Moderate anaemia","Proportion",23.69,2.35,45.03
+"Central Darfur","Child: Severe Anaemia","Proportion",1.35,0.01,7.65
+"Central Darfur","Pregnant: Mild anaemia","Proportion",17.02,0.01,46.96
+"Central Darfur","Pregnant: Moderate anaemia","Proportion",26.6,0.01,71.14
+"Central Darfur","Pregnant: Severe Anaemia","Proportion",1.13,0.01,7.2
+"Central Darfur","Non-pregnant: Mild anaemia","Proportion",23.67,4.63,42.71
+"Central Darfur","Non-pregnant: Moderate anaemia","Proportion",18.83,1.95,35.71
+"Central Darfur","Non-pregnant: Severe Anaemia","Proportion",1.36,0.01,6.21
+"Central Darfur","Child: Acute inflammation","Proportion",58.6,34.4,82.8
+"Central Darfur","Pregnant: Acute inflammation","Proportion",63.6,20.78,99.99
+"Central Darfur","Non-pregnant: Acute inflammation","Proportion",52.43,25.71,79.16
+"Central Darfur","Child: Iron deficiency","Proportion",34.25,11.28,57.23
+"Central Darfur","Child: Iron deficiency anaemia","Proportion",16.79,0.01,36.49
+"Central Darfur","Pregnant: Iron deficiency","Proportion",64.19,8.84,99.99
+"Central Darfur","Pregnant: Iron overload","Proportion",1.2,0.01,5.98
+"Central Darfur","Pregnant: Iron deficiency anaemia","Proportion",20.36,0.01,61.64
+"Central Darfur","Non-pregnant: Iron deficiency","Proportion",34.05,7.13,60.97
+"Central Darfur","Non-pregnant: Iron overload","Proportion",0,0,0
+"Central Darfur","Non-pregnant: Iron deficiency anaemia","Proportion",13.82,0.01,35.18
+"Central Darfur","Child: Hypocalcaemia","Proportion",40.22,14.06,66.37
+"Central Darfur","Child: Hpercalcaemia","Proportion",10.26,0.01,32.45
+"Central Darfur","Pregnant: Hypocalcaemia","Proportion",50.14,4.05,96.23
+"Central Darfur","Pregnant: Hpercalcaemia","Proportion",37.36,0.01,86.69
+"Central Darfur","Non-pregnant: Hypocalcaemia","Proportion",41.4,0.01,85.09
+"Central Darfur","Non-pregnant: Hpercalcaemia","Proportion",50.17,8.27,92.06
+"Central Darfur","Pregnant: Iodine intake above requirements","Proportion",0,0,0
+"Central Darfur","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Central Darfur","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",1.35,0.01,6.7
+"Central Darfur","Non-pregnant non-lactating: Iodine intake excessive","Proportion",0.66,0.01,5.07
+"Central Darfur","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Central Darfur","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Central Darfur","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",27.93,0.01,78.49
+"Central Darfur","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",21.01,0.01,57.92
+"Central Darfur","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",37.2,0.01,74.57
+"Central Darfur","Non-pregnant lactating: Iodine insufficiency","Proportion",96.21,83.77,99.99
+"Central Darfur","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"Red Sea","Child: Mild anaemia","Proportion",24.08,11.19,36.98
+"Red Sea","Child: Moderate anaemia","Proportion",33.99,19.52,48.45
+"Red Sea","Child: Severe Anaemia","Proportion",3.77,0.01,11.77
+"Red Sea","Pregnant: Mild anaemia","Proportion",29.32,0.01,64.56
+"Red Sea","Pregnant: Moderate anaemia","Proportion",22.81,0.01,57.22
+"Red Sea","Pregnant: Severe Anaemia","Proportion",2.42,0.01,20.29
+"Red Sea","Non-pregnant: Mild anaemia","Proportion",16.07,1.74,30.4
+"Red Sea","Non-pregnant: Moderate anaemia","Proportion",21.5,4.2,38.81
+"Red Sea","Non-pregnant: Severe Anaemia","Proportion",5.3,0.01,15.54
+"Red Sea","Child: Acute inflammation","Proportion",32.91,13.78,52.04
+"Red Sea","Pregnant: Acute inflammation","Proportion",25.13,0.01,59.32
+"Red Sea","Non-pregnant: Acute inflammation","Proportion",38.2,18.07,58.32
+"Red Sea","Child: Iron deficiency","Proportion",69.4,51.77,87.03
+"Red Sea","Child: Iron deficiency anaemia","Proportion",44.06,26.18,61.94
+"Red Sea","Pregnant: Iron deficiency","Proportion",65.66,34.58,96.74
+"Red Sea","Pregnant: Iron overload","Proportion",0,0,0
+"Red Sea","Pregnant: Iron deficiency anaemia","Proportion",41.6,0.01,84.79
+"Red Sea","Non-pregnant: Iron deficiency","Proportion",64.01,43.17,84.85
+"Red Sea","Non-pregnant: Iron overload","Proportion",0,0,0
+"Red Sea","Non-pregnant: Iron deficiency anaemia","Proportion",32.51,10.78,54.23
+"Red Sea","Child: Hypocalcaemia","Proportion",32.08,14.71,49.45
+"Red Sea","Child: Hpercalcaemia","Proportion",11.44,0.01,24.43
+"Red Sea","Pregnant: Hypocalcaemia","Proportion",56.22,14.53,97.92
+"Red Sea","Pregnant: Hpercalcaemia","Proportion",28.84,0.01,74.55
+"Red Sea","Non-pregnant: Hypocalcaemia","Proportion",37.2,0.01,75
+"Red Sea","Non-pregnant: Hpercalcaemia","Proportion",56.01,22.03,89.98
+"Red Sea","Pregnant: Iodine intake above requirements","Proportion",42.78,0.01,99.99
+"Red Sea","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Red Sea","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",59.03,27.72,90.34
+"Red Sea","Non-pregnant non-lactating: Iodine intake excessive","Proportion",10.48,0.01,29.71
+"Red Sea","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Red Sea","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Red Sea","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",5.81,0.01,20.54
+"Red Sea","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",5.13,0.01,16.32
+"Red Sea","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",0.91,0.01,8.15
+"Red Sea","Non-pregnant lactating: Iodine insufficiency","Proportion",10.3,0.01,27.79
+"Red Sea","Pregnant: Iodine insufficiency","Proportion",56.53,56.53,56.53
+"North Kourdofan","Child: Mild anaemia","Proportion",24.42,12.82,36.02
+"North Kourdofan","Child: Moderate anaemia","Proportion",25.06,12.96,37.15
+"North Kourdofan","Child: Severe Anaemia","Proportion",1.52,0.01,6.26
+"North Kourdofan","Pregnant: Mild anaemia","Proportion",21.87,0.01,46.63
+"North Kourdofan","Pregnant: Moderate anaemia","Proportion",19.43,0.01,47.81
+"North Kourdofan","Pregnant: Severe Anaemia","Proportion",0.39,0.01,4.66
+"North Kourdofan","Non-pregnant: Mild anaemia","Proportion",16.8,4.34,29.25
+"North Kourdofan","Non-pregnant: Moderate anaemia","Proportion",11.96,0.01,25.22
+"North Kourdofan","Non-pregnant: Severe Anaemia","Proportion",0.3,0.01,2.99
+"North Kourdofan","Child: Acute inflammation","Proportion",16.03,0.01,34.73
+"North Kourdofan","Pregnant: Acute inflammation","Proportion",36.01,2.38,69.64
+"North Kourdofan","Non-pregnant: Acute inflammation","Proportion",21.88,3.75,40
+"North Kourdofan","Child: Iron deficiency","Proportion",68.03,46.7,89.37
+"North Kourdofan","Child: Iron deficiency anaemia","Proportion",19.15,3.25,35.04
+"North Kourdofan","Pregnant: Iron deficiency","Proportion",68.09,33.63,99.99
+"North Kourdofan","Pregnant: Iron overload","Proportion",0,0,0
+"North Kourdofan","Pregnant: Iron deficiency anaemia","Proportion",28.08,0.01,58.28
+"North Kourdofan","Non-pregnant: Iron deficiency","Proportion",53.13,31.17,75.09
+"North Kourdofan","Non-pregnant: Iron overload","Proportion",0.68,0.01,6.76
+"North Kourdofan","Non-pregnant: Iron deficiency anaemia","Proportion",16.86,3.12,30.6
+"North Kourdofan","Child: Hypocalcaemia","Proportion",78.92,59.22,98.62
+"North Kourdofan","Child: Hpercalcaemia","Proportion",3.14,0.01,11.15
+"North Kourdofan","Pregnant: Hypocalcaemia","Proportion",94.32,76.66,99.99
+"North Kourdofan","Pregnant: Hpercalcaemia","Proportion",5.45,0.01,21.6
+"North Kourdofan","Non-pregnant: Hypocalcaemia","Proportion",89.86,73.78,99.99
+"North Kourdofan","Non-pregnant: Hpercalcaemia","Proportion",9.03,0.01,26.93
+"North Kourdofan","Pregnant: Iodine intake above requirements","Proportion",1.28,0.01,17.02
+"North Kourdofan","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"North Kourdofan","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",15.09,0.01,38.48
+"North Kourdofan","Non-pregnant non-lactating: Iodine intake excessive","Proportion",5.15,0.01,30.76
+"North Kourdofan","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"North Kourdofan","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"North Kourdofan","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",10.31,0.01,38.09
+"North Kourdofan","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",9.98,0.01,39.86
+"North Kourdofan","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",12.61,0.01,39.33
+"North Kourdofan","Non-pregnant lactating: Iodine insufficiency","Proportion",61.11,38.46,83.75
+"North Kourdofan","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"East Darfur","Child: Mild anaemia","Proportion",31.03,10.57,51.5
+"East Darfur","Child: Moderate anaemia","Proportion",26.98,0.01,57.63
+"East Darfur","Child: Severe Anaemia","Proportion",3.65,0.01,12.89
+"East Darfur","Pregnant: Mild anaemia","Proportion",26.93,0.01,57.82
+"East Darfur","Pregnant: Moderate anaemia","Proportion",16.89,0.01,55.53
+"East Darfur","Pregnant: Severe Anaemia","Proportion",5.14,0.01,30.22
+"East Darfur","Non-pregnant: Mild anaemia","Proportion",16.54,2.33,30.76
+"East Darfur","Non-pregnant: Moderate anaemia","Proportion",20.45,4,36.9
+"East Darfur","Non-pregnant: Severe Anaemia","Proportion",3.45,0.01,10.56
+"East Darfur","Child: Acute inflammation","Proportion",48.64,26.22,71.07
+"East Darfur","Pregnant: Acute inflammation","Proportion",31.67,0.01,63.5
+"East Darfur","Non-pregnant: Acute inflammation","Proportion",40.74,21.61,59.87
+"East Darfur","Child: Iron deficiency","Proportion",43.99,15.7,72.29
+"East Darfur","Child: Iron deficiency anaemia","Proportion",28.9,0.2,57.6
+"East Darfur","Pregnant: Iron deficiency","Proportion",80.62,42.45,99.99
+"East Darfur","Pregnant: Iron overload","Proportion",2.21,0.01,9.55
+"East Darfur","Pregnant: Iron deficiency anaemia","Proportion",41.45,0.01,90.55
+"East Darfur","Non-pregnant: Iron deficiency","Proportion",48.07,22.55,73.58
+"East Darfur","Non-pregnant: Iron overload","Proportion",1.25,0.01,6.11
+"East Darfur","Non-pregnant: Iron deficiency anaemia","Proportion",20.01,1.46,38.56
+"East Darfur","Child: Hypocalcaemia","Proportion",59.45,37,81.89
+"East Darfur","Child: Hpercalcaemia","Proportion",4.42,0.01,17.04
+"East Darfur","Pregnant: Hypocalcaemia","Proportion",78.62,45.09,99.99
+"East Darfur","Pregnant: Hpercalcaemia","Proportion",17.11,0.01,57.41
+"East Darfur","Non-pregnant: Hypocalcaemia","Proportion",81.38,57.03,99.99
+"East Darfur","Non-pregnant: Hpercalcaemia","Proportion",16.08,0.01,37.83
+"East Darfur","Pregnant: Iodine intake above requirements","Proportion",0,0,1.23
+"East Darfur","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"East Darfur","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",5.04,0.01,23.58
+"East Darfur","Non-pregnant non-lactating: Iodine intake excessive","Proportion",0,0,0
+"East Darfur","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"East Darfur","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"East Darfur","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",9.04,0.01,31.35
+"East Darfur","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",13.4,0.01,30.65
+"East Darfur","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",55.74,18.04,93.44
+"East Darfur","Non-pregnant lactating: Iodine insufficiency","Proportion",96.23,79.56,99.99
+"East Darfur","Pregnant: Iodine insufficiency","Proportion",100,100,100
+"Kassala","Child: Mild anaemia","Proportion",21.01,8.7,33.32
+"Kassala","Child: Moderate anaemia","Proportion",26.85,12.92,40.78
+"Kassala","Child: Severe Anaemia","Proportion",2.52,0.01,8.81
+"Kassala","Pregnant: Mild anaemia","Proportion",28.01,0.01,68.46
+"Kassala","Pregnant: Moderate anaemia","Proportion",26.18,0.01,71.72
+"Kassala","Pregnant: Severe Anaemia","Proportion",0,0,0
+"Kassala","Non-pregnant: Mild anaemia","Proportion",16.12,0.88,31.37
+"Kassala","Non-pregnant: Moderate anaemia","Proportion",16.82,1.69,31.95
+"Kassala","Non-pregnant: Severe Anaemia","Proportion",0.28,0.01,1.81
+"Kassala","Child: Acute inflammation","Proportion",50.72,0.01,99.99
+"Kassala","Pregnant: Acute inflammation","Proportion",61.42,6.22,99.99
+"Kassala","Non-pregnant: Acute inflammation","Proportion",51.8,27.49,76.11
+"Kassala","Child: Iron deficiency","Proportion",57.02,34.96,79.09
+"Kassala","Child: Iron deficiency anaemia","Proportion",21.26,2.98,39.53
+"Kassala","Pregnant: Iron deficiency","Proportion",81.86,43.09,99.99
+"Kassala","Pregnant: Iron overload","Proportion",0,0,0
+"Kassala","Pregnant: Iron deficiency anaemia","Proportion",49.33,7.51,91.15
+"Kassala","Non-pregnant: Iron deficiency","Proportion",60.26,34.47,86.04
+"Kassala","Non-pregnant: Iron overload","Proportion",0.52,0.01,5.95
+"Kassala","Non-pregnant: Iron deficiency anaemia","Proportion",24,5.62,42.37
+"Kassala","Child: Hypocalcaemia","Proportion",51.22,29.07,73.37
+"Kassala","Child: Hpercalcaemia","Proportion",8.6,0.01,24.61
+"Kassala","Pregnant: Hypocalcaemia","Proportion",52.28,14.89,89.67
+"Kassala","Pregnant: Hpercalcaemia","Proportion",25.53,0.01,71.9
+"Kassala","Non-pregnant: Hypocalcaemia","Proportion",53.98,16.22,91.75
+"Kassala","Non-pregnant: Hpercalcaemia","Proportion",41.33,6.45,76.21
+"Kassala","Pregnant: Iodine intake above requirements","Proportion",25.21,5.44,44.98
+"Kassala","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"Kassala","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",22.69,0.01,51.46
+"Kassala","Non-pregnant non-lactating: Iodine intake excessive","Proportion",25.09,0.01,53.2
+"Kassala","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"Kassala","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"Kassala","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",13.27,0.01,43.66
+"Kassala","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",8.01,0.01,38.83
+"Kassala","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",5.19,0.01,23.14
+"Kassala","Non-pregnant lactating: Iodine insufficiency","Proportion",42.28,17.55,67.01
+"Kassala","Pregnant: Iodine insufficiency","Proportion",85.17,85.17,85.17
+"South Kourdofan","Child: Mild anaemia","Proportion",24.46,4.86,44.06
+"South Kourdofan","Child: Moderate anaemia","Proportion",21.75,6.62,36.88
+"South Kourdofan","Child: Severe Anaemia","Proportion",2.66,0.01,9.84
+"South Kourdofan","Pregnant: Mild anaemia","Proportion",17.61,0.01,44.43
+"South Kourdofan","Pregnant: Moderate anaemia","Proportion",29.92,0.01,66.88
+"South Kourdofan","Pregnant: Severe Anaemia","Proportion",4.93,0.01,31.4
+"South Kourdofan","Non-pregnant: Mild anaemia","Proportion",18.22,1.57,34.86
+"South Kourdofan","Non-pregnant: Moderate anaemia","Proportion",9.34,0.01,24.81
+"South Kourdofan","Non-pregnant: Severe Anaemia","Proportion",0.43,0.01,3.24
+"South Kourdofan","Child: Acute inflammation","Proportion",20.96,1.93,40
+"South Kourdofan","Pregnant: Acute inflammation","Proportion",19.41,0.01,57.84
+"South Kourdofan","Non-pregnant: Acute inflammation","Proportion",15.57,0.01,36.38
+"South Kourdofan","Child: Iron deficiency","Proportion",49.32,27.52,71.12
+"South Kourdofan","Child: Iron deficiency anaemia","Proportion",29.72,6.84,52.59
+"South Kourdofan","Pregnant: Iron deficiency","Proportion",59.24,14.45,99.99
+"South Kourdofan","Pregnant: Iron overload","Proportion",0.44,0.01,5.86
+"South Kourdofan","Pregnant: Iron deficiency anaemia","Proportion",31.61,0.01,79.1
+"South Kourdofan","Non-pregnant: Iron deficiency","Proportion",37.83,11.51,64.15
+"South Kourdofan","Non-pregnant: Iron overload","Proportion",0.78,0.01,8.92
+"South Kourdofan","Non-pregnant: Iron deficiency anaemia","Proportion",13.92,0.01,30.45
+"South Kourdofan","Child: Hypocalcaemia","Proportion",55.21,34.22,76.21
+"South Kourdofan","Child: Hpercalcaemia","Proportion",2.34,0.01,8.25
+"South Kourdofan","Pregnant: Hypocalcaemia","Proportion",95.22,85.05,99.99
+"South Kourdofan","Pregnant: Hpercalcaemia","Proportion",0,0,0
+"South Kourdofan","Non-pregnant: Hypocalcaemia","Proportion",85.95,67.58,99.99
+"South Kourdofan","Non-pregnant: Hpercalcaemia","Proportion",10.73,0.01,28.63
+"South Kourdofan","Pregnant: Iodine intake above requirements","Proportion",1.12,0.01,11.29
+"South Kourdofan","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"South Kourdofan","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",15.4,3.71,27.08
+"South Kourdofan","Non-pregnant non-lactating: Iodine intake excessive","Proportion",0,0,0
+"South Kourdofan","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"South Kourdofan","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"South Kourdofan","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",22.43,0.01,58.21
+"South Kourdofan","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",11.22,0.01,35.91
+"South Kourdofan","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",34.79,6.2,63.39
+"South Kourdofan","Non-pregnant lactating: Iodine insufficiency","Proportion",77.75,50.9,99.99
+"South Kourdofan","Pregnant: Iodine insufficiency","Proportion",96.52,96.52,96.52
+"West Darfur","Child: Mild anaemia","Proportion",15.01,5.05,24.97
+"West Darfur","Child: Moderate anaemia","Proportion",13.45,1.75,25.15
+"West Darfur","Child: Severe Anaemia","Proportion",0.45,0.01,2.36
+"West Darfur","Pregnant: Mild anaemia","Proportion",15.45,0.01,34.14
+"West Darfur","Pregnant: Moderate anaemia","Proportion",6.22,0.01,27.57
+"West Darfur","Pregnant: Severe Anaemia","Proportion",0.63,0.01,6.04
+"West Darfur","Non-pregnant: Mild anaemia","Proportion",12.34,1.62,23.06
+"West Darfur","Non-pregnant: Moderate anaemia","Proportion",6.34,0.01,14.66
+"West Darfur","Non-pregnant: Severe Anaemia","Proportion",0,0,0.7
+"West Darfur","Child: Acute inflammation","Proportion",36.37,22.08,50.66
+"West Darfur","Pregnant: Acute inflammation","Proportion",40.43,10.57,70.28
+"West Darfur","Non-pregnant: Acute inflammation","Proportion",46.53,28.77,64.29
+"West Darfur","Child: Iron deficiency","Proportion",27.37,14.46,40.27
+"West Darfur","Child: Iron deficiency anaemia","Proportion",8.15,1.04,15.26
+"West Darfur","Pregnant: Iron deficiency","Proportion",33.42,6.42,60.42
+"West Darfur","Pregnant: Iron overload","Proportion",0,0,4.15
+"West Darfur","Pregnant: Iron deficiency anaemia","Proportion",5.12,0.01,22.92
+"West Darfur","Non-pregnant: Iron deficiency","Proportion",25.3,6.23,44.37
+"West Darfur","Non-pregnant: Iron overload","Proportion",0.9,0.01,4.45
+"West Darfur","Non-pregnant: Iron deficiency anaemia","Proportion",4.9,0.01,12.37
+"West Darfur","Child: Hypocalcaemia","Proportion",51.82,35.72,67.92
+"West Darfur","Child: Hpercalcaemia","Proportion",6.99,0.01,14.85
+"West Darfur","Pregnant: Hypocalcaemia","Proportion",84.96,59.88,99.99
+"West Darfur","Pregnant: Hpercalcaemia","Proportion",10.32,0.01,37.12
+"West Darfur","Non-pregnant: Hypocalcaemia","Proportion",72.09,53.18,91.01
+"West Darfur","Non-pregnant: Hpercalcaemia","Proportion",21.97,3.84,40.1
+"West Darfur","Pregnant: Iodine intake above requirements","Proportion",0,0,0
+"West Darfur","Pregnant: Iodine intake excessive","Proportion",0,0,0
+"West Darfur","Non-pregnant non-lactating: Iodine intake above requirements","Proportion",0.51,0.01,5.55
+"West Darfur","Non-pregnant non-lactating: Iodine intake excessive","Proportion",0.54,0.01,4.83
+"West Darfur","Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
+"West Darfur","Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
+"West Darfur","Non-pregnant non-lactating: Mild iodine deficiency","Proportion",9.58,0.01,30.12
+"West Darfur","Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",12.7,0.01,33.02
+"West Darfur","Non-pregnant non-lactating: Severe iodine deficiency","Proportion",67,37.81,96.18
+"West Darfur","Non-pregnant lactating: Iodine insufficiency","Proportion",92.22,81.26,99.99
+"West Darfur","Pregnant: Iodine insufficiency","Proportion",96.41,96.41,96.41
