@@ -91,7 +91,7 @@ indicatorName <- ifelse(yy[ , 3] == "ID2", "Mild iodine deficiency",
                                "Severe iodine deficiency"))
 
 iodineResults2 <- data.frame(State = yy[ , 1],
-                            Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
-                            xx,
-                            row.names = NULL,
-                            stringsAsFactors = FALSE)
+                             Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
+                             xx,
+                             row.names = NULL,
+                             stringsAsFactors = FALSE)

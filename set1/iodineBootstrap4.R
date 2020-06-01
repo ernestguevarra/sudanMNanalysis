@@ -87,7 +87,7 @@ names(xx) <- c("estimate", "lcl", "ucl", "sd")
 yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
 iodineResults4 <- data.frame(State = yy[ , 1],
-                            Indicator = paste(yy[ , 2], "Iodine intake insufficiency", sep = ": "),
-                            xx,
-                            row.names = NULL,
-                            stringsAsFactors = FALSE)
+                             Indicator = paste(yy[ , 2], "Iodine intake insufficiency", sep = ": "),
+                             xx,
+                             row.names = NULL,
+                             stringsAsFactors = FALSE)
