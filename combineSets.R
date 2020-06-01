@@ -22,25 +22,24 @@ stateResults <- rbind(stateResults, allResults)
 
 write.csv(stateResults, "_byStatesMNresults.csv", row.names = FALSE)
 
+
+results <- openxlsx::createWorkbook()
+
 ## Save per state result into a worksheet in a single workbook
 for(i in unique(stateResults$State)) {
-  results <- openxlsx::createWorkbook()
-  for(j in unique(stateResults$Locality[stateResults$State == i])) {
-    openxlsx::addWorksheet(wb = results, sheetName = j)
-    
-    currentLocalityResults <- subset(stateResults,
-                                    State == i & Locality == j,
-                                    select = c(-State, -Locality, -sd))
-    
-    currentLocalityResults[ , c("estimate", "lcl", "ucl")] <- round(currentLocalityResults[ , c("estimate", "lcl", "ucl")] * 100, digits = 2)
-    
-    openxlsx::writeData(wb = results, 
-                        sheet = j, 
-                        currentLocalityResults)
-  }
-  openxlsx::saveWorkbook(wb = results, 
-                         file = paste("localityResults/_", i, ".xlsx", sep = "", collapse = " "), 
-                         overwrite = TRUE)
+  currentStateResults <- subset(stateResults,
+                                State == i,
+                                select = c(-State, -sd))
+  
+  currentStateResults[!stringr::str_detect(currentStateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")] <- round(currentStateResults[!stringr::str_detect(currentStateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")] * 100, digits = 2)
+  currentStateResults[stringr::str_detect(currentStateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")] <- round(currentStateResults[stringr::str_detect(currentStateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")], digits = 2)
+  
+  openxlsx::addWorksheet(wb = results, sheetName = i)
+  openxlsx::writeData(wb = results, 
+                      sheet = i, 
+                      currentStateResults)
 }
+
+openxlsx::saveWorkbook(wb = results, file = "_byStates.xlsx", overwrite = TRUE)
 
 

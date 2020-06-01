@@ -14,7 +14,7 @@ subDF$indicatorGroup <- with(subDF, {
 stateNames <- unique(locNames$state[locNames$stateID %in% STATES])
 
 ## indicator name vector
-params <- c("iodine", "ID5", "ID6")
+params <- c("iodine")
 
 ## Create empty data.frame for concatenating boot results
 bootDF <- data.frame(matrix(nrow = REPLICATES, 
@@ -88,12 +88,8 @@ names(xx) <- c("estimate", "lcl", "ucl", "sd")
 ## Get admin and identifying data
 yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
-indicatorName <- ifelse(yy[ , 3] %in% "ID5", "Iodine intake above requirements",
-                        ifelse(yy[ , 3] == "ID6", "Iodine intake excessive", 
-                               "Median urinary iodine concentration (microgram/L)"))
-
 iodineResults <- data.frame(State = yy[ , 1],
-                            Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
+                            Indicator = paste(yy[ , 2], "Median urinary iodine concentration (microgram/L)", sep = ": "),
                             xx,
                             row.names = NULL,
                             stringsAsFactors = FALSE)

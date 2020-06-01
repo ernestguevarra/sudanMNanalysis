@@ -1,38 +1,43 @@
-"Indicator","Type","Estimate","LCL","UCL"
-"Child: Mild anaemia","Proportion",22.52,7.51,37.52
-"Child: Moderate anaemia","Proportion",22.01,5.74,38.28
-"Child: Severe Anaemia","Proportion",1.57,0.01,6.82
-"Pregnant: Mild anaemia","Proportion",19.3,0.01,48.35
-"Pregnant: Moderate anaemia","Proportion",12.69,0.01,40.23
-"Pregnant: Severe Anaemia","Proportion",0.98,0.01,11.35
-"Non-pregnant: Mild anaemia","Proportion",16.49,1.48,31.51
-"Non-pregnant: Moderate anaemia","Proportion",10.47,0.01,24.55
-"Non-pregnant: Severe Anaemia","Proportion",0.76,0.01,4.95
-"Child: Acute inflammation","Proportion",30.05,7.73,52.38
-"Pregnant: Acute inflammation","Proportion",34.61,0.01,70.51
-"Non-pregnant: Acute inflammation","Proportion",30.98,11.38,50.58
-"Child: Iron deficiency","Proportion",51.29,29.43,73.16
-"Child: Iron deficiency anaemia","Proportion",23.63,5.53,41.74
-"Pregnant: Iron deficiency","Proportion",57.76,16.22,99.3
-"Pregnant: Iron overload","Proportion",0.39,0.01,7.97
-"Pregnant: Iron deficiency anaemia","Proportion",20.56,0.01,51.64
-"Non-pregnant: Iron deficiency","Proportion",44.19,20.87,67.51
-"Non-pregnant: Iron overload","Proportion",0.83,0.01,6.15
-"Non-pregnant: Iron deficiency anaemia","Proportion",15.06,0.04,30.08
-"Child: Hypocalcaemia","Proportion",38.89,20.06,57.73
-"Child: Hpercalcaemia","Proportion",5.65,0.01,16.79
-"Pregnant: Hypocalcaemia","Proportion",60.69,30.14,91.25
-"Pregnant: Hpercalcaemia","Proportion",12.85,0.01,41.05
-"Non-pregnant: Hypocalcaemia","Proportion",51.85,26.79,76.92
-"Non-pregnant: Hpercalcaemia","Proportion",24.75,0.15,49.36
-"Pregnant: Iodine intake above requirements","Proportion",7.91,0.01,32.41
-"Pregnant: Iodine intake excessive","Proportion",0,0,0
-"Non-pregnant non-lactating: Iodine intake above requirements","Proportion",13.85,0.01,36.84
-"Non-pregnant non-lactating: Iodine intake excessive","Proportion",5.81,0.01,26.93
-"Non-pregnant lactating: Iodine intake above requirements","Proportion",0,0,0
-"Non-pregnant lactating: Iodine intake excessive","Proportion",0,0,0
-"Non-pregnant non-lactating: Mild iodine deficiency","Proportion",16.91,0.01,45.21
-"Non-pregnant non-lactating: Moderate iodine deficiency","Proportion",10.7,0.01,34.45
-"Non-pregnant non-lactating: Severe iodine deficiency","Proportion",15.67,0.01,41.58
-"Non-pregnant lactating: Iodine insufficiency","Proportion",57.85,32.64,83.07
-"Pregnant: Iodine insufficiency","Proportion",92.12,92.12,92.12
+"Indicator","Estimate","LCL","UCL"
+"Child: Median adjusted serum haemoglobin concentration (g/dL)",11.2719126295155,10.9902603170505,11.5535649419805
+"Child: Mild anaemia",0.237212731131673,0.183173672068922,0.291251790194424
+"Child: Moderate anaemia",0.225153244886016,0.165560590689879,0.284745899082153
+"Child: Severe Anaemia",0.0167708725638105,1e-04,0.0340091414871556
+"Pregnant: Median adjusted serum haemoglobin concentration (g/dL)",11.6515414577022,11.1886993709957,12.1143835444087
+"Pregnant: Mild anaemia",0.227527822780833,0.114818511183297,0.340237134378368
+"Pregnant: Moderate anaemia",0.126749035181113,0.0399680927055272,0.213529977656698
+"Pregnant: Severe Anaemia",0.00715290756495525,1e-04,0.0310734858176135
+"Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL)",12.9009928464143,12.6210519489235,13.1809337439051
+"Non-pregnant: Mild anaemia",0.17515423978758,0.119528017462656,0.230780462112505
+"Non-pregnant: Moderate anaemia",0.11208638828806,0.0654941924109957,0.158678584165124
+"Non-pregnant: Severe Anaemia",0.00830792445878544,1e-04,0.0220839229977422
+"Child: Median serum c-reactive protein concentration (mg/L)",3.66832565362389,3.21681508822172,4.11983621902606
+"Child: Acute inflammation",0.31900975822073,0.251955365768336,0.386064150673125
+"Pregnant: Median serum c-reactive protein concentration (mg/L)",4.45665054351977,3.50091983080407,5.41238125623546
+"Pregnant: Acute inflammation",0.38276413861319,0.254209795114464,0.511318482111915
+"Non-pregnant: Median serum c-reactive protein concentration (mg/L)",3.76559341666455,3.29754929471186,4.23363753861723
+"Non-pregnant: Acute inflammation",0.343718147359644,0.265463167123237,0.42197312759605
+"Child: Median adjusted serum ferritin concentration (ng/mL)",10.5169534889641,7.8803837065799,13.1535232713484
+"Child: Iron deficiency",0.535467986982018,0.459571158740414,0.611364815223623
+"Child: Iron overload",0,0,0
+"Child: Median adjusted serum ferritin concentration (ng/mL)",0.246261696595668,0.178385229857292,0.314138163334043
+"Pregnant: Median adjusted serum ferritin concentration (ng/mL)",12.5366870115323,5.91809926289899,19.1552747601656
+"Pregnant: Iron deficiency",0.584369327940178,0.43551290993475,0.733225745945606
+"Pregnant: Iron overload",0.00628368755872836,1e-04,0.0293200115041662
+"Pregnant: Median adjusted serum ferritin concentration (ng/mL)",0.206325738414686,0.100386934876016,0.312264541953357
+"Non-pregnant: Median adjusted serum ferritin concentration (ng/mL)",18.2434935464983,14.1788668722551,22.3081202207415
+"Non-pregnant: Iron deficiency",0.470673850281683,0.382141724929696,0.55920597563367
+"Non-pregnant: Iron overload",0.011800999235842,1e-04,0.0286642020125493
+"Non-pregnant: Median adjusted serum ferritin concentration (ng/mL)",0.160570995101317,0.107256634896782,0.213885355305852
+"Child: Median serum calcium concentration (mg/dL)",7.73226598100863,7.56613057691756,7.8984013850997
+"Child: Hypocalcaemia",0.39879489025663,0.323727599185571,0.473862181327688
+"Child: Hypercalcaemia",0.057085627030988,0.0159104263669223,0.0982608276950536
+"Pregnant: Median serum calcium concentration (mg/dL)",7.1816043379751,6.90930755645668,7.45390111949353
+"Pregnant: Hypocalcaemia",0.63979602583175,0.493202138525748,0.786389913137752
+"Pregnant: Hypercalcaemia",0.150877552557317,0.0244385065408418,0.277316598573792
+"Non-pregnant: Median serum calcium concentration (mg/dL)",7.44066342506555,7.29455165844547,7.58677519168564
+"Non-pregnant: Hypocalcaemia",0.552203282621725,0.470347023873095,0.634059541370355
+"Non-pregnant: Hypercalcaemia",0.237583803775863,0.154742125926125,0.3204254816256
+"Pregnant: Median urinary iodine concentration (microgram/L)",101.216676510272,51.203885768572,151.229467251972
+"Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L)",108.383913596904,74.0030396570689,142.76478753674
+"Non-pregnant lactating: Median urinary iodine concentration (microgram/L)",81.5250512970647,57.8616720956584,105.188430498471
