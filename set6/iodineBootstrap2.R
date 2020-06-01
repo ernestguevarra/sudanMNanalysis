@@ -1,28 +1,28 @@
-## Bootstrap inflammation indicators ################################################
+## Bootstrap anaemia indicators ################################################
 
 ## Subset indicators to 3 states data
 subDF <- subset(indicators, stateID %in% STATES)
 
 ## Create anaemia indicator groups
-subDF$indicatorGroup <- ifelse(subDF$ageGrp == 1, "Child",
-                               ifelse(subDF$pregnant == 1, "Pregnant",
-                                      ifelse(subDF$pregnant == 2, "Non-pregnant", NA)))
+subDF$indicatorGroup <- with(subDF, {
+  ifelse(pregnant == 2 & lactating == 2, "Non-pregnant non-lactating", NA)
+})
 
 ## Get state names
 stateNames <- unique(locNames$state[locNames$stateID %in% STATES])
 
 ## indicator name vector
-params <- c("crp", "AI")
+params <- c("ID2", "ID3", "ID4")
 
 ## Create empty data.frame for concatenating boot results
 bootDF <- data.frame(matrix(nrow = REPLICATES, 
-                            ncol = length(params) * length(stateNames) * 3, 
+                            ncol = length(params) * length(stateNames) * 1,
                             byrow = TRUE))
 
 bootDFnames <- NULL
 
 for(i in stateNames) {
-  for(j in c("Child", "Pregnant", "Non-pregnant")) {
+  for(j in c("Non-pregnant non-lactating")) {
     for(k in params) {
       bootDFnames <- c(bootDFnames, paste(i, j, k, sep = "_"))
     }
@@ -37,7 +37,7 @@ for(i in sort(unique(subDF$stateID))) {
   ## Get current state name
   currentStateName <- unique(locNames$state[locNames$stateID == i])
   ## Cycle through grouping categrories
-  for(j in c("Child", "Pregnant", "Non-pregnant")) {
+  for(j in c("Non-pregnant non-lactating")) {
     ## Subset to current grouping category
     currentGroup <- subset(subDF, stateID == i & indicatorGroup == j)
     ## Cycle through indicators
@@ -86,11 +86,12 @@ names(xx) <- c("estimate", "lcl", "ucl", "sd")
 ## Get admin and identifying data
 yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
-indicatorName <- ifelse(yy[ , 3] == "AI", "Acute inflammation", 
-                               "Median serum c-reactive protein concentration (mg/L)")
+indicatorName <- ifelse(yy[ , 3] == "ID2", "Mild iodine deficiency",
+                        ifelse(yy[ , 3] == "ID3", "Moderate iodine deficiency", 
+                               "Severe iodine deficiency"))
 
-inflammationResults <- data.frame(State = yy[ , 1],
-                                  Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
-                                  xx,
-                                  row.names = NULL,
-                                  stringsAsFactors = FALSE)
+iodineResults2 <- data.frame(State = yy[ , 1],
+                            Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
+                            xx,
+                            row.names = NULL,
+                            stringsAsFactors = FALSE)

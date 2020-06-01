@@ -5,43 +5,47 @@ subDF <- subset(indicators, stateID %in% STATES)
 
 ## Create anaemia indicator groups
 subDF$indicatorGroup <- with(subDF, {
-  ifelse(pregnant == 1, "pregnant",
-    ifelse(pregnant == 2 & lactating == 2, "notPregnantNotLactating",
-      ifelse(pregnant == 2 & lactating == 1, "notPregnantLactating", NA)))
+  ifelse(pregnant == 1, "Pregnant",
+    ifelse(pregnant == 2 & lactating == 2, "Non-pregnant non-lactating",
+      ifelse(pregnant == 2 & lactating == 1, "Non-pregnant lactating", NA)))
 })
 
 ## Get state names
 stateNames <- unique(locNames$state[locNames$stateID %in% STATES])
 
 ## indicator name vector
-params <- c("iodine", "ID1A", "ID1B", "ID2", "ID3", "ID4", "ID5", "ID6")
+params <- c("iodine", "ID5", "ID6")
 
 ## Create empty data.frame for concatenating boot results
-#bootDF <- data.frame(matrix(nrow = 399, ncol = 36, byrow = TRUE))
-bootDF <- data.frame(matrix(nrow = REPLICATES, ncol = 72, byrow = TRUE))
+bootDF <- data.frame(matrix(nrow = REPLICATES, 
+                            ncol = length(params) * length(stateNames) * 3, 
+                            byrow = TRUE))
 
-names(bootDF) <- c(paste(params, "pregnant", stateNames[1], sep = "_"),
-                   paste(params, "notPregnantNotLactating", stateNames[1], sep = "_"),
-                   paste(params, "notPregnantLactating", stateNames[1], sep = "_"),
-                   paste(params, "pregnant", stateNames[2], sep = "_"),
-                   paste(params, "notPregnantNotLactating", stateNames[2], sep = "_"),
-                   paste(params, "notPregnantLactating", stateNames[2], sep = "_"),
-                   paste(params, "pregnant", stateNames[3], sep = "_"),
-                   paste(params, "notPregnantNotLactating", stateNames[3], sep = "_"),
-                   paste(params, "notPregnantLactating", stateNames[3], sep = "_"))
+bootDFnames <- NULL
+
+for(i in stateNames) {
+  for(j in c("Pregnant", "Non-pregnant non-lactating", "Non-pregnant lactating")) {
+    for(k in params) {
+      bootDFnames <- c(bootDFnames, paste(i, j, k, sep = "_"))
+    }
+  }
+}
+
+## rename bootDF
+names(bootDF) <- bootDFnames
 
 ## Cycle through states
 for(i in sort(unique(subDF$stateID))) {
   ## Get current state name
   currentStateName <- unique(locNames$state[locNames$stateID == i])
   ## Cycle through grouping categrories
-  for(j in c("pregnant", "notPregnantNotLactating", "notPregnantLactating")) {
+  for(j in c("Pregnant", "Non-pregnant non-lactating", "Non-pregnant lactating")) {
     ## Subset to current grouping category
     currentGroup <- subset(subDF, stateID == i & indicatorGroup == j)
     ## Cycle through indicators
     for(k in params) {
       ##
-      cat("\n", unique(locNames$state[locNames$stateID == i]), " - ", j, " - ", k, "\n\n", sep = ""); flush.console()
+      cat("\n", currentStateName, " - ", j, " - ", k, "\n\n", sep = ""); flush.console()
       ## Create empty concatenating vector for current bootstrap outputs
       currentBoot <- NA
       ## Check if current group is not empty and then bootstrap
@@ -49,15 +53,19 @@ for(i in sort(unique(subDF$stateID))) {
         ## Boot
         currentBoot <- bootBW(x = currentGroup, 
                               w = psuData[psuData$psu %in% currentGroup$psu, ],
-                              statistic = bootClassic, 
+                              statistic = ifelse(k %in% c("adjHb", 
+                                                          "adjFerritin", 
+                                                          "crp", 
+                                                          "calcium", 
+                                                          "iodine"), bootMedian, bootClassic), 
                               params = k,
-                              outputColumns = paste(k, 
-                                                    j, 
-                                                    currentStateName, 
+                              outputColumns = paste(currentStateName, 
+                                                    j,
+                                                    k, 
                                                     sep = "_"),
                               replicates = REPLICATES)
       }
-      bootDF[[paste(k, j, currentStateName, sep = "_")]] <- currentBoot
+      bootDF[[paste(currentStateName, j, k, sep = "_")]] <- currentBoot
     }
   }
 }
@@ -74,54 +82,18 @@ bootSD <- apply(X = bootDF, MARGIN = 2, FUN = robustSD)
 ## Convert output to long form
 xx <- data.frame(t(bootResults), bootSD)
 
-## Rename rows
-row.names(xx) <- 1:nrow(xx)
-
 ## Rename results
 names(xx) <- c("estimate", "lcl", "ucl", "sd")
 
-## Calculate number of indicator groups
-nIndicatorGroups <- length(params) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
-nStateGroups <- length(stateNames) * length(unique(subDF$indicatorGroup[!is.na(subDF$indicatorGroup)]))
+## Get admin and identifying data
+yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
-## Create proper data.frames
-State <- c(rep(stateNames[1], nIndicatorGroups),
-           rep(stateNames[2], nIndicatorGroups),
-           rep(stateNames[3], nIndicatorGroups))
+indicatorName <- ifelse(yy[ , 3] %in% "ID5", "Iodine intake above requirements",
+                        ifelse(yy[ , 3] == "ID6", "Iodine intake excessive", 
+                               "Median urinary iodine concentration (microgram/L)"))
 
-Indicator <- c(paste("Pregnant: ", 
-                     c("Mean urinary iodine concentration (microgram/L)", 
-                       "Insufficient iodine", 
-                       "Insufficient iodine", 
-                       "Mild iodine deficiency",
-                       "Moderate iodine deficiency",
-                       "Severe iodine deficiency",
-                       "Iodine above requirements",
-                       "Iodine excessive"), 
-                     sep = ""),
-               paste("Non-pregnant non-lactating: ",
-                     c("Mean urinary iodine concentration (microgram/L)", 
-                       "Insufficient iodine", 
-                       "Insufficient iodine", 
-                       "Mild iodine deficiency",
-                       "Moderate iodine deficiency",
-                       "Severe iodine deficiency",
-                       "Iodine above requirements",
-                       "Iodine excessive"),
-                     sep = ""),
-               paste("Non-pregnant lactating: ",
-                     c("Mean urinary iodine concentration (microgram/L)", 
-                       "Insufficient iodine", 
-                       "Insufficient iodine", 
-                       "Mild iodine deficiency",
-                       "Moderate iodine deficiency",
-                       "Severe iodine deficiency",
-                       "Iodine above requirements",
-                       "Iodine excessive"),
-                     sep = ""))
-
-Type <- c(rep(c("Mean", "Proportion", "Proportion", "Proportion",
-                "Proportion", "Proportion", "Proportion", "Proportion"), 
-              nStateGroups))
-
-iodineResults <- data.frame(State, Indicator, Type, xx)
+iodineResults <- data.frame(State = yy[ , 1],
+                            Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
+                            xx,
+                            row.names = NULL,
+                            stringsAsFactors = FALSE)

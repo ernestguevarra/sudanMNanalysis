@@ -158,6 +158,22 @@ bootClassic <- function(x, params)
   return(result)
 }
 
+
+################################################################################
+#
+# Statistic function (simple proportion) for bootstrap estimation
+#
+bootMedian <- function(x, params)
+{
+  result <- vector(mode = "numeric", length = length(params))
+  for(i in 1:length(params))
+  {
+    result[i]  <- median(x[[params[i]]], na.rm = TRUE)
+  }
+  return(result)
+}
+
+
 ################################################################################
 #
 # Statistic function (robust SD) 
