@@ -1,43 +1,43 @@
-"Indicator","Estimate","LCL","UCL"
-"Child: Median adjusted serum haemoglobin concentration (g/dL)",11.2719126295155,10.9902603170505,11.5535649419805
-"Child: Mild anaemia",0.237212731131673,0.183173672068922,0.291251790194424
-"Child: Moderate anaemia",0.225153244886016,0.165560590689879,0.284745899082153
-"Child: Severe Anaemia",0.0167708725638105,1e-04,0.0340091414871556
-"Pregnant: Median adjusted serum haemoglobin concentration (g/dL)",11.6515414577022,11.1886993709957,12.1143835444087
-"Pregnant: Mild anaemia",0.227527822780833,0.114818511183297,0.340237134378368
-"Pregnant: Moderate anaemia",0.126749035181113,0.0399680927055272,0.213529977656698
-"Pregnant: Severe Anaemia",0.00715290756495525,1e-04,0.0310734858176135
-"Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL)",12.9009928464143,12.6210519489235,13.1809337439051
-"Non-pregnant: Mild anaemia",0.17515423978758,0.119528017462656,0.230780462112505
-"Non-pregnant: Moderate anaemia",0.11208638828806,0.0654941924109957,0.158678584165124
-"Non-pregnant: Severe Anaemia",0.00830792445878544,1e-04,0.0220839229977422
-"Child: Median serum c-reactive protein concentration (mg/L)",3.66832565362389,3.21681508822172,4.11983621902606
-"Child: Acute inflammation",0.31900975822073,0.251955365768336,0.386064150673125
-"Pregnant: Median serum c-reactive protein concentration (mg/L)",4.45665054351977,3.50091983080407,5.41238125623546
-"Pregnant: Acute inflammation",0.38276413861319,0.254209795114464,0.511318482111915
-"Non-pregnant: Median serum c-reactive protein concentration (mg/L)",3.76559341666455,3.29754929471186,4.23363753861723
-"Non-pregnant: Acute inflammation",0.343718147359644,0.265463167123237,0.42197312759605
-"Child: Median adjusted serum ferritin concentration (ng/mL)",10.5169534889641,7.8803837065799,13.1535232713484
-"Child: Iron deficiency",0.535467986982018,0.459571158740414,0.611364815223623
-"Child: Iron overload",0,0,0
-"Child: Median adjusted serum ferritin concentration (ng/mL)",0.246261696595668,0.178385229857292,0.314138163334043
-"Pregnant: Median adjusted serum ferritin concentration (ng/mL)",12.5366870115323,5.91809926289899,19.1552747601656
-"Pregnant: Iron deficiency",0.584369327940178,0.43551290993475,0.733225745945606
-"Pregnant: Iron overload",0.00628368755872836,1e-04,0.0293200115041662
-"Pregnant: Median adjusted serum ferritin concentration (ng/mL)",0.206325738414686,0.100386934876016,0.312264541953357
-"Non-pregnant: Median adjusted serum ferritin concentration (ng/mL)",18.2434935464983,14.1788668722551,22.3081202207415
-"Non-pregnant: Iron deficiency",0.470673850281683,0.382141724929696,0.55920597563367
-"Non-pregnant: Iron overload",0.011800999235842,1e-04,0.0286642020125493
-"Non-pregnant: Median adjusted serum ferritin concentration (ng/mL)",0.160570995101317,0.107256634896782,0.213885355305852
-"Child: Median serum calcium concentration (mg/dL)",7.73226598100863,7.56613057691756,7.8984013850997
-"Child: Hypocalcaemia",0.39879489025663,0.323727599185571,0.473862181327688
-"Child: Hypercalcaemia",0.057085627030988,0.0159104263669223,0.0982608276950536
-"Pregnant: Median serum calcium concentration (mg/dL)",7.1816043379751,6.90930755645668,7.45390111949353
-"Pregnant: Hypocalcaemia",0.63979602583175,0.493202138525748,0.786389913137752
-"Pregnant: Hypercalcaemia",0.150877552557317,0.0244385065408418,0.277316598573792
-"Non-pregnant: Median serum calcium concentration (mg/dL)",7.44066342506555,7.29455165844547,7.58677519168564
-"Non-pregnant: Hypocalcaemia",0.552203282621725,0.470347023873095,0.634059541370355
-"Non-pregnant: Hypercalcaemia",0.237583803775863,0.154742125926125,0.3204254816256
-"Pregnant: Median urinary iodine concentration (microgram/L)",101.216676510272,51.203885768572,151.229467251972
-"Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L)",108.383913596904,74.0030396570689,142.76478753674
-"Non-pregnant lactating: Median urinary iodine concentration (microgram/L)",81.5250512970647,57.8616720956584,105.188430498471
+Indicator,Estimate,LCL,UCL
+Child: Median adjusted serum haemoglobin concentration (g/dL),11.27191263,10.99026032,11.55356494
+Child: Mild anaemia,0.237212731,0.183173672,0.29125179
+Child: Moderate anaemia,0.225153245,0.165560591,0.284745899
+Child: Severe Anaemia,0.016770873,1.00E-04,0.034009141
+Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.65154146,11.18869937,12.11438354
+Pregnant: Mild anaemia,0.227527823,0.114818511,0.340237134
+Pregnant: Moderate anaemia,0.126749035,0.039968093,0.213529978
+Pregnant: Severe Anaemia,0.007152908,1.00E-04,0.031073486
+Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.90099285,12.62105195,13.18093374
+Non-pregnant: Mild anaemia,0.17515424,0.119528017,0.230780462
+Non-pregnant: Moderate anaemia,0.112086388,0.065494192,0.158678584
+Non-pregnant: Severe Anaemia,0.008307924,1.00E-04,0.022083923
+Child: Median serum c-reactive protein concentration (mg/L),3.668325654,3.216815088,4.119836219
+Child: Acute inflammation,0.319009758,0.251955366,0.386064151
+Pregnant: Median serum c-reactive protein concentration (mg/L),4.456650544,3.500919831,5.412381256
+Pregnant: Acute inflammation,0.382764139,0.254209795,0.511318482
+Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.765593417,3.297549295,4.233637539
+Non-pregnant: Acute inflammation,0.343718147,0.265463167,0.421973128
+Child: Median adjusted serum ferritin concentration (ng/mL),10.51695349,7.880383707,13.15352327
+Child: Iron deficiency,0.535467987,0.459571159,0.611364815
+Child: Iron overload,0,0,0
+Child: Iron deficiency anaemia,0.246261697,0.17838523,0.314138163
+Pregnant: Median adjusted serum ferritin concentration (ng/mL),12.53668701,5.918099263,19.15527476
+Pregnant: Iron deficiency,0.584369328,0.43551291,0.733225746
+Pregnant: Iron overload,0.006283688,1.00E-04,0.029320012
+Pregnant: Iron deficiency anaemia,0.206325738,0.100386935,0.312264542
+Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),18.24349355,14.17886687,22.30812022
+Non-pregnant: Iron deficiency,0.47067385,0.382141725,0.559205976
+Non-pregnant: Iron overload,0.011800999,1.00E-04,0.028664202
+Non-pregnant: Iron deficiency anaemia,0.160570995,0.107256635,0.213885355
+Child: Median serum calcium concentration (mg/dL),7.732265981,7.566130577,7.898401385
+Child: Hypocalcaemia,0.39879489,0.323727599,0.473862181
+Child: Hypercalcaemia,0.057085627,0.015910426,0.098260828
+Pregnant: Median serum calcium concentration (mg/dL),7.181604338,6.909307556,7.453901119
+Pregnant: Hypocalcaemia,0.639796026,0.493202139,0.786389913
+Pregnant: Hypercalcaemia,0.150877553,0.024438507,0.277316599
+Non-pregnant: Median serum calcium concentration (mg/dL),7.440663425,7.294551658,7.586775192
+Non-pregnant: Hypocalcaemia,0.552203283,0.470347024,0.634059541
+Non-pregnant: Hypercalcaemia,0.237583804,0.154742126,0.320425482
+Pregnant: Median urinary iodine concentration (microgram/L),101.2166765,51.20388577,151.2294673
+Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),108.3839136,74.00303966,142.7647875
+Non-pregnant lactating: Median urinary iodine concentration (microgram/L),81.5250513,57.8616721,105.1884305

@@ -88,7 +88,7 @@ yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
 indicatorName <- ifelse(yy[ , 3] == "IR1", "Iron deficiency",
                         ifelse(yy[ , 3] == "IR2", "Iron overload", 
-                               ifelse(yy[ , 3] == "IR3", "Iron deficiency anaemia", 
+                               ifelse(yy[ , 3] == "IDA", "Iron deficiency anaemia", 
                                       "Median adjusted serum ferritin concentration (ng/mL)")))
 
 ironResults <- data.frame(State = yy[ , 1],

@@ -1,26 +1,26 @@
-## Bootstrap iron indicators ################################################
-
-## Subset indicators to 3 states data
+## Bootstrap anaemia indicators ################################################
+  
+## Subset indicators to 3 states data - State 1, 7, 13
 subDF <- subset(indicators, stateID %in% STATES)
-
+  
 ## Create anaemia indicator groups
 subDF$indicatorGroup <- ifelse(subDF$ageGrp == 1, "Child",
                                ifelse(subDF$pregnant == 1, "Pregnant",
                                       ifelse(subDF$pregnant == 2, "Non-pregnant", NA)))
-
+  
 ## Get state names
 stateNames <- unique(locNames$state[locNames$stateID %in% STATES])
-
+  
 ## indicator name vector
-params <- c("adjFerritin", "IR1", "IR2", "IDA")
-
+params <- c("AN0")
+  
 ## Create empty data.frame for concatenating boot results
 bootDF <- data.frame(matrix(nrow = REPLICATES, 
-                            ncol = length(params) * length(stateNames) * 3, 
+                            ncol = length(params) * length(STATES) * 3, 
                             byrow = TRUE))
-
+  
 bootDFnames <- NULL
-
+  
 for(i in stateNames) {
   for(j in c("Child", "Pregnant", "Non-pregnant")) {
     for(k in params) {
@@ -28,10 +28,10 @@ for(i in stateNames) {
     }
   }
 }
-
+  
 ## rename bootDF
 names(bootDF) <- bootDFnames
-
+  
 ## Cycle through states
 for(i in sort(unique(subDF$stateID))) {
   ## Get current state name
@@ -67,32 +67,27 @@ for(i in sort(unique(subDF$stateID))) {
     }
   }
 }
-
+  
 ## Get estimates and CIs
 bootResults <- apply(X = bootDF, MARGIN = 2, 
                      FUN = quantile, 
                      probs = c(0.5, 0.025, 0.975), 
                      na.rm = TRUE)
-
+  
 ## Get robust SD
 bootSD <- apply(X = bootDF, MARGIN = 2, FUN = robustSD)
-
+  
 ## Convert output to long form
 xx <- data.frame(t(bootResults), bootSD)
-
+  
 ## Rename results
 names(xx) <- c("estimate", "lcl", "ucl", "sd")
 
 ## Get admin and identifying data
 yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
-indicatorName <- ifelse(yy[ , 3] == "IR1", "Iron deficiency",
-                        ifelse(yy[ , 3] == "IR2", "Iron overload", 
-                               ifelse(yy[ , 3] == "IDA", "Iron deficiency anaemia", 
-                                      "Median adjusted serum ferritin concentration (ng/mL)")))
-
-ironResults <- data.frame(State = yy[ , 1],
-                          Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
-                          xx,
-                          row.names = NULL,
-                          stringsAsFactors = FALSE)
+anaemiaResults <- data.frame(State = yy[ , 1],
+                             Indicator = paste(yy[ , 2], "Any anaemia", sep = ": "),
+                             xx,
+                             row.names = NULL,
+                             stringsAsFactors = FALSE)

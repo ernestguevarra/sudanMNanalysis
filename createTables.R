@@ -5,25 +5,19 @@ library(stringr)
 library(dplyr)
 
 ## Read data
-localityResults <- read.csv("_byStatesMNresults.csv", stringsAsFactors = FALSE)
-localityResults <- localityResults[!localityResults$Locality %in% c("Heiban", "El Buram", "Um Durein"), ]
-localityResults$estimate <- round(localityResults$estimate * 100, digits = 2)
-localityResults$lcl <- round(localityResults$lcl * 100, digits = 2)
-localityResults$ucl <- round(localityResults$ucl * 100, digits = 2)
-
-localityResults$Indicator <- localityResults$Indicator %>%
-  str_replace_all(pattern = "Anaemia", replacement = "anaemia") %>%
-  str_replace_all(pattern = "Hpercalcaemia", replacement = "Hypercalcaemia")
-
-stateResults <- read.csv("_stateResults.csv", stringsAsFactors = FALSE)
+stateResults <- read.csv("_byStatesMNresults.csv", stringsAsFactors = FALSE)
 stateResults$Indicator <- stateResults$Indicator %>%
-  str_replace_all(pattern = "Anaemia", replacement = "anaemia") %>%
-  str_replace_all(pattern = "Hpercalcaemia", replacement = "Hypercalcaemia")
+  str_replace_all(pattern = "Anaemia", replacement = "anaemia")
+
+stateResults[str_detect(stateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")] <- round(stateResults[str_detect(stateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")], digits = 2)
+stateResults[!str_detect(stateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")] <- round(stateResults[!str_detect(stateResults$Indicator, "Median"), c("estimate", "lcl", "ucl")] * 100, digits = 2)
 
 nationalResults <- read.csv("_nationalResults.csv", stringsAsFactors = FALSE)
 nationalResults$Indicator <- nationalResults$Indicator %>%
-  str_replace_all(pattern = "Anaemia", replacement = "anaemia") %>%
-  str_replace_all(pattern = "Hpercalcaemia", replacement = "Hypercalcaemia")
+  str_replace_all(pattern = "Anaemia", replacement = "anaemia")
+
+nationalResults[str_detect(nationalResults$Indicator, "Median"), c("Estimate", "LCL", "UCL")] <- round(nationalResults[str_detect(nationalResults$Indicator, "Median"), c("Estimate", "LCL", "UCL")], digits = 2)
+nationalResults[!str_detect(nationalResults$Indicator, "Median"), c("Estimate", "LCL", "UCL")] <- round(nationalResults[!str_detect(nationalResults$Indicator, "Median"), c("Estimate", "LCL", "UCL")] * 100, digits = 2)
 
 ##
 reportTables <- createWorkbook()
@@ -31,506 +25,406 @@ reportTables <- createWorkbook()
 ## Create children tables ######################################################
 
 ## Anaemia
-childAnaemia <- data.frame(localityResults %>% 
-                                filter(Indicator == "Child: Mild anaemia") %>%
-                                dplyr::select(State, Locality, estimate, lcl, ucl),
-                              localityResults %>%
-                                filter(Indicator == "Child: Moderate anaemia") %>%
-                                dplyr::select(estimate, lcl, ucl),
-                              localityResults %>%
-                                filter(Indicator == "Child: Severe anaemia") %>%
-                                dplyr::select(estimate, lcl, ucl),
-                              stringsAsFactors = FALSE)
-  
-addWorksheet(wb = reportTables, sheetName = "childAnaemiaLocality")
-writeData(wb = reportTables, sheet = "childAnaemiaLocality", x = childAnaemia)
-
 childAnaemia <- data.frame(stateResults %>%
+                             filter(Indicator == "Child: Median adjusted serum haemoglobin concentration (g/dL)") %>%
+                             dplyr::select(State, estimate, lcl, ucl) %>%
+                             mutate(),
+                           stateResults %>%
                              filter(Indicator == "Child: Mild anaemia") %>%
-                             dplyr::select(State, Estimate, LCL, UCL),
+                             dplyr::select(estimate, lcl, ucl),
                            stateResults %>%
                              filter(Indicator == "Child: Moderate anaemia") %>%
-                             dplyr::select(Estimate, LCL, UCL),
+                             dplyr::select(estimate, lcl, ucl),
                            stateResults %>%
                              filter(Indicator == "Child: Severe anaemia") %>%
-                             dplyr::select(Estimate, LCL, UCL),
+                             dplyr::select(estimate, lcl, ucl),
                            stringsAsFactors = FALSE)
+
+childAnaemia <- childAnaemia[order(childAnaemia$State), ]
 
 childAnaemia <- rbind(childAnaemia,
                       unlist(
                         c(State = 1,
-                        nationalResults[nationalResults$Indicator == "Child: Mild anaemia", c("Estimate", "LCL", "UCL")],
-                        nationalResults[nationalResults$Indicator == "Child: Moderate anaemia", c("Estimate", "LCL", "UCL")],
-                        nationalResults[nationalResults$Indicator == "Child: Severe anaemia", c("Estimate", "LCL", "UCL")])))
+                          nationalResults[nationalResults$Indicator == "Child: Median adjusted serum haemoglobin concentration (g/dL)", c("Estimate", "LCL", "UCL")],
+                          nationalResults[nationalResults$Indicator == "Child: Mild anaemia", c("Estimate", "LCL", "UCL")],
+                          nationalResults[nationalResults$Indicator == "Child: Moderate anaemia", c("Estimate", "LCL", "UCL")],
+                          nationalResults[nationalResults$Indicator == "Child: Severe anaemia", c("Estimate", "LCL", "UCL")])))
 
 childAnaemia[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "childAnaemiaState")
-writeData(wb = reportTables, sheet = "childAnaemiaState", x = childAnaemia)
+names(childAnaemia) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 4))
+
+addWorksheet(wb = reportTables, sheetName = "childAnaemia")
+writeData(wb = reportTables, sheet = "childAnaemia", x = childAnaemia)
 
 ## Iron
-childIron <- data.frame(localityResults %>%
+childIron <- data.frame(stateResults %>%
+                          filter(Indicator == "Child: Median adjusted serum ferritin concentration (ng/mL)") %>%
+                          dplyr::select(State, estimate, lcl, ucl),
+                        stateResults %>%
                           filter(Indicator == "Child: Iron deficiency") %>%
-                          dplyr::select(State, Locality, estimate, lcl, ucl),
-                        localityResults %>%
+                          dplyr::select(estimate, lcl, ucl),
+                        stateResults %>%
                           filter(Indicator == "Child: Iron deficiency anaemia") %>%
                           dplyr::select(estimate, lcl, ucl),
                         stringsAsFactors = FALSE)
 
-addWorksheet(wb = reportTables, sheetName = "childIronLocality")
-writeData(wb = reportTables, sheet = "childIronLocality", x = childIron)
-
-childIron <- data.frame(stateResults %>%
-                          filter(Indicator == "Child: Iron deficiency") %>%
-                          dplyr::select(State, Estimate, LCL, UCL),
-                        stateResults %>%
-                          filter(Indicator == "Child: Iron deficiency anaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
-                        stringsAsFactors = FALSE)
+childIron <- childIron[order(childIron$State), ]
 
 childIron <- rbind(childIron,
                    unlist(
                      c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Child: Median adjusted serum ferritin concentration (ng/mL)", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Child: Iron deficiency", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Child: Iron deficiency anaemia", c("Estimate", "LCL", "UCL")])))
 
 childIron[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "childIronState")
-writeData(wb = reportTables, sheet = "childIronState", x = childIron)
+names(childIron) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 3))
+
+addWorksheet(wb = reportTables, sheetName = "childIron")
+writeData(wb = reportTables, sheet = "childIron", x = childIron)
 
 ## Acute inflammation
-childInflammation <- data.frame(localityResults %>%
-                                  filter(Indicator == "Child: Acute inflammation") %>%
-                                  dplyr::select(State, Locality, estimate, lcl, ucl),
-                                stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "childInflammationLocality")
-writeData(wb = reportTables, sheet = "childInflammationLocality", x = childInflammation)
-
 childInflammation <- data.frame(stateResults %>%
+                                  filter(Indicator == "Child: Median serum c-reactive protein concentration (mg/L)") %>%
+                                  dplyr::select(State, estimate, lcl, ucl),
+                                stateResults %>%
                                   filter(Indicator == "Child: Acute inflammation") %>%
-                                  dplyr::select(State, Estimate, LCL, UCL),
+                                  dplyr::select(estimate, lcl, ucl),
                                 stringsAsFactors = FALSE)
+
+childInflammation <- childInflammation[order(childInflammation$State), ]
 
 childInflammation <- rbind(childInflammation,
                            unlist(
                              c(State = 1,
+                               nationalResults[nationalResults$Indicator == "Child: Median serum c-reactive protein concentration (mg/L)", c("Estimate", "LCL", "UCL")],
                                nationalResults[nationalResults$Indicator == "Child: Acute inflammation", c("Estimate", "LCL", "UCL")])))
 
 childInflammation[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "childInflammationState")
-writeData(wb = reportTables, sheet = "childInflammationState", x = childInflammation)
+names(childInflammation) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 2))
+
+addWorksheet(wb = reportTables, sheetName = "childInflammation")
+writeData(wb = reportTables, sheet = "childInflammation", x = childInflammation)
 
 ## Calcium
-childCalcium <- data.frame(localityResults %>%
-                             filter(Indicator == "Child: Hypocalcaemia") %>%
-                             dplyr::select(State, Locality, estimate, lcl, ucl),
-                           localityResults %>%
-                             filter(Indicator == "Child: Hypercalcaemia") %>%
-                             dplyr::select("estimate", "lcl", "ucl"),
-                           stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "childCalciumLocality")
-writeData(wb = reportTables, sheet = "childCalciumLocality", x = childCalcium)
-
 childCalcium <- data.frame(stateResults %>%
+                             filter(Indicator == "Child: Median serum calcium concentration (mg/dL)") %>%
+                             dplyr::select(State, estimate, lcl, ucl),
+                           stateResults %>%
                              filter(Indicator == "Child: Hypocalcaemia") %>%
-                             dplyr::select(State, Estimate, LCL, UCL),
+                             dplyr::select(estimate, lcl, ucl),
                            stateResults %>%
                              filter(Indicator == "Child: Hypercalcaemia") %>%
-                             dplyr::select(Estimate, LCL, UCL),
+                             dplyr::select(estimate, lcl, ucl),
                            stringsAsFactors = FALSE)
+
+childCalcium <- childCalcium[order(childCalcium$State), ]
 
 childCalcium <- rbind(childCalcium,
                    unlist(
                      c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Child: Median serum calcium concentration (mg/dL)", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Child: Hypocalcaemia", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Child: Hypercalcaemia", c("Estimate", "LCL", "UCL")])))
 
 childCalcium[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "childCalciumState")
-writeData(wb = reportTables, sheet = "childCalciumState", x = childCalcium)
+names(childCalcium) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 3))
+
+addWorksheet(wb = reportTables, sheetName = "childCalcium")
+writeData(wb = reportTables, sheet = "childCalcium", x = childCalcium)
 
 
 ## Create non-pregnant tables ##################################################
 
 ## Anaemia
-npAnaemia <- data.frame(localityResults %>% 
-                          filter(Indicator == "Non-pregnant: Mild anaemia") %>%
-                          dplyr::select(State, Locality, estimate, lcl, ucl),
-                        localityResults %>%
-                          filter(Indicator == "Non-pregnant: Moderate anaemia") %>%
-                          dplyr::select(estimate, lcl, ucl),
-                        localityResults %>%
-                          filter(Indicator == "Non-pregnant: Severe anaemia") %>%
-                          dplyr::select(estimate, lcl, ucl),
-                        stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "npAnaemiaLocality")
-writeData(wb = reportTables, sheet = "npAnaemiaLocality", x = npAnaemia)
-
 npAnaemia <- data.frame(stateResults %>%
+                          filter(Indicator == "Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL)") %>%
+                          dplyr::select(State, estimate, lcl, ucl),
+                        stateResults %>%
                           filter(Indicator == "Non-pregnant: Mild anaemia") %>%
-                          dplyr::select(State, Estimate, LCL, UCL),
+                          dplyr::select(estimate, lcl, ucl),
                         stateResults %>%
                           filter(Indicator == "Non-pregnant: Moderate anaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
+                          dplyr::select(estimate, lcl, ucl),
                         stateResults %>%
                           filter(Indicator == "Non-pregnant: Severe anaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
+                          dplyr::select(estimate, lcl, ucl),
                         stringsAsFactors = FALSE)
+
+npAnaemia <- npAnaemia[order(npAnaemia$State), ]
 
 npAnaemia <- rbind(npAnaemia,
                    unlist(
                      c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL)", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Non-pregnant: Mild anaemia", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Non-pregnant: Moderate anaemia", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Non-pregnant: Severe anaemia", c("Estimate", "LCL", "UCL")])))
 
 npAnaemia[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "npAnaemiaState")
-writeData(wb = reportTables, sheet = "npAnaemiaState", x = npAnaemia)
+names(npAnaemia) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 4))
+
+addWorksheet(wb = reportTables, sheetName = "npAnaemia")
+writeData(wb = reportTables, sheet = "npAnaemia", x = npAnaemia)
 
 ## Iron
-npIron <- data.frame(localityResults %>%
+npIron <- data.frame(stateResults %>%
+                       filter(Indicator == "Non-pregnant: Median adjusted serum ferritin concentration (ng/mL)") %>%
+                       dplyr::select(State, estimate, lcl, ucl),
+                     stateResults %>%
                        filter(Indicator == "Non-pregnant: Iron deficiency") %>%
-                       dplyr::select(State, Locality, estimate, lcl, ucl),
-                     localityResults %>%
+                       dplyr::select(estimate, lcl, ucl),
+                     stateResults %>%
                        filter(Indicator == "Non-pregnant: Iron deficiency anaemia") %>%
                        dplyr::select(estimate, lcl, ucl),
                      stringsAsFactors = FALSE)
 
-addWorksheet(wb = reportTables, sheetName = "npIronLocality")
-writeData(wb = reportTables, sheet = "npIronLocality", x = npIron)
-
-npIron <- data.frame(stateResults %>%
-                       filter(Indicator == "Non-pregnant: Iron deficiency") %>%
-                       dplyr::select(State, Estimate, LCL, UCL),
-                     stateResults %>%
-                       filter(Indicator == "Non-pregnant: Iron deficiency anaemia") %>%
-                       dplyr::select(Estimate, LCL, UCL),
-                     stringsAsFactors = FALSE)
+npIron <- npIron[order(npIron$State), ]
 
 npIron <- rbind(npIron,
                    unlist(
                      c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Non-pregnant: Median adjusted serum ferritin concentration (ng/mL)", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Non-pregnant: Iron deficiency", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Non-pregnant: Iron deficiency anaemia", c("Estimate", "LCL", "UCL")])))
 
 npIron[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "npIronState")
-writeData(wb = reportTables, sheet = "npIronState", x = npIron)
+names(npIron) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 3))
+
+addWorksheet(wb = reportTables, sheetName = "npIron")
+writeData(wb = reportTables, sheet = "npIron", x = npIron)
 
 ## Acute inflammation
-npInflammation <- data.frame(localityResults %>%
-                               filter(Indicator == "Non-pregnant: Acute inflammation") %>%
-                               dplyr::select(State, Locality, estimate, lcl, ucl),
-                             stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "npInflammationLocality")
-writeData(wb = reportTables, sheet = "npInflammationLocality", x = npInflammation)
-
 npInflammation <- data.frame(stateResults %>%
+                               filter(Indicator == "Non-pregnant: Median serum c-reactive protein concentration (mg/L)") %>%
+                               dplyr::select(State, estimate, lcl, ucl),
+                             stateResults %>%
                                filter(Indicator == "Non-pregnant: Acute inflammation") %>%
-                               dplyr::select(State, Estimate, LCL, UCL),
+                               dplyr::select(estimate, lcl, ucl),
                              stringsAsFactors = FALSE)
+
+npInflammation <- npInflammation[order(npInflammation$State), ]
 
 npInflammation <- rbind(npInflammation,
                            unlist(
                              c(State = 1,
+                               nationalResults[nationalResults$Indicator == "Non-pregnant: Median serum c-reactive protein concentration (mg/L)", c("Estimate", "LCL", "UCL")],
                                nationalResults[nationalResults$Indicator == "Non-pregnant: Acute inflammation", c("Estimate", "LCL", "UCL")])))
 
 npInflammation[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "npInflammationState")
-writeData(wb = reportTables, sheet = "npInflammationState", x = npInflammation)
+names(npInflammation) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 2))
+
+addWorksheet(wb = reportTables, sheetName = "npInflammation")
+writeData(wb = reportTables, sheet = "npInflammation", x = npInflammation)
 
 ## Calcium
-npCalcium <- data.frame(localityResults %>%
-                          filter(Indicator == "Non-pregnant: Hypocalcaemia") %>%
-                          dplyr::select(State, Locality, estimate, lcl, ucl),
-                        localityResults %>%
-                          filter(Indicator == "Non-pregnant: Hypercalcaemia") %>%
-                          dplyr::select("estimate", "lcl", "ucl"),
-                        stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "npCalciumLocality")
-writeData(wb = reportTables, sheet = "npCalciumLocality", x = npCalcium)
-
 npCalcium <- data.frame(stateResults %>%
+                          filter(Indicator == "Non-pregnant: Median serum calcium concentration (mg/dL)") %>%
+                          dplyr::select(State, estimate, lcl, ucl),
+                        stateResults %>%
                           filter(Indicator == "Non-pregnant: Hypocalcaemia") %>%
-                             dplyr::select(State, Estimate, LCL, UCL),
+                          dplyr::select(estimate, lcl, ucl),
                         stateResults %>%
                           filter(Indicator == "Non-pregnant: Hypercalcaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
+                          dplyr::select(estimate, lcl, ucl),
                         stringsAsFactors = FALSE)
+
+npCalcium <- npCalcium[order(npCalcium$State), ]
 
 npCalcium <- rbind(npCalcium,
                       unlist(
                         c(State = 1,
+                          nationalResults[nationalResults$Indicator == "Non-pregnant: Median serum calcium concentration (mg/dL)", c("Estimate", "LCL", "UCL")],
                           nationalResults[nationalResults$Indicator == "Non-pregnant: Hypocalcaemia", c("Estimate", "LCL", "UCL")],
                           nationalResults[nationalResults$Indicator == "Non-pregnant: Hypercalcaemia", c("Estimate", "LCL", "UCL")])))
 
 npCalcium[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "npCalciumState")
-writeData(wb = reportTables, sheet = "npCalciumState", x = npCalcium)
+names(npCalcium) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 3))
+
+addWorksheet(wb = reportTables, sheetName = "npCalcium")
+writeData(wb = reportTables, sheet = "npCalcium", x = npCalcium)
 
 ## Iodine
-npnlIodine <- data.frame(localityResults %>% 
-                           filter(Indicator == "Non-pregnant non-lactating: Mild iodine deficiency") %>%
-                           dplyr::select(State, Locality, estimate, lcl, ucl),
-                         localityResults %>%
-                           filter(Indicator == "Non-pregnant non-lactating: Moderate iodine deficiency") %>%
-                           dplyr::select(estimate, lcl, ucl),
-                         localityResults %>%
-                           filter(Indicator == "Non-pregnant non-lactating: Severe iodine deficiency") %>%
-                           dplyr::select(estimate, lcl, ucl),
-                          stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "npnlIodineLocality")
-writeData(wb = reportTables, sheet = "npnlIodineLocality", x = npnlIodine)
-
 npnlIodine <- data.frame(stateResults %>%
-                           filter(Indicator == "Non-pregnant non-lactating: Mild iodine deficiency") %>%
-                           dplyr::select(State, Estimate, LCL, UCL),
-                         stateResults %>%
-                           filter(Indicator == "Non-pregnant non-lactating: Moderate iodine deficiency") %>%
-                           dplyr::select(Estimate, LCL, UCL),
-                         stateResults %>%
-                           filter(Indicator == "Non-pregnant non-lactating: Severe iodine deficiency") %>%
-                           dplyr::select(Estimate, LCL, UCL),
+                           filter(Indicator == "Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L)") %>%
+                           dplyr::select(State, estimate, lcl, ucl),
                          stringsAsFactors = FALSE)
+
+npnlIodine <- npnlIodine[order(npnlIodine$State), ]
 
 npnlIodine <- rbind(npnlIodine,
                    unlist(
                      c(State = 1,
-                       nationalResults[nationalResults$Indicator == "Non-pregnant non-lactating: Mild iodine deficiency", c("Estimate", "LCL", "UCL")],
-                       nationalResults[nationalResults$Indicator == "Non-pregnant non-lactating: Moderate iodine deficiency", c("Estimate", "LCL", "UCL")],
-                       nationalResults[nationalResults$Indicator == "Non-pregnant non-lactating: Severe iodine deficiency", c("Estimate", "LCL", "UCL")])))
+                       nationalResults[nationalResults$Indicator == "Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L)", c("Estimate", "LCL", "UCL")])))
 
 npnlIodine[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "npnlIodineState")
-writeData(wb = reportTables, sheet = "npnlIodineState", x = npnlIodine)
+names(npnlIodine) <- c("State", "Estimate", "95% LCL", "95% UCL")
+
+addWorksheet(wb = reportTables, sheetName = "npnlIodine")
+writeData(wb = reportTables, sheet = "npnlIodine", x = npnlIodine)
 
 ## Intake
+nplIodine <- data.frame(stateResults %>%
+                          filter(Indicator == "Non-pregnant lactating: Median urinary iodine concentration (microgram/L)") %>%
+                          dplyr::select(State, estimate, lcl, ucl),
+                        stringsAsFactors = FALSE)
 
-npIodine <- data.frame(localityResults %>% 
-                         filter(Indicator == "Non-pregnant non-lactating: Iodine intake above requirements") %>%
-                         dplyr::select(State, Locality, estimate, lcl, ucl),
-                       localityResults %>%
-                         filter(Indicator == "Non-pregnant non-lactating: Iodine intake excessive") %>%
-                         dplyr::select(estimate, lcl, ucl),
-                       localityResults %>% 
-                         filter(Indicator == "Non-pregnant lactating: Iodine intake above requirements") %>%
-                         dplyr::select(estimate, lcl, ucl),
-                       localityResults %>%
-                         filter(Indicator == "Non-pregnant lactating: Iodine intake excessive") %>%
-                         dplyr::select(estimate, lcl, ucl),
-                       stringsAsFactors = FALSE)
+nplIodine <- nplIodine[order(nplIodine$State), ]
 
-addWorksheet(wb = reportTables, sheetName = "npIntakeLocality")
-writeData(wb = reportTables, sheet = "npIntakeLocality", x = npIodine)
+nplIodine <- rbind(nplIodine,
+                   unlist(
+                     c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Non-pregnant lactating: Median urinary iodine concentration (microgram/L)", c("Estimate", "LCL", "UCL")])))
 
-npIodine <- data.frame(stateResults %>%
-                         filter(Indicator == "Non-pregnant non-lactating: Iodine intake above requirements") %>%
-                         dplyr::select(State, Estimate, LCL, UCL),
-                       stateResults %>%
-                         filter(Indicator == "Non-pregnant non-lactating: Iodine intake excessive") %>%
-                         dplyr::select(Estimate, LCL, UCL),
-                       stateResults %>%
-                         filter(Indicator == "Non-pregnant lactating: Iodine intake above requirements") %>%
-                         dplyr::select(Estimate, LCL, UCL),
-                       stateResults %>%
-                         filter(Indicator == "Non-pregnant lactating: Iodine intake excessive") %>%
-                         dplyr::select(Estimate, LCL, UCL),
-                       stringsAsFactors = FALSE)
+nplIodine[19, "State"] <- "National"
 
-npIodine <- rbind(npIodine,
-                    unlist(
-                      c(State = 1,
-                        nationalResults[nationalResults$Indicator == "Non-pregnant non-lactating: Iodine intake above requirements", c("Estimate", "LCL", "UCL")],
-                        nationalResults[nationalResults$Indicator == "Non-pregnant non-lactating: Iodine intake excessive", c("Estimate", "LCL", "UCL")],
-                        nationalResults[nationalResults$Indicator == "Non-pregnant lactating: Iodine intake above requirements", c("Estimate", "LCL", "UCL")],
-                        nationalResults[nationalResults$Indicator == "Non-pregnant lactating: Iodine intake excessive", c("Estimate", "LCL", "UCL")])))
+names(nplIodine) <- c("State", "Estimate", "95% LCL", "95% UCL")
 
-npIodine[19, "State"] <- "National"
-
-addWorksheet(wb = reportTables, sheetName = "npIntakeState")
-writeData(wb = reportTables, sheet = "npIntakeState", x = npIodine)
-
+addWorksheet(wb = reportTables, sheetName = "nplIodine")
+writeData(wb = reportTables, sheet = "nplIodine", x = nplIodine)
 
 ## Create pregnant tables ##################################################
 
 ## Anaemia
-pAnaemia <- data.frame(localityResults %>% 
-                          filter(Indicator == "Pregnant: Mild anaemia") %>%
-                          dplyr::select(State, Locality, estimate, lcl, ucl),
-                        localityResults %>%
-                          filter(Indicator == "Pregnant: Moderate anaemia") %>%
-                          dplyr::select(estimate, lcl, ucl),
-                        localityResults %>%
-                          filter(Indicator == "Pregnant: Severe anaemia") %>%
-                          dplyr::select(estimate, lcl, ucl),
-                        stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "pAnaemiaLocality")
-writeData(wb = reportTables, sheet = "pAnaemiaLocality", x = pAnaemia)
-
 pAnaemia <- data.frame(stateResults %>%
-                          filter(Indicator == "Pregnant: Mild anaemia") %>%
-                          dplyr::select(State, Estimate, LCL, UCL),
-                        stateResults %>%
-                          filter(Indicator == "Pregnant: Moderate anaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
-                        stateResults %>%
-                          filter(Indicator == "Pregnant: Severe anaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
-                        stringsAsFactors = FALSE)
+                         filter(Indicator == "Pregnant: Median adjusted serum haemoglobin concentration (g/dL)") %>%
+                         dplyr::select(State, estimate, lcl, ucl),
+                       stateResults %>%
+                         filter(Indicator == "Pregnant: Mild anaemia") %>%
+                         dplyr::select(estimate, lcl, ucl),
+                       stateResults %>%
+                         filter(Indicator == "Pregnant: Moderate anaemia") %>%
+                         dplyr::select(estimate, lcl, ucl),
+                       stateResults %>%
+                         filter(Indicator == "Pregnant: Severe anaemia") %>%
+                         dplyr::select(estimate, lcl, ucl),
+                       stringsAsFactors = FALSE)
+
+pAnaemia <- pAnaemia[order(pAnaemia$State), ]
 
 pAnaemia <- rbind(pAnaemia,
                    unlist(
                      c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Pregnant: Median adjusted serum haemoglobin concentration (g/dL)", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Pregnant: Mild anaemia", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Pregnant: Moderate anaemia", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Pregnant: Severe anaemia", c("Estimate", "LCL", "UCL")])))
 
 pAnaemia[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "pAnaemiaState")
-writeData(wb = reportTables, sheet = "pAnaemiaState", x = pAnaemia)
+names(pAnaemia) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 4))
+
+addWorksheet(wb = reportTables, sheetName = "pAnaemia")
+writeData(wb = reportTables, sheet = "pAnaemia", x = pAnaemia)
 
 ## Iron
-pIron <- data.frame(localityResults %>%
-                       filter(Indicator == "Pregnant: Iron deficiency") %>%
-                       dplyr::select(State, Locality, estimate, lcl, ucl),
-                     localityResults %>%
-                       filter(Indicator == "Pregnant: Iron deficiency anaemia") %>%
-                       dplyr::select(estimate, lcl, ucl),
-                     stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "pIronLocality")
-writeData(wb = reportTables, sheet = "pIronLocality", x = pIron)
-
 pIron <- data.frame(stateResults %>%
-                       filter(Indicator == "Pregnant: Iron deficiency") %>%
-                       dplyr::select(State, Estimate, LCL, UCL),
-                     stateResults %>%
-                       filter(Indicator == "Pregnant: Iron deficiency anaemia") %>%
-                       dplyr::select(Estimate, LCL, UCL),
-                     stringsAsFactors = FALSE)
+                      filter(Indicator == "Pregnant: Median adjusted serum ferritin concentration (ng/mL)") %>%
+                      dplyr::select(State, estimate, lcl, ucl),
+                    stateResults %>%
+                      filter(Indicator == "Pregnant: Iron deficiency") %>%
+                      dplyr::select(estimate, lcl, ucl),
+                    stateResults %>%
+                      filter(Indicator == "Pregnant: Iron deficiency anaemia") %>%
+                      dplyr::select(estimate, lcl, ucl),
+                    stringsAsFactors = FALSE)
+
+pIron <- pIron[order(pIron$State), ]
 
 pIron <- rbind(pIron,
                 unlist(
                   c(State = 1,
+                    nationalResults[nationalResults$Indicator == "Pregnant: Median adjusted serum ferritin concentration (ng/mL)", c("Estimate", "LCL", "UCL")],
                     nationalResults[nationalResults$Indicator == "Pregnant: Iron deficiency", c("Estimate", "LCL", "UCL")],
                     nationalResults[nationalResults$Indicator == "Pregnant: Iron deficiency anaemia", c("Estimate", "LCL", "UCL")])))
 
 pIron[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "pIronState")
-writeData(wb = reportTables, sheet = "pIronState", x = pIron)
+names(pIron) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 3))
+
+addWorksheet(wb = reportTables, sheetName = "pIron")
+writeData(wb = reportTables, sheet = "pIron", x = pIron)
 
 ## Acute inflammation
-pInflammation <- data.frame(localityResults %>%
-                               filter(Indicator == "Pregnant: Acute inflammation") %>%
-                               dplyr::select(State, Locality, estimate, lcl, ucl),
-                             stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "pInflammationLocality")
-writeData(wb = reportTables, sheet = "pInflammationLocality", x = pInflammation)
-
 pInflammation <- data.frame(stateResults %>%
-                               filter(Indicator == "Pregnant: Acute inflammation") %>%
-                               dplyr::select(State, Estimate, LCL, UCL),
+                              filter(Indicator == "Pregnant: Median serum c-reactive protein concentration (mg/L)") %>%
+                              dplyr::select(State, estimate, lcl, ucl),
+                            stateResults %>%
+                              filter(Indicator == "Pregnant: Acute inflammation") %>%
+                              dplyr::select(estimate, lcl, ucl),
                              stringsAsFactors = FALSE)
+
+pInflammation <- pInflammation[order(pInflammation$State), ]
 
 pInflammation <- rbind(pInflammation,
                         unlist(
                           c(State = 1,
+                            nationalResults[nationalResults$Indicator == "Pregnant: Median serum c-reactive protein concentration (mg/L)", c("Estimate", "LCL", "UCL")],
                             nationalResults[nationalResults$Indicator == "Pregnant: Acute inflammation", c("Estimate", "LCL", "UCL")])))
 
 pInflammation[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "pInflammationState")
-writeData(wb = reportTables, sheet = "pInflammationState", x = pInflammation)
+names(pInflammation) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 2))
+
+addWorksheet(wb = reportTables, sheetName = "pInflammation")
+writeData(wb = reportTables, sheet = "pInflammation", x = pInflammation)
 
 ## Calcium
-pCalcium <- data.frame(localityResults %>%
-                          filter(Indicator == "Pregnant: Hypocalcaemia") %>%
-                          dplyr::select(State, Locality, estimate, lcl, ucl),
-                        localityResults %>%
-                          filter(Indicator == "Pregnant: Hypercalcaemia") %>%
-                          dplyr::select("estimate", "lcl", "ucl"),
-                        stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "pCalciumLocality")
-writeData(wb = reportTables, sheet = "pCalciumLocality", x = pCalcium)
-
 pCalcium <- data.frame(stateResults %>%
-                          filter(Indicator == "Pregnant: Hypocalcaemia") %>%
-                          dplyr::select(State, Estimate, LCL, UCL),
-                        stateResults %>%
-                          filter(Indicator == "Pregnant: Hypercalcaemia") %>%
-                          dplyr::select(Estimate, LCL, UCL),
-                        stringsAsFactors = FALSE)
+                         filter(Indicator == "Pregnant: Median serum calcium concentration (mg/dL)") %>%
+                         dplyr::select(State, estimate, lcl, ucl),
+                       stateResults %>%
+                         filter(Indicator == "Pregnant: Hypocalcaemia") %>%
+                         dplyr::select(estimate, lcl, ucl),
+                       stateResults %>%
+                         filter(Indicator == "Pregnant: Hypercalcaemia") %>%
+                         dplyr::select(estimate, lcl, ucl),
+                       stringsAsFactors = FALSE)
+
+pCalcium <- pCalcium[order(pCalcium$State), ]
 
 pCalcium <- rbind(pCalcium,
                    unlist(
                      c(State = 1,
+                       nationalResults[nationalResults$Indicator == "Pregnant: Median serum calcium concentration (mg/dL)", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Pregnant: Hypocalcaemia", c("Estimate", "LCL", "UCL")],
                        nationalResults[nationalResults$Indicator == "Pregnant: Hypercalcaemia", c("Estimate", "LCL", "UCL")])))
 
 pCalcium[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "pCalciumState")
-writeData(wb = reportTables, sheet = "pCalciumState", x = pCalcium)
+names(pCalcium) <- c("State", rep(c("Estimate", "95% LCL", "95% UCL"), 3))
+
+addWorksheet(wb = reportTables, sheetName = "pCalcium")
+writeData(wb = reportTables, sheet = "pCalcium", x = pCalcium)
 
 ## Iodine
 
-## Intake
-
-pIodine <- data.frame(localityResults %>% 
-                        filter(Indicator == "Pregnant: Iodine insufficiency") %>%
-                        dplyr::select(State, Locality, estimate, lcl, ucl),
-                      localityResults %>% 
-                         filter(Indicator == "Pregnant: Iodine intake above requirements") %>%
-                         dplyr::select(estimate, lcl, ucl),
-                      localityResults %>%
-                         filter(Indicator == "Pregnant: Iodine intake excessive") %>%
-                         dplyr::select(estimate, lcl, ucl),
-                      stringsAsFactors = FALSE)
-
-addWorksheet(wb = reportTables, sheetName = "pIntakeLocality")
-writeData(wb = reportTables, sheet = "pIntakeLocality", x = pIodine)
-
 pIodine <- data.frame(stateResults %>%
-                        filter(Indicator == "Pregnant: Iodine insufficiency") %>%
-                        dplyr::select(State, Estimate, LCL, UCL),
-                      stateResults %>%
-                         filter(Indicator == "Pregnant: Iodine intake above requirements") %>%
-                         dplyr::select(Estimate, LCL, UCL),
-                      stateResults %>%
-                         filter(Indicator == "Pregnant: Iodine intake excessive") %>%
-                         dplyr::select(Estimate, LCL, UCL),
+                        filter(Indicator == "Pregnant: Median urinary iodine concentration (microgram/L)") %>%
+                        dplyr::select(State, estimate, lcl, ucl),
                       stringsAsFactors = FALSE)
+
+pIodine <- pIodine[order(pIodine$State), ]
 
 pIodine <- rbind(pIodine,
                   unlist(
                     c(State = 1,
-                      nationalResults[nationalResults$Indicator == "Pregnant: Iodine insufficiency", c("Estimate", "LCL", "UCL")],
-                      nationalResults[nationalResults$Indicator == "Pregnant: Iodine intake above requirements", c("Estimate", "LCL", "UCL")],
-                      nationalResults[nationalResults$Indicator == "Pregnant: Iodine intake excessive", c("Estimate", "LCL", "UCL")])))
+                      nationalResults[nationalResults$Indicator == "Pregnant: Median urinary iodine concentration (microgram/L)", c("Estimate", "LCL", "UCL")])))
 
 pIodine[19, "State"] <- "National"
 
-addWorksheet(wb = reportTables, sheetName = "pIntakeState")
-writeData(wb = reportTables, sheet = "pIntakeState", x = pIodine)
+names(pIodine) <- c("State", "Estimate", "95% LCL", "95% UCL")
+
+addWorksheet(wb = reportTables, sheetName = "pIodine")
+writeData(wb = reportTables, sheet = "pIodine", x = pIodine)
 
 saveWorkbook(wb = reportTables, file = "reportTables/reportTables.xlsx", overwrite = TRUE)
