@@ -1,757 +1,757 @@
-State,Indicator,estimate,lcl,ucl,sd
-Northern,Child: Median adjusted serum haemoglobin concentration (g/dL),11.3,11.1,11.6,0.148260167
-Northern,Child: Mild anaemia,0.252941176,0.195020559,0.319861779,0.032099865
-Northern,Child: Moderate anaemia,0.181818182,0.136349578,0.231540962,0.026388843
-Northern,Child: Severe Anaemia,0.008849558,0,0.02666263,0.006770296
-Northern,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.5,11.25,11.8,0.148260167
-Northern,Pregnant: Mild anaemia,0.176470588,0.082136246,0.287977602,0.057432535
-Northern,Pregnant: Moderate anaemia,0.138461538,0.053915454,0.241472507,0.053087895
-Northern,Pregnant: Severe Anaemia,0,0,0.05801364,0.012564421
-Northern,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.1,12.9,13.3,0.074130083
-Northern,Non-pregnant: Mild anaemia,0.102040816,0.061924424,0.149051491,0.023754321
-Northern,Non-pregnant: Moderate anaemia,0.117302053,0.072216127,0.165752858,0.023063809
-Northern,Non-pregnant: Severe Anaemia,0.00280112,0,0.016217094,0.0044792
-Al-Gadarif,Child: Median adjusted serum haemoglobin concentration (g/dL),11.3,11.1475,11.5,0.129727646
-Al-Gadarif,Child: Mild anaemia,0.264,0.21894029,0.315864268,0.023883016
-Al-Gadarif,Child: Moderate anaemia,0.210769231,0.167423392,0.259281371,0.025437612
-Al-Gadarif,Child: Severe Anaemia,0.032154341,0.013635332,0.056333563,0.010703995
-Al-Gadarif,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.7,11.5,12.2,0.22239025
-Al-Gadarif,Pregnant: Mild anaemia,0.225,0.135534085,0.345238095,0.054697795
-Al-Gadarif,Pregnant: Moderate anaemia,0.060240964,0,0.13345679,0.034654307
-Al-Gadarif,Pregnant: Severe Anaemia,0,0,0,0
-Al-Gadarif,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13,12.7,13.2,0.148260167
-Al-Gadarif,Non-pregnant: Mild anaemia,0.184834123,0.126177249,0.235867551,0.025462283
-Al-Gadarif,Non-pregnant: Moderate anaemia,0.119804401,0.07367355,0.17302106,0.02722891
-Al-Gadarif,Non-pregnant: Severe Anaemia,0.004739336,0,0.014321522,0.005358801
-West Kourdofan,Child: Median adjusted serum haemoglobin concentration (g/dL),11.7,11.3,12.1,0.148260167
-West Kourdofan,Child: Mild anaemia,0.262337662,0.208649441,0.328564393,0.033795681
-West Kourdofan,Child: Moderate anaemia,0.120300752,0.07905197,0.168137314,0.024331948
-West Kourdofan,Child: Severe Anaemia,0.012722646,0.002472551,0.029287358,0.007709499
-West Kourdofan,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.75,11.5,12,0.22239025
-West Kourdofan,Pregnant: Mild anaemia,0.234234234,0.135417333,0.333469945,0.046488357
-West Kourdofan,Pregnant: Moderate anaemia,0.116071429,0.044136239,0.197007874,0.036981171
-West Kourdofan,Pregnant: Severe Anaemia,0,0,0,0
-West Kourdofan,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.2,12.9,13.4,0.148260167
-West Kourdofan,Non-pregnant: Mild anaemia,0.146417445,0.096854401,0.213681645,0.028812243
-West Kourdofan,Non-pregnant: Moderate anaemia,0.087947883,0.048852003,0.139106783,0.023046867
-West Kourdofan,Non-pregnant: Severe Anaemia,0.009174312,0,0.025889968,0.007507407
-Northern,Child: Median serum c-reactive protein concentration (mg/L),1.7,1.4,2,0.148260167
-Northern,Child: Acute inflammation,0.101408451,0.060348652,0.167948413,0.027942341
-Northern,Pregnant: Median serum c-reactive protein concentration (mg/L),2.1,1.7,2.3525,0.22239025
-Northern,Pregnant: Acute inflammation,0.114285714,0.038820216,0.209033778,0.045025941
-Northern,Non-pregnant: Median serum c-reactive protein concentration (mg/L),1.8,1.5,2,0.148260167
-Northern,Non-pregnant: Acute inflammation,0.108626198,0.062835697,0.171254588,0.028958982
-Al-Gadarif,Child: Median serum c-reactive protein concentration (mg/L),3.7,3.1,4.2,0.370650417
-Al-Gadarif,Child: Acute inflammation,0.300536673,0.235818159,0.375639067,0.033011326
-Al-Gadarif,Pregnant: Median serum c-reactive protein concentration (mg/L),5.3,3.4,6.1075,0.815430918
-Al-Gadarif,Pregnant: Acute inflammation,0.50617284,0.355782652,0.640894499,0.069318394
-Al-Gadarif,Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.7,3.3,4.3,0.22239025
-Al-Gadarif,Non-pregnant: Acute inflammation,0.306532663,0.223034188,0.390781962,0.036752579
-West Kourdofan,Child: Median serum c-reactive protein concentration (mg/L),2.9,2.3,3.5,0.496671559
-West Kourdofan,Child: Acute inflammation,0.242165242,0.174894457,0.312613162,0.035543218
-West Kourdofan,Pregnant: Median serum c-reactive protein concentration (mg/L),4.3,3.6,5.3,0.378063426
-West Kourdofan,Pregnant: Acute inflammation,0.405405405,0.27717586,0.537639481,0.056873709
-West Kourdofan,Non-pregnant: Median serum c-reactive protein concentration (mg/L),2.5,1.86325,3.03,0.22239025
-West Kourdofan,Non-pregnant: Acute inflammation,0.243055556,0.17843487,0.327825115,0.039565098
-Northern,Child: Median adjusted serum ferritin concentration (ng/mL),9.1,7.3,10.985,0.778365876
-Northern,Child: Iron deficiency,0.590116279,0.518266395,0.657626094,0.035619533
-Northern,Child: Iron overload,NA,NA,NA,NA
-Northern,Child: Iron deficiency anaemia,0.217391304,0.148413297,0.277200559,0.03167821
-Northern,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.2,7.8475,14.6125,2.965203339
-Northern,Pregnant: Iron deficiency,0.653333333,0.507422886,0.772294304,0.07605554
-Northern,Pregnant: Iron overload,0,0,0,0
-Northern,Pregnant: Iron deficiency anaemia,0.256410256,0.130163043,0.412842742,0.068522028
-Northern,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.1,14.9,23.1085,1.408471586
-Northern,Non-pregnant: Iron deficiency,0.420588235,0.331054644,0.512082396,0.041674674
-Northern,Non-pregnant: Iron overload,0,0,0,0
-Northern,Non-pregnant: Iron deficiency anaemia,0.144846797,0.094000078,0.191834154,0.026529125
-Al-Gadarif,Child: Median adjusted serum ferritin concentration (ng/mL),11.83,9.23,15,1.638274845
-Al-Gadarif,Child: Iron deficiency,0.490842491,0.413649223,0.565975498,0.039412074
-Al-Gadarif,Child: Iron overload,NA,NA,NA,NA
-Al-Gadarif,Child: Iron deficiency anaemia,0.280135823,0.210884128,0.336759395,0.033026769
-Al-Gadarif,Pregnant: Median adjusted serum ferritin concentration (ng/mL),11.7,8.6,13.195,1.204613856
-Al-Gadarif,Pregnant: Iron deficiency,0.69047619,0.552213073,0.827231041,0.067825916
-Al-Gadarif,Pregnant: Iron overload,0,0,0,0
-Al-Gadarif,Pregnant: Iron deficiency anaemia,0.231707317,0.123636884,0.342016878,0.061914157
-Al-Gadarif,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),21.2,18.2,26.805,1.445536628
-Al-Gadarif,Non-pregnant: Iron deficiency,0.369346734,0.304319955,0.445669656,0.038312832
-Al-Gadarif,Non-pregnant: Iron overload,0.0075,0,0.025647634,0.00730203
-Al-Gadarif,Non-pregnant: Iron deficiency anaemia,0.158273381,0.104819332,0.220309747,0.027373232
-West Kourdofan,Child: Median adjusted serum ferritin concentration (ng/mL),14.4,12.3,16.9,1.423297603
-West Kourdofan,Child: Iron deficiency,0.405128205,0.321911884,0.473551935,0.043271282
-West Kourdofan,Child: Iron overload,NA,NA,NA,NA
-West Kourdofan,Child: Iron deficiency anaemia,0.254498715,0.196551796,0.309888175,0.031140254
-West Kourdofan,Pregnant: Median adjusted serum ferritin concentration (ng/mL),13.1,9.3,19.7,4.518228588
-West Kourdofan,Pregnant: Iron deficiency,0.517241379,0.418069187,0.639740991,0.053873412
-West Kourdofan,Pregnant: Iron overload,0,0,0.021945277,0
-West Kourdofan,Pregnant: Iron deficiency anaemia,0.209090909,0.116483183,0.307762238,0.046818318
-West Kourdofan,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),26.2,19.6,32.8,3.335853756
-West Kourdofan,Non-pregnant: Iron deficiency,0.383606557,0.293526098,0.506643515,0.052747586
-West Kourdofan,Non-pregnant: Iron overload,0.033557047,0.007364427,0.066697248,0.013261039
-West Kourdofan,Non-pregnant: Iron deficiency anaemia,0.100917431,0.05362776,0.153858764,0.024983881
-Northern,Child: Median serum calcium concentration (mg/dL),10.05,9.9,10.3,0.22239025
-Northern,Child: Hypocalcaemia,0.184986595,0.118375826,0.267502302,0.036252654
-Northern,Child: Hypercalcaemia,0.176100629,0.119209416,0.242643569,0.037784568
-Northern,Pregnant: Median serum calcium concentration (mg/dL),8.9,8.5,9.2,0
-Northern,Pregnant: Hypocalcaemia,0.666666667,0.461538462,0.833527132,0.080833038
-Northern,Pregnant: Hypercalcaemia,0.32,0.145684524,0.512855163,0.086662251
-Northern,Non-pregnant: Median serum calcium concentration (mg/dL),9.7,9.6,9.9,0.074130083
-Northern,Non-pregnant: Hypocalcaemia,0.236111111,0.142773109,0.338538462,0.049110491
-Northern,Non-pregnant: Hypercalcaemia,0.681818182,0.564219577,0.776168855,0.053441904
-Al-Gadarif,Child: Median serum calcium concentration (mg/dL),9.3,9.2,9.4,0
-Al-Gadarif,Child: Hypocalcaemia,0.552325581,0.5,0.612118198,0.032018531
-Al-Gadarif,Child: Hypercalcaemia,0.023255814,0.007145946,0.046760996,0.010305021
-Al-Gadarif,Pregnant: Median serum calcium concentration (mg/dL),8.75,8.5,9.1,0.074130083
-Al-Gadarif,Pregnant: Hypocalcaemia,0.846153846,0.696051587,0.95459596,0.068970728
-Al-Gadarif,Pregnant: Hypercalcaemia,0.157894737,0.044444444,0.309733894,0.072124981
-Al-Gadarif,Non-pregnant: Median serum calcium concentration (mg/dL),8.9,8.8,9.1,0.074130083
-Al-Gadarif,Non-pregnant: Hypocalcaemia,0.816568047,0.736337209,0.883733779,0.037756708
-Al-Gadarif,Non-pregnant: Hypercalcaemia,0.097701149,0.040862573,0.175107143,0.029173181
-West Kourdofan,Child: Median serum calcium concentration (mg/dL),9.1,9,9.2,0.051891058
-West Kourdofan,Child: Hypocalcaemia,0.634615385,0.521273299,0.737453246,0.052550714
-West Kourdofan,Child: Hypercalcaemia,0.025641026,0.003073679,0.058139953,0.014233362
-West Kourdofan,Pregnant: Median serum calcium concentration (mg/dL),8.44,8,9,0.214977242
-West Kourdofan,Pregnant: Hypocalcaemia,0.790123457,0.67030323,0.901294791,0.062404079
-West Kourdofan,Pregnant: Hypercalcaemia,0.159090909,0.068778111,0.27328844,0.051020285
-West Kourdofan,Non-pregnant: Median serum calcium concentration (mg/dL),8.7,8.4,8.9,0.074130083
-West Kourdofan,Non-pregnant: Hypocalcaemia,0.881443299,0.800859729,0.945079426,0.035306001
-West Kourdofan,Non-pregnant: Hypercalcaemia,0.099415205,0.041553777,0.17260804,0.033677588
-Northern,Pregnant: Median urinary iodine concentration (microgram/L),125.34,86.663,151.84,22.7394031
-Northern,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),147.45,119.5675,163.48,12.18698572
-Northern,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),101.87,84.79225,121.66,10.1261694
-Al-Gadarif,Pregnant: Median urinary iodine concentration (microgram/L),74.33,59.01575,108.65,12.36304467
-Al-Gadarif,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),94.35,79.524,115.2,13.29152397
-Al-Gadarif,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),77.22,56.5115,93.57,10.81001942
-West Kourdofan,Pregnant: Median urinary iodine concentration (microgram/L),39.42,26.15,63.14,6.293644087
-West Kourdofan,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),56.19,43.8,70.83,8.812213673
-West Kourdofan,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),34.09,20.04,39.95,2.605672434
-River Nile,Child: Median adjusted serum haemoglobin concentration (g/dL),11,10.7,11.2,0.148260167
-River Nile,Child: Mild anaemia,0.277504105,0.221320171,0.338031217,0.029288759
-River Nile,Child: Moderate anaemia,0.267080745,0.200374358,0.32728988,0.034338167
-River Nile,Child: Severe Anaemia,0.012477718,0.002035228,0.029253168,0.006593454
-River Nile,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.1,11.6,12.4,0.22239025
-River Nile,Pregnant: Mild anaemia,0.175675676,0.072455038,0.305404279,0.055572901
-River Nile,Pregnant: Moderate anaemia,0.057471264,0,0.154995599,0.039874948
-River Nile,Pregnant: Severe Anaemia,0,0,0,0
-River Nile,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.7,12.3,12.905,0.148260167
-River Nile,Non-pregnant: Mild anaemia,0.225181598,0.168933424,0.291823127,0.032004441
-River Nile,Non-pregnant: Moderate anaemia,0.111650485,0.061938357,0.167533894,0.025277759
-River Nile,Non-pregnant: Severe Anaemia,0.005037783,0,0.018276762,0.004356469
-Sinar,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,11,11.4,0.074130083
-Sinar,Child: Mild anaemia,0.270700637,0.220625931,0.321604688,0.026482228
-Sinar,Child: Moderate anaemia,0.216088328,0.179120436,0.257074803,0.020846178
-Sinar,Child: Severe Anaemia,0.00931677,0,0.026650012,0.006539693
-Sinar,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.9,11.5475,12.2,0.074130083
-Sinar,Pregnant: Mild anaemia,0.108695652,0.039528524,0.201697649,0.036470758
-Sinar,Pregnant: Moderate anaemia,0.144067797,0.071971429,0.224605512,0.041372791
-Sinar,Pregnant: Severe Anaemia,0,0,0,0
-Sinar,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.7,12.6,12.9025,0.074130083
-Sinar,Non-pregnant: Mild anaemia,0.193905817,0.14018736,0.252559339,0.030441629
-Sinar,Non-pregnant: Moderate anaemia,0.116094987,0.071428571,0.172336873,0.024385162
-Sinar,Non-pregnant: Severe Anaemia,0.005479452,0,0.022394853,0.005972805
-North Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,10.7,11.6,0.296520334
-North Darfur,Child: Mild anaemia,0.27037037,0.215742435,0.318205641,0.027174679
-North Darfur,Child: Moderate anaemia,0.172354949,0.121635251,0.220487974,0.026013376
-North Darfur,Child: Severe Anaemia,0.020304569,0.007330534,0.036380341,0.008260768
-North Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.3,10.995,11.6525,0.148260167
-North Darfur,Pregnant: Mild anaemia,0.301075269,0.202021277,0.434003281,0.064964317
-North Darfur,Pregnant: Moderate anaemia,0.202531646,0.105263158,0.295454545,0.05389813
-North Darfur,Pregnant: Severe Anaemia,0.009433962,0,0.044005433,0.015128588
-North Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.7,12.3975,13.1,0.296520334
-North Darfur,Non-pregnant: Mild anaemia,0.179063361,0.120370128,0.237986493,0.02906206
-North Darfur,Non-pregnant: Moderate anaemia,0.165450122,0.118387909,0.22285402,0.026839043
-North Darfur,Non-pregnant: Severe Anaemia,0.020887728,0.005359791,0.044391926,0.009424459
-River Nile,Child: Median serum c-reactive protein concentration (mg/L),4.75,3.8,5.2,0.277987813
-River Nile,Child: Acute inflammation,0.437299035,0.349921603,0.511800823,0.041742868
-River Nile,Pregnant: Median serum c-reactive protein concentration (mg/L),8.8,6.6,10.1075,0.148260167
-River Nile,Pregnant: Acute inflammation,0.731707317,0.592091837,0.85726817,0.068898911
-River Nile,Non-pregnant: Median serum c-reactive protein concentration (mg/L),5.1,4.4,5.6,0.185325209
-River Nile,Non-pregnant: Acute inflammation,0.515706806,0.449375619,0.587057914,0.036970616
-Sinar,Child: Median serum c-reactive protein concentration (mg/L),3.8,3.6,4.1,0.148260167
-Sinar,Child: Acute inflammation,0.251655629,0.190879765,0.330107385,0.036258746
-Sinar,Pregnant: Median serum c-reactive protein concentration (mg/L),4.7,3.95,5.1,0.240922771
-Sinar,Pregnant: Acute inflammation,0.434343434,0.314934165,0.567505948,0.063982895
-Sinar,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.25,4,4.6,0.148260167
-Sinar,Non-pregnant: Acute inflammation,0.317365269,0.256094259,0.394153846,0.037546838
-North Darfur,Child: Median serum c-reactive protein concentration (mg/L),4.5,4.1,4.7,0.074130083
-North Darfur,Child: Acute inflammation,0.387858347,0.328496468,0.450132207,0.034374825
-North Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),5.6,4.4475,6,0.593040668
-North Darfur,Pregnant: Acute inflammation,0.548076923,0.402084515,0.682341367,0.072361593
-North Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4.2,5,0.148260167
-North Darfur,Non-pregnant: Acute inflammation,0.418478261,0.353043812,0.492894865,0.033546435
-River Nile,Child: Median adjusted serum ferritin concentration (ng/mL),7.8,6.1,10.51,0.947011816
-River Nile,Child: Iron deficiency,0.625396825,0.548865395,0.692317997,0.037960377
-River Nile,Child: Iron overload,NA,NA,NA,NA
-River Nile,Child: Iron deficiency anaemia,0.241758242,0.161826009,0.331977159,0.043245611
-River Nile,Pregnant: Median adjusted serum ferritin concentration (ng/mL),12,10.2,16.185,1.300982965
-River Nile,Pregnant: Iron deficiency,0.567164179,0.41506993,0.719333333,0.081605906
-River Nile,Pregnant: Iron overload,0,0,0,0
-River Nile,Pregnant: Iron deficiency anaemia,0.181818182,0.097370427,0.311464646,0.058620022
-River Nile,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),12.1,9.6,16.64,1.53634598
-River Nile,Non-pregnant: Iron deficiency,0.546511628,0.467459679,0.621146684,0.044260309
-River Nile,Non-pregnant: Iron overload,0,0,0.003453106,0
-River Nile,Non-pregnant: Iron deficiency anaemia,0.223140496,0.163050038,0.295543981,0.036186122
-Sinar,Child: Median adjusted serum ferritin concentration (ng/mL),10.595,7.95,15.4,1.764295987
-Sinar,Child: Iron deficiency,0.523648649,0.437478147,0.607420946,0.041151658
-Sinar,Child: Iron overload,NA,NA,NA,NA
-Sinar,Child: Iron deficiency anaemia,0.191588785,0.139349629,0.251199152,0.028897291
-Sinar,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.14,8.1,14.43325,2.08676185
-Sinar,Pregnant: Iron deficiency,0.634408602,0.519111927,0.775692112,0.0696353
-Sinar,Pregnant: Iron overload,0,0,0.029780322,0.007450448
-Sinar,Pregnant: Iron deficiency anaemia,0.147368421,0.066594203,0.241574496,0.045685089
-Sinar,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.865,17.735875,24.2,2.149772421
-Sinar,Non-pregnant: Iron deficiency,0.437308869,0.352435897,0.527336581,0.047295473
-Sinar,Non-pregnant: Iron overload,0.018237082,0.003203602,0.042868729,0.00990668
-Sinar,Non-pregnant: Iron deficiency anaemia,0.142857143,0.099709218,0.190392597,0.022148574
-North Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),13.1,10.27,16.2,1.567851265
-North Darfur,Child: Iron deficiency,0.46985447,0.399950739,0.532903698,0.033267698
-North Darfur,Child: Iron overload,NA,NA,NA,NA
-North Darfur,Child: Iron deficiency anaemia,0.251851852,0.198878495,0.311101787,0.031293665
-North Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),14.755,9.36,24.985,1.334341502
-North Darfur,Pregnant: Iron deficiency,0.528089888,0.377638889,0.6844,0.079071752
-North Darfur,Pregnant: Iron overload,0,0,0.034502807,0.007339612
-North Darfur,Pregnant: Iron deficiency anaemia,0.279069767,0.179905925,0.388944444,0.060332372
-North Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),22.4,17.0285,24.76825,2.594552921
-North Darfur,Non-pregnant: Iron deficiency,0.403899721,0.336152451,0.486365754,0.041175827
-North Darfur,Non-pregnant: Iron overload,0.005617978,0,0.021863928,0.005714425
-North Darfur,Non-pregnant: Iron deficiency anaemia,0.2,0.145753618,0.25834211,0.028674483
-River Nile,Child: Median serum calcium concentration (mg/dL),9.8,9.7,10,0.074130083
-River Nile,Child: Hypocalcaemia,0.253846154,0.177964594,0.318033875,0.035557127
-River Nile,Child: Hypercalcaemia,0.098976109,0.058771242,0.148835157,0.02327664
-River Nile,Pregnant: Median serum calcium concentration (mg/dL),9.2,8.5,9.4,0.370650417
-River Nile,Pregnant: Hypocalcaemia,0.838709677,0.651565217,0.964285714,0.081560699
-River Nile,Pregnant: Hypercalcaemia,0.172413793,0.035652709,0.348176718,0.074727907
-River Nile,Non-pregnant: Median serum calcium concentration (mg/dL),9.35,9.2,9.5,0.074130083
-River Nile,Non-pregnant: Hypocalcaemia,0.41025641,0.281038408,0.525566369,0.065473975
-River Nile,Non-pregnant: Hypercalcaemia,0.5,0.373104167,0.609522233,0.057499744
-Sinar,Child: Median serum calcium concentration (mg/dL),8.9,8.7975,9.1525,0.148260167
-Sinar,Child: Hypocalcaemia,0.661237785,0.564528142,0.757527025,0.048920618
-Sinar,Child: Hypercalcaemia,0.067484663,0.026576684,0.118647116,0.023853991
-Sinar,Pregnant: Median serum calcium concentration (mg/dL),8.6,8.3975,8.8,0.074130083
-Sinar,Pregnant: Hypocalcaemia,0.833333333,0.712246707,0.920681606,0.050109186
-Sinar,Pregnant: Hypercalcaemia,0.161764706,0.065520888,0.275862069,0.054602325
-Sinar,Non-pregnant: Median serum calcium concentration (mg/dL),8.7,8.6,8.8,0
-Sinar,Non-pregnant: Hypocalcaemia,0.822727273,0.72934311,0.895334881,0.040351295
-Sinar,Non-pregnant: Hypercalcaemia,0.153153153,0.092162867,0.237669999,0.036036268
-North Darfur,Child: Median serum calcium concentration (mg/dL),9.1,9,9.3,0
-North Darfur,Child: Hypocalcaemia,0.62472885,0.540811594,0.698817828,0.035796659
-North Darfur,Child: Hypercalcaemia,0.004524887,0,0.019150978,0.004836272
-North Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.5,8.2,8.8,0.074130083
-North Darfur,Pregnant: Hypocalcaemia,0.895522388,0.785559006,0.969254079,0.047335193
-North Darfur,Pregnant: Hypercalcaemia,0.101694915,0.030600632,0.196095938,0.042791592
-North Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.7,9,0.074130083
-North Darfur,Non-pregnant: Hypocalcaemia,0.892682927,0.824143504,0.950954597,0.033927281
-North Darfur,Non-pregnant: Hypercalcaemia,0.085714286,0.041021143,0.144293592,0.027853172
-River Nile,Pregnant: Median urinary iodine concentration (microgram/L),116.19,57.93,144.59,13.15808982
-River Nile,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),129.745,114.755,154.7975,15.84901185
-River Nile,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),97.18,66.6685,124.696,13.69738617
-Sinar,Pregnant: Median urinary iodine concentration (microgram/L),77.63,52.1515,104.04,17.10181026
-Sinar,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),74.57,56.73,106.90525,7.905973402
-Sinar,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),57,41.12,68.68,8.213613249
-North Darfur,Pregnant: Median urinary iodine concentration (microgram/L),60.095,40.472,75.25,4.503402571
-North Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),39.56,19.52,71.29,10.25960355
-North Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),42.68,26.19,60.7345,8.858544975
-Khartoum,Child: Median adjusted serum haemoglobin concentration (g/dL),11.3,11,11.605,0.074130083
-Khartoum,Child: Mild anaemia,0.202631579,0.154906676,0.261091424,0.028157092
-Khartoum,Child: Moderate anaemia,0.225419664,0.16650165,0.292752268,0.035573922
-Khartoum,Child: Severe Anaemia,0.017582418,0.002426598,0.045059795,0.010700233
-Khartoum,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),12,11.5975,12.2025,0.037065042
-Khartoum,Pregnant: Mild anaemia,0.2125,0.069767442,0.375138889,0.072281933
-Khartoum,Pregnant: Moderate anaemia,0.047058824,0,0.122449139,0.031742954
-Khartoum,Pregnant: Severe Anaemia,0,0,0,0
-Khartoum,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.2,13,13.4,0.074130083
-Khartoum,Non-pregnant: Mild anaemia,0.131964809,0.088990465,0.189631527,0.026349126
-Khartoum,Non-pregnant: Moderate anaemia,0.057575758,0.023705164,0.091865819,0.019280632
-Khartoum,Non-pregnant: Severe Anaemia,0.00536193,0,0.024764056,0.008039611
-Blue Nile,Child: Median adjusted serum haemoglobin concentration (g/dL),10.9,10.7,11.1,0.148260167
-Blue Nile,Child: Mild anaemia,0.275555556,0.230413844,0.315257406,0.022513754
-Blue Nile,Child: Moderate anaemia,0.312217195,0.263678028,0.368670648,0.028032789
-Blue Nile,Child: Severe Anaemia,0.021103896,0.00756734,0.038975196,0.008293154
-Blue Nile,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.3,11.1,11.8,0.148260167
-Blue Nile,Pregnant: Mild anaemia,0.336956522,0.239100519,0.436385512,0.054803865
-Blue Nile,Pregnant: Moderate anaemia,0.170212766,0.077698413,0.290785432,0.055346545
-Blue Nile,Pregnant: Severe Anaemia,0,0,0.041688596,0.013540024
-Blue Nile,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.5,12.2,12.8,0.074130083
-Blue Nile,Non-pregnant: Mild anaemia,0.226804124,0.152606264,0.295603284,0.038998141
-Blue Nile,Non-pregnant: Moderate anaemia,0.147945205,0.100186012,0.190114891,0.022879627
-Blue Nile,Non-pregnant: Severe Anaemia,0.005797101,0,0.021685794,0.006168761
-South Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),11.6,11.3,11.9,0.074130083
-South Darfur,Child: Mild anaemia,0.209302326,0.157979377,0.272972973,0.030972476
-South Darfur,Child: Moderate anaemia,0.193277311,0.133718338,0.259503518,0.035843541
-South Darfur,Child: Severe Anaemia,0.015706806,0.002559354,0.03504884,0.008835252
-South Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.55,11.2,12,0.370650417
-South Darfur,Pregnant: Mild anaemia,0.195121951,0.101123596,0.322376171,0.054731174
-South Darfur,Pregnant: Moderate anaemia,0.164705882,0.065705128,0.274043098,0.055597563
-South Darfur,Pregnant: Severe Anaemia,0.048780488,0.010616587,0.126582278,0.029282341
-South Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.9,12.7,13.0025,0.074130083
-South Darfur,Non-pregnant: Mild anaemia,0.20754717,0.151816511,0.269986386,0.026028308
-South Darfur,Non-pregnant: Moderate anaemia,0.103825137,0.064804396,0.150646205,0.022762895
-South Darfur,Non-pregnant: Severe Anaemia,0.005899705,0,0.023064808,0.006243984
-Khartoum,Child: Median serum c-reactive protein concentration (mg/L),4.2,3.7,4.8,0.22239025
-Khartoum,Child: Acute inflammation,0.337531486,0.275223038,0.405082336,0.037361296
-Khartoum,Pregnant: Median serum c-reactive protein concentration (mg/L),4.6,3.9,4.7,0.259455292
-Khartoum,Pregnant: Acute inflammation,0.337349398,0.228898451,0.465799087,0.061908916
-Khartoum,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4,5.005,0.22239025
-Khartoum,Non-pregnant: Acute inflammation,0.416129032,0.340985139,0.500069252,0.042764527
-Blue Nile,Child: Median serum c-reactive protein concentration (mg/L),2.9,2.4,3.4,0.22239025
-Blue Nile,Child: Acute inflammation,0.216949153,0.161877983,0.281975911,0.032305333
-Blue Nile,Pregnant: Median serum c-reactive protein concentration (mg/L),3.2,2.6,4.8,0.574508147
-Blue Nile,Pregnant: Acute inflammation,0.328358209,0.168365964,0.482777993,0.072624817
-Blue Nile,Non-pregnant: Median serum c-reactive protein concentration (mg/L),2.7,2.195,3.1,0.148260167
-Blue Nile,Non-pregnant: Acute inflammation,0.193820225,0.141410706,0.249401996,0.027256066
-South Darfur,Child: Median serum c-reactive protein concentration (mg/L),5,4.4,5.5,0.296520334
-South Darfur,Child: Acute inflammation,0.49137931,0.429440833,0.564021978,0.032872546
-South Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),5.2,4.4,6.2,0.370650417
-South Darfur,Pregnant: Acute inflammation,0.511111111,0.374671053,0.655555556,0.070817621
-South Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.85,4.1,5.3,0.296520334
-South Darfur,Non-pregnant: Acute inflammation,0.478114478,0.410076807,0.547294456,0.03864319
-Khartoum,Child: Median adjusted serum ferritin concentration (ng/mL),8.4,6.11,10.6525,1.297276461
-Khartoum,Child: Iron deficiency,0.602446483,0.530491748,0.674417665,0.032303484
-Khartoum,Child: Iron overload,NA,NA,NA,NA
-Khartoum,Child: Iron deficiency anaemia,0.313019391,0.23863484,0.398334131,0.039764858
-Khartoum,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.1,8.5,20.796,2.06081632
-Khartoum,Pregnant: Iron deficiency,0.573529412,0.430194093,0.716479368,0.077898065
-Khartoum,Pregnant: Iron overload,0,0,0,0
-Khartoum,Pregnant: Iron deficiency anaemia,0.126582278,0.042063922,0.228220402,0.046259655
-Khartoum,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),16.8325,13.79,20.1575,1.75873623
-Khartoum,Non-pregnant: Iron deficiency,0.46749226,0.380999901,0.553221788,0.044720805
-Khartoum,Non-pregnant: Iron overload,0.006756757,0,0.028847889,0.006993264
-Khartoum,Non-pregnant: Iron deficiency anaemia,0.12,0.076675391,0.17120354,0.022849724
-Blue Nile,Child: Median adjusted serum ferritin concentration (ng/mL),15.3,12.6,19.2,0.898827262
-Blue Nile,Child: Iron deficiency,0.37037037,0.29087344,0.467175882,0.043453276
-Blue Nile,Child: Iron overload,NA,NA,NA,NA
-Blue Nile,Child: Iron deficiency anaemia,0.173913043,0.108132045,0.248093099,0.034370766
-Blue Nile,Pregnant: Median adjusted serum ferritin concentration (ng/mL),24.15,13.7,61,14.99651589
-Blue Nile,Pregnant: Iron deficiency,0.454545455,0.315012743,0.627151515,0.080754926
-Blue Nile,Pregnant: Iron overload,0,0,0.053777972,0.010822487
-Blue Nile,Pregnant: Iron deficiency anaemia,0.212765957,0.098718465,0.328606965,0.053677236
-Blue Nile,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),27.95,23.995,31.3,1.019288648
-Blue Nile,Non-pregnant: Iron deficiency,0.363013699,0.275304678,0.478123659,0.050107508
-Blue Nile,Non-pregnant: Iron overload,0.029810298,0.005412088,0.066167638,0.016124757
-Blue Nile,Non-pregnant: Iron deficiency anaemia,0.14921466,0.097765363,0.204055988,0.025968231
-South Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),14.8,11.57,17.6,1.219439873
-South Darfur,Child: Iron deficiency,0.403125,0.325650881,0.473219527,0.036214651
-South Darfur,Child: Iron overload,NA,NA,NA,NA
-South Darfur,Child: Iron deficiency anaemia,0.186170213,0.127717391,0.246354316,0.03397404
-South Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),17.0525,12.2,28.145,3.387744815
-South Darfur,Pregnant: Iron deficiency,0.541666667,0.382022472,0.72095967,0.093570193
-South Darfur,Pregnant: Iron overload,0.037037037,0,0.101316168,0.026488261
-South Darfur,Pregnant: Iron deficiency anaemia,0.134020619,0.053763441,0.228342079,0.049975337
-South Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),17.44,12.7,22.5,2.283206571
-South Darfur,Non-pregnant: Iron deficiency,0.582633053,0.479760933,0.710794672,0.056690739
-South Darfur,Non-pregnant: Iron overload,0.055232558,0.024816078,0.091266858,0.018306489
-South Darfur,Non-pregnant: Iron deficiency anaemia,0.156069364,0.10878008,0.216976103,0.027620518
-Khartoum,Child: Median serum calcium concentration (mg/dL),NA,NA,NA,NA
-Khartoum,Child: Hypocalcaemia,NA,NA,NA,NA
-Khartoum,Child: Hypercalcaemia,NA,NA,NA,NA
-Khartoum,Pregnant: Median serum calcium concentration (mg/dL),NA,NA,NA,NA
-Khartoum,Pregnant: Hypocalcaemia,NA,NA,NA,NA
-Khartoum,Pregnant: Hypercalcaemia,NA,NA,NA,NA
-Khartoum,Non-pregnant: Median serum calcium concentration (mg/dL),NA,NA,NA,NA
-Khartoum,Non-pregnant: Hypocalcaemia,NA,NA,NA,NA
-Khartoum,Non-pregnant: Hypercalcaemia,NA,NA,NA,NA
-Blue Nile,Child: Median serum calcium concentration (mg/dL),9.4,9.2,9.5,0.092662604
-Blue Nile,Child: Hypocalcaemia,0.463114754,0.387060117,0.538960062,0.038919675
-Blue Nile,Child: Hypercalcaemia,0.097087379,0.053682702,0.146458295,0.023003966
-Blue Nile,Pregnant: Median serum calcium concentration (mg/dL),8.2,8,8.4,0.148260167
-Blue Nile,Pregnant: Hypocalcaemia,0.929824561,0.819909091,1,0.048542993
-Blue Nile,Pregnant: Hypercalcaemia,0.06122449,0,0.163934426,0.042752555
-Blue Nile,Non-pregnant: Median serum calcium concentration (mg/dL),8.9,8.7,9.1,0.148260167
-Blue Nile,Non-pregnant: Hypocalcaemia,0.851282051,0.784628968,0.913915046,0.038551886
-Blue Nile,Non-pregnant: Hypercalcaemia,0.108108108,0.04905776,0.178054549,0.037932376
-South Darfur,Child: Median serum calcium concentration (mg/dL),9.2,9,9.3025,0.074130083
-South Darfur,Child: Hypocalcaemia,0.56996587,0.477307466,0.640045249,0.041130936
-South Darfur,Child: Hypercalcaemia,0.029850746,0.006995614,0.06368178,0.013762611
-South Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.5,8.2,8.8,0.055597563
-South Darfur,Pregnant: Hypocalcaemia,0.828571429,0.677394541,0.948319696,0.071486221
-South Darfur,Pregnant: Hypercalcaemia,0.112903226,0.033253968,0.22962699,0.055416863
-South Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.6,8.9,0.074130083
-South Darfur,Non-pregnant: Hypocalcaemia,0.802259887,0.711709466,0.881128151,0.042358448
-South Darfur,Non-pregnant: Hypercalcaemia,0.193877551,0.11763325,0.284922728,0.044304115
-Khartoum,Pregnant: Median urinary iodine concentration (microgram/L),182.04,81.25875,213.45,45.10074278
-Khartoum,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),166.01,118.07625,204.16,27.40218535
-Khartoum,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),110.81,89.875,155.51625,21.4013551
-Blue Nile,Pregnant: Median urinary iodine concentration (microgram/L),78.32,45.86,115.38,15.70816469
-Blue Nile,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),125.52,83.95,161.471,10.84152471
-Blue Nile,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),77.1,57.55,98.5605,16.52915536
-South Darfur,Pregnant: Median urinary iodine concentration (microgram/L),49.78,33.721,76.53,18.28047858
-South Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),67.84,37.86,129.82125,24.55188365
-South Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),63.81,46.81825,97.5205,11.04538244
-Al-Gazeera,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,10.8475,11.4,0.148260167
-Al-Gazeera,Child: Mild anaemia,0.247844828,0.194811439,0.303251866,0.026725086
-Al-Gazeera,Child: Moderate anaemia,0.22519084,0.174874485,0.277662005,0.025477099
-Al-Gazeera,Child: Severe Anaemia,0.00660066,0,0.018532442,0.005250286
-Al-Gazeera,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.6,11.4,12,0.22239025
-Al-Gazeera,Pregnant: Mild anaemia,0.261538462,0.164863445,0.352561259,0.045141996
-Al-Gazeera,Pregnant: Moderate anaemia,0.081300813,0.029165798,0.153912467,0.032509482
-Al-Gazeera,Pregnant: Severe Anaemia,0,0,0,0
-Al-Gazeera,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13,12.7,13.3,0.148260167
-Al-Gazeera,Non-pregnant: Mild anaemia,0.181818182,0.126523742,0.244661283,0.031147425
-Al-Gazeera,Non-pregnant: Moderate anaemia,0.075601375,0.035896359,0.119067053,0.022227368
-Al-Gazeera,Non-pregnant: Severe Anaemia,0,0,0,0
-White Nile,Child: Median adjusted serum haemoglobin concentration (g/dL),11.4,11.1,11.6,0.092662604
-White Nile,Child: Mild anaemia,0.256410256,0.20566197,0.304058092,0.02598166
-White Nile,Child: Moderate anaemia,0.167714885,0.108979647,0.232215564,0.030703358
-White Nile,Child: Severe Anaemia,0.011764706,0,0.033190163,0.008415082
-White Nile,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.8,11.5,12.3,0.148260167
-White Nile,Pregnant: Mild anaemia,0.162162162,0.095511167,0.239715963,0.039733477
-White Nile,Pregnant: Moderate anaemia,0.057324841,0.018981371,0.120620088,0.025725031
-White Nile,Pregnant: Severe Anaemia,0,0,0,0
-White Nile,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.9,12.7,13,0.074130083
-White Nile,Non-pregnant: Mild anaemia,0.144385027,0.096685083,0.200646013,0.030027876
-White Nile,Non-pregnant: Moderate anaemia,0.075,0.039085888,0.121503435,0.020443958
-White Nile,Non-pregnant: Severe Anaemia,0,0,0.008752825,0.001987402
-Central Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),11.1,10.5475,11.8,0.444780501
-Central Darfur,Child: Mild anaemia,0.249240122,0.19558131,0.304622298,0.03028059
-Central Darfur,Child: Moderate anaemia,0.194373402,0.117153085,0.287411223,0.043367468
-Central Darfur,Child: Severe Anaemia,0.00591716,0,0.025461936,0.007048629
-Central Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),10.6,9.7,11.5,0.555975626
-Central Darfur,Pregnant: Mild anaemia,0.322033898,0.183169889,0.474495056,0.083245828
-Central Darfur,Pregnant: Moderate anaemia,0.256198347,0.157843137,0.350277778,0.052283398
-Central Darfur,Pregnant: Severe Anaemia,0,0,0.038666121,0.008236676
-Central Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.3,11.6,12.9,0.444780501
-Central Darfur,Non-pregnant: Mild anaemia,0.20212766,0.14657715,0.259409913,0.029814735
-Central Darfur,Non-pregnant: Moderate anaemia,0.156462585,0.10465991,0.219378298,0.026522581
-Central Darfur,Non-pregnant: Severe Anaemia,0.003717472,0,0.023898995,0.008355612
-Al-Gazeera,Child: Median serum c-reactive protein concentration (mg/L),1.7,1.2,2,0.111195125
-Al-Gazeera,Child: Acute inflammation,0.178217822,0.123075173,0.239596787,0.028609058
-Al-Gazeera,Pregnant: Median serum c-reactive protein concentration (mg/L),2.6,1.6,3.3,0.074130083
-Al-Gazeera,Pregnant: Acute inflammation,0.150442478,0.070205966,0.241699725,0.050211984
-Al-Gazeera,Non-pregnant: Median serum c-reactive protein concentration (mg/L),1.85,1.4,2.605,0.259455292
-Al-Gazeera,Non-pregnant: Acute inflammation,0.179591837,0.124880268,0.249149902,0.037281813
-White Nile,Child: Median serum c-reactive protein concentration (mg/L),3,2.8,3.2525,0.129727646
-White Nile,Child: Acute inflammation,0.146153846,0.10719329,0.188412715,0.020196613
-White Nile,Pregnant: Median serum c-reactive protein concentration (mg/L),4.2,3.7,4.9,0.22239025
-White Nile,Pregnant: Acute inflammation,0.357664234,0.26387012,0.44675482,0.046840732
-White Nile,Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.05,2.9,3.5,0.185325209
-White Nile,Non-pregnant: Acute inflammation,0.193029491,0.132975357,0.266385583,0.034886273
-Central Darfur,Child: Median serum c-reactive protein concentration (mg/L),5.4,5.1,6.105,0.296520334
-Central Darfur,Child: Acute inflammation,0.581395349,0.510656278,0.645916499,0.033997482
-Central Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),6.45,5,8.025,0.889561002
-Central Darfur,Pregnant: Acute inflammation,0.6,0.478211462,0.714285714,0.062851873
-Central Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),5.2,4.9,6,0.185325209
-Central Darfur,Non-pregnant: Acute inflammation,0.53030303,0.426721382,0.6232851,0.054836137
-Al-Gazeera,Child: Median adjusted serum ferritin concentration (ng/mL),9.3,6.295,12.0325,1.445536628
-Al-Gazeera,Child: Iron deficiency,0.56870229,0.472598588,0.668021047,0.047997077
-Al-Gazeera,Child: Iron overload,NA,NA,NA,NA
-Al-Gazeera,Child: Iron deficiency anaemia,0.210106383,0.155994703,0.277368358,0.030322215
-Al-Gazeera,Pregnant: Median adjusted serum ferritin concentration (ng/mL),14.2,10.698,19.525,1.363993536
-Al-Gazeera,Pregnant: Iron deficiency,0.540983607,0.410563187,0.679631068,0.065769329
-Al-Gazeera,Pregnant: Iron overload,0,0,0.041684174,0.012053672
-Al-Gazeera,Pregnant: Iron deficiency anaemia,0.201550388,0.126721748,0.295123787,0.044713227
-Al-Gazeera,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),17,13.1,21.3,1.553025249
-Al-Gazeera,Non-pregnant: Iron deficiency,0.46122449,0.366122583,0.547311321,0.043870169
-Al-Gazeera,Non-pregnant: Iron overload,0,0,0.011284628,0
-Al-Gazeera,Non-pregnant: Iron deficiency anaemia,0.12585034,0.077179487,0.178810705,0.025477204
-White Nile,Child: Median adjusted serum ferritin concentration (ng/mL),10.65,8.2,13.0025,0.856202464
-White Nile,Child: Iron deficiency,0.517671518,0.452103041,0.590257085,0.035276619
-White Nile,Child: Iron overload,NA,NA,NA,NA
-White Nile,Child: Iron deficiency anaemia,0.223502304,0.174930513,0.278850724,0.028690305
-White Nile,Pregnant: Median adjusted serum ferritin concentration (ng/mL),13.975,12.5,20.392125,2.047843556
-White Nile,Pregnant: Iron deficiency,0.531746032,0.421336164,0.664497717,0.055598779
-White Nile,Pregnant: Iron overload,0,0,0.029651908,0.005552893
-White Nile,Pregnant: Iron deficiency anaemia,0.1,0.041903693,0.170153583,0.031100272
-White Nile,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),17.03,14,19.825,1.482601669
-White Nile,Non-pregnant: Iron deficiency,0.465425532,0.3931901,0.54169505,0.039054216
-White Nile,Non-pregnant: Iron overload,0.003003003,0,0.016999582,0.006134915
-White Nile,Non-pregnant: Iron deficiency anaemia,0.099447514,0.06026887,0.143721213,0.019693005
-Central Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),13.5,10.0945,16.44775,2.705748047
-Central Darfur,Child: Iron deficiency,0.449324324,0.370158503,0.543284467,0.04408248
-Central Darfur,Child: Iron overload,NA,NA,NA,NA
-Central Darfur,Child: Iron deficiency anaemia,0.190735695,0.123553036,0.263678736,0.035503302
-Central Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),14.5,10.4,17.535375,1.493721182
-Central Darfur,Pregnant: Iron deficiency,0.761904762,0.533399646,0.981672113,0.112329744
-Central Darfur,Pregnant: Iron overload,0.073170732,0.014084507,0.143161094,0.0340186
-Central Darfur,Pregnant: Iron deficiency anaemia,0.277777778,0.164109684,0.409015823,0.062813048
-Central Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.3,18.6,24.375,1.356580528
-Central Darfur,Non-pregnant: Iron deficiency,0.328947368,0.24107937,0.410721618,0.044192285
-Central Darfur,Non-pregnant: Iron overload,0,0,0,0
-Central Darfur,Non-pregnant: Iron deficiency anaemia,0.103053435,0.059988048,0.156941924,0.025055283
-Al-Gazeera,Child: Median serum calcium concentration (mg/dL),10,9.9,10.1,0.074130083
-Al-Gazeera,Child: Hypocalcaemia,0.150501672,0.09485979,0.209873647,0.030554054
-Al-Gazeera,Child: Hypercalcaemia,0.136363636,0.075968519,0.20582571,0.033922686
-Al-Gazeera,Pregnant: Median serum calcium concentration (mg/dL),9.2,9.1,9.4025,0.074130083
-Al-Gazeera,Pregnant: Hypocalcaemia,0.603448276,0.371190476,0.796507064,0.118185489
-Al-Gazeera,Pregnant: Hypercalcaemia,0.289473684,0.117647059,0.5,0.098864783
-Al-Gazeera,Non-pregnant: Median serum calcium concentration (mg/dL),9.7,9.5,9.8,0.074130083
-Al-Gazeera,Non-pregnant: Hypocalcaemia,0.178947368,0.089169255,0.274344959,0.046966008
-Al-Gazeera,Non-pregnant: Hypercalcaemia,0.747368421,0.616001802,0.845586881,0.061855765
-White Nile,Child: Median serum calcium concentration (mg/dL),9.3,9.1,9.4,0.074130083
-White Nile,Child: Hypocalcaemia,0.577272727,0.496227284,0.652324495,0.040854807
-White Nile,Child: Hypercalcaemia,0.013192612,0,0.042483161,0.012483633
-White Nile,Pregnant: Median serum calcium concentration (mg/dL),8.5,8.4,8.9,0.148260167
-White Nile,Pregnant: Hypocalcaemia,0.845238095,0.718930381,0.934609727,0.054727249
-White Nile,Pregnant: Hypercalcaemia,0.102040816,0.036970899,0.19627451,0.041780278
-White Nile,Non-pregnant: Median serum calcium concentration (mg/dL),8.9,8.8,9,0
-White Nile,Non-pregnant: Hypocalcaemia,0.832460733,0.754521768,0.905080404,0.041468684
-White Nile,Non-pregnant: Hypercalcaemia,0.113300493,0.053524436,0.182022145,0.030472892
-Central Darfur,Child: Median serum calcium concentration (mg/dL),9.8,9.6,9.9,0.074130083
-Central Darfur,Child: Hypocalcaemia,0.333333333,0.243215744,0.440873515,0.050992551
-Central Darfur,Child: Hypercalcaemia,0.159292035,0.089318396,0.220471432,0.036638937
-Central Darfur,Pregnant: Median serum calcium concentration (mg/dL),9.25,8.9,9.6,0.370650417
-Central Darfur,Pregnant: Hypocalcaemia,0.625,0.384432234,0.857763975,0.130499834
-Central Darfur,Pregnant: Hypercalcaemia,0.32,0.099545455,0.571428571,0.116811041
-Central Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),9.6,9.2,9.8,0.20385773
-Central Darfur,Non-pregnant: Hypocalcaemia,0.397260274,0.254530046,0.556834416,0.07253817
-Central Darfur,Non-pregnant: Hypercalcaemia,0.537190083,0.364677177,0.677807646,0.084199717
-Al-Gazeera,Pregnant: Median urinary iodine concentration (microgram/L),100.325,76.26175,124.667,10.54871088
-Al-Gazeera,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),102.22,81.0685,126.75,12.46682679
-Al-Gazeera,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),82.54,65.87375,97.58,7.794778277
-White Nile,Pregnant: Median urinary iodine concentration (microgram/L),124.04,82.27,128.82,10.11134339
-White Nile,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),101.82,74.3145,138.81,11.42900562
-White Nile,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),99.2,70.32,126.803,7.244362407
-Central Darfur,Pregnant: Median urinary iodine concentration (microgram/L),30.42,19.9905,45.77,8.53422586
-Central Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),34.32,11.7465,67.494,12.09988287
-Central Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),20.15,10.64225,24.12325,3.128289522
-Red Sea,Child: Median adjusted serum haemoglobin concentration (g/dL),11,10.8,11.3,0.148260167
-Red Sea,Child: Mild anaemia,0.230514096,0.194129245,0.275822312,0.020223289
-Red Sea,Child: Moderate anaemia,0.285472973,0.214770932,0.350305109,0.033411524
-Red Sea,Child: Severe Anaemia,0.032733224,0.014095925,0.059016687,0.011460194
-Red Sea,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.6,10.79,12,0.259455292
-Red Sea,Pregnant: Mild anaemia,0.183333333,0.05758547,0.317176959,0.067974571
-Red Sea,Pregnant: Moderate anaemia,0.244444444,0.130296022,0.367346939,0.064086235
-Red Sea,Pregnant: Severe Anaemia,0,0,0.043478261,0
-Red Sea,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.4,12,12.6,0.148260167
-Red Sea,Non-pregnant: Mild anaemia,0.227699531,0.166228901,0.299067507,0.036856465
-Red Sea,Non-pregnant: Moderate anaemia,0.211764706,0.155997983,0.269069062,0.030517775
-Red Sea,Non-pregnant: Severe Anaemia,0.023310023,0.006769878,0.048839907,0.010563548
-North Kourdofan,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,11,11.4025,0.074130083
-North Kourdofan,Child: Mild anaemia,0.228276878,0.189059584,0.274368713,0.024593794
-North Kourdofan,Child: Moderate anaemia,0.265337423,0.218662383,0.313431215,0.023068809
-North Kourdofan,Child: Severe Anaemia,0.022156573,0.007199393,0.043674497,0.009701257
-North Kourdofan,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.7,11.4,11.9,0.185325209
-North Kourdofan,Pregnant: Mild anaemia,0.208633094,0.134228188,0.299215472,0.043751244
-North Kourdofan,Pregnant: Moderate anaemia,0.173333333,0.087750582,0.267270773,0.042593211
-North Kourdofan,Pregnant: Severe Anaemia,0,0,0.027595785,0.005746518
-North Kourdofan,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13,12.7,13.2,0.074130083
-North Kourdofan,Non-pregnant: Mild anaemia,0.168618267,0.132170305,0.211837588,0.022196698
-North Kourdofan,Non-pregnant: Moderate anaemia,0.123515439,0.076894657,0.176493213,0.024029868
-North Kourdofan,Non-pregnant: Severe Anaemia,0.014388489,0.002474335,0.033183254,0.007213567
-East Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),10.6,10.3975,10.9,0.148260167
-East Darfur,Child: Mild anaemia,0.278846154,0.203993759,0.346437866,0.038948627
-East Darfur,Child: Moderate anaemia,0.360927152,0.277494853,0.452014504,0.040679531
-East Darfur,Child: Severe Anaemia,0.020648968,0.00298202,0.042747288,0.012010324
-East Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.1,10.7,11.2,0.074130083
-East Darfur,Pregnant: Mild anaemia,0.389312977,0.263884112,0.52957669,0.061008552
-East Darfur,Pregnant: Moderate anaemia,0.185483871,0.105172414,0.314107977,0.053225478
-East Darfur,Pregnant: Severe Anaemia,0.008928571,0,0.056212205,0.016175761
-East Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.5,12.2,12.7,0.148260167
-East Darfur,Non-pregnant: Mild anaemia,0.173553719,0.12529625,0.228744558,0.025517884
-East Darfur,Non-pregnant: Moderate anaemia,0.208,0.1521049,0.262000083,0.031806901
-East Darfur,Non-pregnant: Severe Anaemia,0.027700831,0.005777044,0.059356902,0.013540834
-Red Sea,Child: Median serum c-reactive protein concentration (mg/L),3.9,3.2475,4.3,0.22239025
-Red Sea,Child: Acute inflammation,0.321428571,0.255698833,0.394513889,0.035247172
-Red Sea,Pregnant: Median serum c-reactive protein concentration (mg/L),3.3,2.7,4.5,0.296520334
-Red Sea,Pregnant: Acute inflammation,0.195121951,0.071428571,0.349137284,0.08225082
-Red Sea,Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.8,3.2,4.4025,0.148260167
-Red Sea,Non-pregnant: Acute inflammation,0.358543417,0.291354204,0.445129667,0.043226878
-North Kourdofan,Child: Median serum c-reactive protein concentration (mg/L),2.4,2.2,2.8,0.096369109
-North Kourdofan,Child: Acute inflammation,0.179104478,0.113091161,0.246472634,0.036077344
-North Kourdofan,Pregnant: Median serum c-reactive protein concentration (mg/L),4.1,3.1125,4.83,0.352117896
-North Kourdofan,Pregnant: Acute inflammation,0.360544218,0.24599827,0.475988732,0.061567194
-North Kourdofan,Non-pregnant: Median serum c-reactive protein concentration (mg/L),2.52,2.12925,3.152,0.311346351
-North Kourdofan,Non-pregnant: Acute inflammation,0.244837758,0.188920866,0.304263351,0.031866083
-East Darfur,Child: Median serum c-reactive protein concentration (mg/L),4.9,4.5,5.6,0.296520334
-East Darfur,Child: Acute inflammation,0.478114478,0.410252572,0.547253849,0.034359948
-East Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4,5.11,0.148260167
-East Darfur,Pregnant: Acute inflammation,0.404761905,0.306281526,0.514317757,0.052425037
-East Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.7,4.1,5.2025,0.296520334
-East Darfur,Non-pregnant: Acute inflammation,0.465116279,0.388516583,0.538565489,0.041452375
-Red Sea,Child: Median adjusted serum ferritin concentration (ng/mL),5.9,4.9,8.62,1.287083574
-Red Sea,Child: Iron deficiency,0.679282869,0.585397401,0.747480586,0.039825936
-Red Sea,Child: Iron overload,NA,NA,NA,NA
-Red Sea,Child: Iron deficiency anaemia,0.375,0.294833203,0.450824611,0.04046412
-Red Sea,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.3,5.4,16.3,2.223902504
-Red Sea,Pregnant: Iron deficiency,0.645833333,0.449868421,0.789622642,0.090402541
-Red Sea,Pregnant: Iron overload,0,0,0,0
-Red Sea,Pregnant: Iron deficiency anaemia,0.318181818,0.166472868,0.480038462,0.075430611
-Red Sea,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),10.65,8.1425,12.6,0.963691085
-Red Sea,Non-pregnant: Iron deficiency,0.637566138,0.555540581,0.720700576,0.040945841
-Red Sea,Non-pregnant: Iron overload,0,0,0,0
-Red Sea,Non-pregnant: Iron deficiency anaemia,0.347258486,0.276830136,0.432500467,0.035139833
-North Kourdofan,Child: Median adjusted serum ferritin concentration (ng/mL),6.4,6,7.5,0.407715459
-North Kourdofan,Child: Iron deficiency,0.652866242,0.57738172,0.722979759,0.039926737
-North Kourdofan,Child: Iron overload,NA,NA,NA,NA
-North Kourdofan,Child: Iron deficiency anaemia,0.210970464,0.160938954,0.262675777,0.028331204
-North Kourdofan,Pregnant: Median adjusted serum ferritin concentration (ng/mL),6.8,6,15.37,1.782828507
-North Kourdofan,Pregnant: Iron deficiency,0.62295082,0.495150912,0.75442865,0.063322465
-North Kourdofan,Pregnant: Iron overload,0,0,0.017391304,0
-North Kourdofan,Pregnant: Iron deficiency anaemia,0.217687075,0.131439394,0.330204669,0.048433721
-North Kourdofan,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),15.1,11.2,17.888125,2.075642337
-North Kourdofan,Non-pregnant: Iron deficiency,0.513274336,0.430657335,0.600536932,0.046310812
-North Kourdofan,Non-pregnant: Iron overload,0.008356546,0,0.027111708,0.006680629
-North Kourdofan,Non-pregnant: Iron deficiency anaemia,0.172236504,0.124593391,0.226622977,0.026239451
-East Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),13.3,10.954375,15.929375,0.98129698
-East Darfur,Child: Iron deficiency,0.445859873,0.378740993,0.518646809,0.036528287
-East Darfur,Child: Iron overload,NA,NA,NA,NA
-East Darfur,Child: Iron deficiency anaemia,0.300940439,0.21871854,0.373841463,0.040352084
-East Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),8.5,7.3,13.3,2.831769189
-East Darfur,Pregnant: Iron deficiency,0.693548387,0.551360784,0.881141692,0.07471072
-East Darfur,Pregnant: Iron overload,0.02,0,0.068405541,0.018665232
-East Darfur,Pregnant: Iron deficiency anaemia,0.390909091,0.275767596,0.541260504,0.067916289
-East Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),19.5,14.814625,24.505,3.81028629
-East Darfur,Non-pregnant: Iron deficiency,0.490304709,0.40664083,0.574807709,0.041165101
-East Darfur,Non-pregnant: Iron overload,0.020895522,0.003089105,0.042971459,0.010689839
-East Darfur,Non-pregnant: Iron deficiency anaemia,0.1966759,0.141948912,0.25,0.028151549
-Red Sea,Child: Median serum calcium concentration (mg/dL),9.7,9.5,9.9,0.074130083
-Red Sea,Child: Hypocalcaemia,0.381294964,0.30260409,0.472161673,0.047006349
-Red Sea,Child: Hypercalcaemia,0.093959732,0.050468692,0.13474223,0.020731623
-Red Sea,Pregnant: Median serum calcium concentration (mg/dL),9.3,8.9,9.8,0.22239025
-Red Sea,Pregnant: Hypocalcaemia,0.4375,0.206551724,0.690357599,0.128683945
-Red Sea,Pregnant: Hypercalcaemia,0.5,0.249404762,0.709907834,0.108106372
-Red Sea,Non-pregnant: Median serum calcium concentration (mg/dL),9.4,9.3,9.7,0.111195125
-Red Sea,Non-pregnant: Hypocalcaemia,0.422330097,0.295327559,0.562493699,0.062116345
-Red Sea,Non-pregnant: Hypercalcaemia,0.495145631,0.377737056,0.620243298,0.059607553
-North Kourdofan,Child: Median serum calcium concentration (mg/dL),8.98,8.84425,9.1,0.074130083
-North Kourdofan,Child: Hypocalcaemia,0.69874477,0.59252818,0.790393013,0.055577452
-North Kourdofan,Child: Hypercalcaemia,0.074235808,0.031395953,0.13009022,0.026695783
-North Kourdofan,Pregnant: Median serum calcium concentration (mg/dL),8,7.87,8.3015,0.111195125
-North Kourdofan,Pregnant: Hypocalcaemia,0.93495935,0.851875,0.990393687,0.035646898
-North Kourdofan,Pregnant: Hypercalcaemia,0.060606061,0.008849558,0.144560211,0.03681142
-North Kourdofan,Non-pregnant: Median serum calcium concentration (mg/dL),8.6,8.4,8.60575,0.074130083
-North Kourdofan,Non-pregnant: Hypocalcaemia,0.885813149,0.816162626,0.941534213,0.026904844
-North Kourdofan,Non-pregnant: Hypercalcaemia,0.102362205,0.062013902,0.156042785,0.030177477
-East Darfur,Child: Median serum calcium concentration (mg/dL),9.2,9,9.4,0.148260167
-East Darfur,Child: Hypocalcaemia,0.557093426,0.466429699,0.631440285,0.043366108
-East Darfur,Child: Hypercalcaemia,0.059800664,0.022800823,0.101386478,0.02172201
-East Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.9,8.5,9.1,0.148260167
-East Darfur,Pregnant: Hypocalcaemia,0.796610169,0.633188406,0.93483835,0.093379622
-East Darfur,Pregnant: Hypercalcaemia,0.183333333,0.067632586,0.312546642,0.067719042
-East Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.6,8.9,0.074130083
-East Darfur,Non-pregnant: Hypocalcaemia,0.820627803,0.712526369,0.905014611,0.044572315
-East Darfur,Non-pregnant: Hypercalcaemia,0.164893617,0.081264208,0.28020765,0.048326398
-Red Sea,Pregnant: Median urinary iodine concentration (microgram/L),199.275,126.221,247.49,53.06972676
-Red Sea,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),257.79,236,270.41975,11.60135806
-Red Sea,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),194.52,181.45175,207.68,0.681996768
-North Kourdofan,Pregnant: Median urinary iodine concentration (microgram/L),99.39,84.83,123.2585,9.948257202
-North Kourdofan,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),90.79,61.293,118.86,18.10256638
-North Kourdofan,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),75.07,69.1755,92.624,3.713917182
-East Darfur,Pregnant: Median urinary iodine concentration (microgram/L),18.83,11.47,27.51275,4.603478184
-East Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),44.74,21.01425,63.33,9.44046613
-East Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),10.42,0,26.7865,9.325564501
-Kassala,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,10.9,11.4,0.074130083
-Kassala,Child: Mild anaemia,0.223433243,0.179709696,0.266005812,0.021751008
-Kassala,Child: Moderate anaemia,0.282548476,0.237890878,0.335677279,0.024224645
-Kassala,Child: Severe Anaemia,0.01986755,0.006811526,0.036015061,0.007261902
-Kassala,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.4,11.1,11.9,0.518910584
-Kassala,Pregnant: Mild anaemia,0.257575758,0.142637363,0.388924964,0.065144619
-Kassala,Pregnant: Moderate anaemia,0.189655172,0.088235294,0.32202381,0.05551172
-Kassala,Pregnant: Severe Anaemia,0,0,0.051203635,0.012564421
-Kassala,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.6,12.2,12.7,0.074130083
-Kassala,Non-pregnant: Mild anaemia,0.214442013,0.168601988,0.268321445,0.026672273
-Kassala,Non-pregnant: Moderate anaemia,0.165865385,0.112816317,0.219192991,0.025804949
-Kassala,Non-pregnant: Severe Anaemia,0.016091954,0.002357116,0.035327134,0.007452507
-South Kourdofan,Child: Median adjusted serum haemoglobin concentration (g/dL),11.5,11.395,11.6,0.074130083
-South Kourdofan,Child: Mild anaemia,0.213675214,0.15924984,0.268321445,0.026785118
-South Kourdofan,Child: Moderate anaemia,0.242857143,0.187778756,0.301224423,0.031484824
-South Kourdofan,Child: Severe Anaemia,0.026960784,0.010539283,0.046082949,0.008770231
-South Kourdofan,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.4,11,11.6,0.22239025
-South Kourdofan,Pregnant: Mild anaemia,0.280701754,0.190048209,0.396256364,0.051738764
-South Kourdofan,Pregnant: Moderate anaemia,0.201612903,0.10087156,0.31181073,0.054864994
-South Kourdofan,Pregnant: Severe Anaemia,0.033613445,0,0.079273504,0.022690453
-South Kourdofan,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.1,12.9,13.35,0.074130083
-South Kourdofan,Non-pregnant: Mild anaemia,0.181598063,0.131714932,0.230990128,0.023567767
-South Kourdofan,Non-pregnant: Moderate anaemia,0.108747045,0.066448943,0.152277817,0.020954656
-South Kourdofan,Non-pregnant: Severe Anaemia,0.005037783,0,0.019308278,0.005382531
-West Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),12,11.9,12.1,0
-West Darfur,Child: Mild anaemia,0.15716753,0.117325566,0.191779579,0.018969373
-West Darfur,Child: Moderate anaemia,0.164874552,0.123336773,0.219390245,0.02261124
-West Darfur,Child: Severe Anaemia,0.004739336,0,0.013725676,0.004446241
-West Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.1,11.8,12.6,0.074130083
-West Darfur,Pregnant: Mild anaemia,0.108433735,0.04384058,0.193627065,0.037625477
-West Darfur,Pregnant: Moderate anaemia,0.112244898,0.047591036,0.2,0.03658094
-West Darfur,Pregnant: Severe Anaemia,0.02970297,0,0.083333333,0.019282533
-West Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.2,13,13.4,0.148260167
-West Darfur,Non-pregnant: Mild anaemia,0.143518519,0.097446899,0.192181875,0.025208291
-West Darfur,Non-pregnant: Moderate anaemia,0.107305936,0.070037166,0.148938572,0.021119371
-West Darfur,Non-pregnant: Severe Anaemia,0,0,0.009030367,0.001684775
-Kassala,Child: Median serum c-reactive protein concentration (mg/L),5.4,4.9,5.9,0.148260167
-Kassala,Child: Acute inflammation,0.572727273,0.492186605,0.655542102,0.043313661
-Kassala,Pregnant: Median serum c-reactive protein concentration (mg/L),4.9,3.7,5.9,0.889561002
-Kassala,Pregnant: Acute inflammation,0.473684211,0.303544372,0.679017857,0.102081813
-Kassala,Non-pregnant: Median serum c-reactive protein concentration (mg/L),5.2,4.7,6,0.370650417
-Kassala,Non-pregnant: Acute inflammation,0.510835913,0.401255951,0.619244196,0.066056288
-South Kourdofan,Child: Median serum c-reactive protein concentration (mg/L),2,1.6995,2.40175,0.209417486
-South Kourdofan,Child: Acute inflammation,0.193181818,0.133942104,0.244856159,0.02778451
-South Kourdofan,Pregnant: Median serum c-reactive protein concentration (mg/L),2.72,1.6,4.62,1.356580528
-South Kourdofan,Pregnant: Acute inflammation,0.285714286,0.171357143,0.420633628,0.06772198
-South Kourdofan,Non-pregnant: Median serum c-reactive protein concentration (mg/L),1.945,1.46,2.4,0.200151225
-South Kourdofan,Non-pregnant: Acute inflammation,0.15625,0.103987745,0.218312131,0.029638407
-West Darfur,Child: Median serum c-reactive protein concentration (mg/L),3.7,3.4975,4.3,0.22239025
-West Darfur,Child: Acute inflammation,0.37716263,0.319909387,0.437264245,0.033813387
-West Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),5.1,3.095,6.5,0.741300835
-West Darfur,Pregnant: Acute inflammation,0.520833333,0.389473684,0.629306207,0.058448824
-West Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4.1,5.0525,0.240922771
-West Darfur,Non-pregnant: Acute inflammation,0.440604752,0.379210568,0.5,0.030374609
-Kassala,Child: Median adjusted serum ferritin concentration (ng/mL),6.2,4.5475,8.908125,1.356580528
-Kassala,Child: Iron deficiency,0.677053824,0.586717296,0.758655623,0.041180959
-Kassala,Child: Iron overload,NA,NA,NA,NA
-Kassala,Child: Iron deficiency anaemia,0.250957854,0.172804168,0.338712599,0.041042123
-Kassala,Pregnant: Median adjusted serum ferritin concentration (ng/mL),5.395,3.77,8.905,0.626399205
-Kassala,Pregnant: Iron deficiency,0.754385965,0.606462066,0.886792453,0.066883852
-Kassala,Pregnant: Iron overload,0,0,0,0
-Kassala,Pregnant: Iron deficiency anaemia,0.409836066,0.274182501,0.569472934,0.078316159
-Kassala,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),12,9.5,15.1,1.089712227
-Kassala,Non-pregnant: Iron deficiency,0.563380282,0.474243685,0.644688826,0.045542603
-Kassala,Non-pregnant: Iron overload,0,0,0.011274026,0.002212858
-Kassala,Non-pregnant: Iron deficiency anaemia,0.271428571,0.196652263,0.353106414,0.040601609
-South Kourdofan,Child: Median adjusted serum ferritin concentration (ng/mL),11.3,7.4,14.82325,1.905143145
-South Kourdofan,Child: Iron deficiency,0.514672686,0.442967653,0.600045872,0.043044233
-South Kourdofan,Child: Iron overload,NA,NA,NA,NA
-South Kourdofan,Child: Iron deficiency anaemia,0.271889401,0.204779658,0.33652272,0.035041316
-South Kourdofan,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.4,6.24,18.1,2.368456167
-South Kourdofan,Pregnant: Iron deficiency,0.673076923,0.499793388,0.872625843,0.097276858
-South Kourdofan,Pregnant: Iron overload,0.027027027,0,0.075502461,0.018594552
-South Kourdofan,Pregnant: Iron deficiency anaemia,0.276422764,0.156786598,0.401650835,0.061078073
-South Kourdofan,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.54,14.8875,27.30325,3.039333422
-South Kourdofan,Non-pregnant: Iron deficiency,0.423728814,0.349665489,0.509993034,0.044058433
-South Kourdofan,Non-pregnant: Iron overload,0.00308642,0,0.015497022,0.004845103
-South Kourdofan,Non-pregnant: Iron deficiency anaemia,0.171745152,0.119397303,0.229119789,0.027383195
-West Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),20.1,17.293,24.5,1.564144761
-West Darfur,Child: Iron deficiency,0.285968028,0.231831619,0.341852928,0.028358071
-West Darfur,Child: Iron overload,NA,NA,NA,NA
-West Darfur,Child: Iron deficiency anaemia,0.109195402,0.07355222,0.146098571,0.018829758
-West Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),32.8,21.3,38.155,3.902948895
-West Darfur,Pregnant: Iron deficiency,0.254545455,0.136837607,0.410739319,0.067679822
-West Darfur,Pregnant: Iron overload,0,0,0.033618166,0.007339612
-West Darfur,Pregnant: Iron deficiency anaemia,0.034883721,0,0.103513957,0.027063364
-West Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),30.5825,22.895,34.06,3.113463506
-West Darfur,Non-pregnant: Iron deficiency,0.282460137,0.224497071,0.356691017,0.031664598
-West Darfur,Non-pregnant: Iron overload,0.00856531,0,0.024093515,0.006160468
-West Darfur,Non-pregnant: Iron deficiency anaemia,0.097826087,0.064865868,0.134660316,0.019471987
-Kassala,Child: Median serum calcium concentration (mg/dL),9.4,9.2,9.6,0.148260167
-Kassala,Child: Hypocalcaemia,0.473684211,0.36769958,0.579938957,0.049172466
-Kassala,Child: Hypercalcaemia,0.095679012,0.046408752,0.171949308,0.031746126
-Kassala,Pregnant: Median serum calcium concentration (mg/dL),9.25,8.6,9.6,0.185325209
-Kassala,Pregnant: Hypocalcaemia,0.621621622,0.4059375,0.823529412,0.112345051
-Kassala,Pregnant: Hypercalcaemia,0.3,0.132916667,0.500925926,0.098113346
-Kassala,Non-pregnant: Median serum calcium concentration (mg/dL),9.2,8.9,9.3,0.074130083
-Kassala,Non-pregnant: Hypocalcaemia,0.651851852,0.505753798,0.772760907,0.069400045
-Kassala,Non-pregnant: Hypercalcaemia,0.32,0.218303457,0.455895263,0.05953303
-South Kourdofan,Child: Median serum calcium concentration (mg/dL),9.2,9,9.36125,0.0889561
-South Kourdofan,Child: Hypocalcaemia,0.617721519,0.530740399,0.704759282,0.04552829
-South Kourdofan,Child: Hypercalcaemia,0.026392962,0.005010044,0.055993961,0.013339604
-South Kourdofan,Pregnant: Median serum calcium concentration (mg/dL),8.07,7.8975,8.29525,0.059304067
-South Kourdofan,Pregnant: Hypocalcaemia,0.987951807,0.940365961,1,0.019254567
-South Kourdofan,Pregnant: Hypercalcaemia,0,0,0,0
-South Kourdofan,Non-pregnant: Median serum calcium concentration (mg/dL),8.6,8.45,8.71,0.022239025
-South Kourdofan,Non-pregnant: Hypocalcaemia,0.921568627,0.851727333,0.976390831,0.035594804
-South Kourdofan,Non-pregnant: Hypercalcaemia,0.076595745,0.023900982,0.156838794,0.033308747
-West Darfur,Child: Median serum calcium concentration (mg/dL),9.2,9.1,9.4,0.074130083
-West Darfur,Child: Hypocalcaemia,0.571084337,0.49138022,0.631403734,0.033102112
-West Darfur,Child: Hypercalcaemia,0.073710074,0.042048193,0.106555072,0.015689724
-West Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.6,8.3,8.9,0.148260167
-West Darfur,Pregnant: Hypocalcaemia,0.875,0.762635973,0.961105754,0.057601734
-West Darfur,Pregnant: Hypercalcaemia,0.118644068,0.019588989,0.237328491,0.054231377
-West Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.6,9,0.129727646
-West Darfur,Non-pregnant: Hypocalcaemia,0.8,0.727889499,0.861821864,0.032797525
-West Darfur,Non-pregnant: Hypercalcaemia,0.175097276,0.11763325,0.252035936,0.034892175
-Kassala,Pregnant: Median urinary iodine concentration (microgram/L),109.05,83.87,185.11925,29.84477161
-Kassala,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),183.87,136.24875,227.132,17.54659076
-Kassala,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),120.44,97.288,158.48,8.130216905
-South Kourdofan,Pregnant: Median urinary iodine concentration (microgram/L),41.38,17.55,62.0825,15.39681834
-South Kourdofan,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),33.82,19.35,60.99,13.97166748
-South Kourdofan,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),34.67,24.7895,46.55,5.743228217
-West Darfur,Pregnant: Median urinary iodine concentration (microgram/L),18.98,9.4395,61.79,16.43463951
-West Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),23.13,8.8,44.61,8.873370991
-West Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),35.9,8.4995,55.114,13.35082803
+State,Indicator,estimate,lcl,ucl,sd,,,,
+Northern,Child: Median adjusted serum haemoglobin concentration (g/dL),11.3,11.1,11.6,0.148260167,,,,
+Northern,Child: Mild anaemia,0.252941176,0.195020559,0.319861779,0.032099865,,,,
+Northern,Child: Moderate anaemia,0.181818182,0.136349578,0.231540962,0.026388843,,,,
+Northern,Child: Severe Anaemia,0.008849558,0,0.02666263,0.006770296,,,,
+Northern,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.5,11.25,11.8,0.148260167,,,,
+Northern,Pregnant: Mild anaemia,0.176470588,0.082136246,0.287977602,0.057432535,,,,
+Northern,Pregnant: Moderate anaemia,0.138461538,0.053915454,0.241472507,0.053087895,,,,
+Northern,Pregnant: Severe Anaemia,0,0,0.05801364,0.012564421,,,,
+Northern,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.1,12.9,13.3,0.074130083,,,,
+Northern,Non-pregnant: Mild anaemia,0.102040816,0.061924424,0.149051491,0.023754321,,,,
+Northern,Non-pregnant: Moderate anaemia,0.117302053,0.072216127,0.165752858,0.023063809,,,,
+Northern,Non-pregnant: Severe Anaemia,0.00280112,0,0.016217094,0.0044792,,,,
+Al-Gadarif,Child: Median adjusted serum haemoglobin concentration (g/dL),11.3,11.1475,11.5,0.129727646,,,,
+Al-Gadarif,Child: Mild anaemia,0.264,0.21894029,0.315864268,0.023883016,,,,
+Al-Gadarif,Child: Moderate anaemia,0.210769231,0.167423392,0.259281371,0.025437612,,,,
+Al-Gadarif,Child: Severe Anaemia,0.032154341,0.013635332,0.056333563,0.010703995,,,,
+Al-Gadarif,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.7,11.5,12.2,0.22239025,,,,
+Al-Gadarif,Pregnant: Mild anaemia,0.225,0.135534085,0.345238095,0.054697795,,,,
+Al-Gadarif,Pregnant: Moderate anaemia,0.060240964,0,0.13345679,0.034654307,,,,
+Al-Gadarif,Pregnant: Severe Anaemia,0,0,0,0,,,,
+Al-Gadarif,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13,12.7,13.2,0.148260167,,,,
+Al-Gadarif,Non-pregnant: Mild anaemia,0.184834123,0.126177249,0.235867551,0.025462283,,,,
+Al-Gadarif,Non-pregnant: Moderate anaemia,0.119804401,0.07367355,0.17302106,0.02722891,,,,
+Al-Gadarif,Non-pregnant: Severe Anaemia,0.004739336,0,0.014321522,0.005358801,,,,
+West Kourdofan,Child: Median adjusted serum haemoglobin concentration (g/dL),11.7,11.3,12.1,0.148260167,,,,
+West Kourdofan,Child: Mild anaemia,0.262337662,0.208649441,0.328564393,0.033795681,,,,
+West Kourdofan,Child: Moderate anaemia,0.120300752,0.07905197,0.168137314,0.024331948,,,,
+West Kourdofan,Child: Severe Anaemia,0.012722646,0.002472551,0.029287358,0.007709499,,,,
+West Kourdofan,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.75,11.5,12,0.22239025,,,,
+West Kourdofan,Pregnant: Mild anaemia,0.234234234,0.135417333,0.333469945,0.046488357,,,,
+West Kourdofan,Pregnant: Moderate anaemia,0.116071429,0.044136239,0.197007874,0.036981171,,,,
+West Kourdofan,Pregnant: Severe Anaemia,0,0,0,0,,,,
+West Kourdofan,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.2,12.9,13.4,0.148260167,,,,
+West Kourdofan,Non-pregnant: Mild anaemia,0.146417445,0.096854401,0.213681645,0.028812243,,,,
+West Kourdofan,Non-pregnant: Moderate anaemia,0.087947883,0.048852003,0.139106783,0.023046867,,,,
+West Kourdofan,Non-pregnant: Severe Anaemia,0.009174312,0,0.025889968,0.007507407,,,,
+Northern,Child: Median serum c-reactive protein concentration (mg/L),1.7,1.4,2,0.148260167,,,,
+Northern,Child: Acute inflammation,0.101408451,0.060348652,0.167948413,0.027942341,,,,
+Northern,Pregnant: Median serum c-reactive protein concentration (mg/L),2.1,1.7,2.3525,0.22239025,,,,
+Northern,Pregnant: Acute inflammation,0.114285714,0.038820216,0.209033778,0.045025941,,,,
+Northern,Non-pregnant: Median serum c-reactive protein concentration (mg/L),1.8,1.5,2,0.148260167,,,,
+Northern,Non-pregnant: Acute inflammation,0.108626198,0.062835697,0.171254588,0.028958982,,,,
+Al-Gadarif,Child: Median serum c-reactive protein concentration (mg/L),3.7,3.1,4.2,0.370650417,,,,
+Al-Gadarif,Child: Acute inflammation,0.300536673,0.235818159,0.375639067,0.033011326,,,,
+Al-Gadarif,Pregnant: Median serum c-reactive protein concentration (mg/L),5.3,3.4,6.1075,0.815430918,,,,
+Al-Gadarif,Pregnant: Acute inflammation,0.50617284,0.355782652,0.640894499,0.069318394,,,,
+Al-Gadarif,Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.7,3.3,4.3,0.22239025,,,,
+Al-Gadarif,Non-pregnant: Acute inflammation,0.306532663,0.223034188,0.390781962,0.036752579,,,,
+West Kourdofan,Child: Median serum c-reactive protein concentration (mg/L),2.9,2.3,3.5,0.496671559,,,,
+West Kourdofan,Child: Acute inflammation,0.242165242,0.174894457,0.312613162,0.035543218,,,,
+West Kourdofan,Pregnant: Median serum c-reactive protein concentration (mg/L),4.3,3.6,5.3,0.378063426,,,,
+West Kourdofan,Pregnant: Acute inflammation,0.405405405,0.27717586,0.537639481,0.056873709,,,,
+West Kourdofan,Non-pregnant: Median serum c-reactive protein concentration (mg/L),2.5,1.86325,3.03,0.22239025,,,,
+West Kourdofan,Non-pregnant: Acute inflammation,0.243055556,0.17843487,0.327825115,0.039565098,,,,
+Northern,Child: Median adjusted serum ferritin concentration (ng/mL),9.1,7.3,10.985,0.778365876,,,,
+Northern,Child: Iron deficiency,0.590116279,0.518266395,0.657626094,0.035619533,,,,
+Northern,Child: Iron overload,NA,NA,NA,NA,,,,
+Northern,Child: Iron deficiency anaemia,0.217391304,0.148413297,0.277200559,0.03167821,,21.7391304,14.8413297,27.7200559
+Northern,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.2,7.8475,14.6125,2.965203339,,,,
+Northern,Pregnant: Iron deficiency,0.653333333,0.507422886,0.772294304,0.07605554,,,,
+Northern,Pregnant: Iron overload,0,0,0,0,,,,
+Northern,Pregnant: Iron deficiency anaemia,0.256410256,0.130163043,0.412842742,0.068522028,,25.6410256,13.0163043,41.2842742
+Northern,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.1,14.9,23.1085,1.408471586,,,,
+Northern,Non-pregnant: Iron deficiency,0.420588235,0.331054644,0.512082396,0.041674674,,,,
+Northern,Non-pregnant: Iron overload,0,0,0,0,,,,
+Northern,Non-pregnant: Iron deficiency anaemia,0.144846797,0.094000078,0.191834154,0.026529125,,14.4846797,9.4000078,19.1834154
+Al-Gadarif,Child: Median adjusted serum ferritin concentration (ng/mL),11.83,9.23,15,1.638274845,,,,
+Al-Gadarif,Child: Iron deficiency,0.490842491,0.413649223,0.565975498,0.039412074,,,,
+Al-Gadarif,Child: Iron overload,NA,NA,NA,NA,,,,
+Al-Gadarif,Child: Iron deficiency anaemia,0.280135823,0.210884128,0.336759395,0.033026769,,28.0135823,21.0884128,33.6759395
+Al-Gadarif,Pregnant: Median adjusted serum ferritin concentration (ng/mL),11.7,8.6,13.195,1.204613856,,,,
+Al-Gadarif,Pregnant: Iron deficiency,0.69047619,0.552213073,0.827231041,0.067825916,,,,
+Al-Gadarif,Pregnant: Iron overload,0,0,0,0,,,,
+Al-Gadarif,Pregnant: Iron deficiency anaemia,0.231707317,0.123636884,0.342016878,0.061914157,,23.1707317,12.3636884,34.2016878
+Al-Gadarif,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),21.2,18.2,26.805,1.445536628,,,,
+Al-Gadarif,Non-pregnant: Iron deficiency,0.369346734,0.304319955,0.445669656,0.038312832,,,,
+Al-Gadarif,Non-pregnant: Iron overload,0.0075,0,0.025647634,0.00730203,,,,
+Al-Gadarif,Non-pregnant: Iron deficiency anaemia,0.158273381,0.104819332,0.220309747,0.027373232,,15.8273381,10.4819332,22.0309747
+West Kourdofan,Child: Median adjusted serum ferritin concentration (ng/mL),14.4,12.3,16.9,1.423297603,,,,
+West Kourdofan,Child: Iron deficiency,0.405128205,0.321911884,0.473551935,0.043271282,,,,
+West Kourdofan,Child: Iron overload,NA,NA,NA,NA,,,,
+West Kourdofan,Child: Iron deficiency anaemia,0.254498715,0.196551796,0.309888175,0.031140254,,25.4498715,19.6551796,30.9888175
+West Kourdofan,Pregnant: Median adjusted serum ferritin concentration (ng/mL),13.1,9.3,19.7,4.518228588,,,,
+West Kourdofan,Pregnant: Iron deficiency,0.517241379,0.418069187,0.639740991,0.053873412,,,,
+West Kourdofan,Pregnant: Iron overload,0,0,0.021945277,0,,,,
+West Kourdofan,Pregnant: Iron deficiency anaemia,0.209090909,0.116483183,0.307762238,0.046818318,,20.9090909,11.6483183,30.7762238
+West Kourdofan,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),26.2,19.6,32.8,3.335853756,,,,
+West Kourdofan,Non-pregnant: Iron deficiency,0.383606557,0.293526098,0.506643515,0.052747586,,,,
+West Kourdofan,Non-pregnant: Iron overload,0.033557047,0.007364427,0.066697248,0.013261039,,,,
+West Kourdofan,Non-pregnant: Iron deficiency anaemia,0.100917431,0.05362776,0.153858764,0.024983881,,10.0917431,5.362776,15.3858764
+Northern,Child: Median serum calcium concentration (mg/dL),10.05,9.9,10.3,0.22239025,,,,
+Northern,Child: Hypocalcaemia,0.184986595,0.118375826,0.267502302,0.036252654,,,,
+Northern,Child: Hypercalcaemia,0.176100629,0.119209416,0.242643569,0.037784568,,,,
+Northern,Pregnant: Median serum calcium concentration (mg/dL),8.9,8.5,9.2,0,,,,
+Northern,Pregnant: Hypocalcaemia,0.666666667,0.461538462,0.833527132,0.080833038,,,,
+Northern,Pregnant: Hypercalcaemia,0.32,0.145684524,0.512855163,0.086662251,,,,
+Northern,Non-pregnant: Median serum calcium concentration (mg/dL),9.7,9.6,9.9,0.074130083,,,,
+Northern,Non-pregnant: Hypocalcaemia,0.236111111,0.142773109,0.338538462,0.049110491,,,,
+Northern,Non-pregnant: Hypercalcaemia,0.681818182,0.564219577,0.776168855,0.053441904,,,,
+Al-Gadarif,Child: Median serum calcium concentration (mg/dL),9.3,9.2,9.4,0,,,,
+Al-Gadarif,Child: Hypocalcaemia,0.552325581,0.5,0.612118198,0.032018531,,,,
+Al-Gadarif,Child: Hypercalcaemia,0.023255814,0.007145946,0.046760996,0.010305021,,,,
+Al-Gadarif,Pregnant: Median serum calcium concentration (mg/dL),8.75,8.5,9.1,0.074130083,,,,
+Al-Gadarif,Pregnant: Hypocalcaemia,0.846153846,0.696051587,0.95459596,0.068970728,,,,
+Al-Gadarif,Pregnant: Hypercalcaemia,0.157894737,0.044444444,0.309733894,0.072124981,,,,
+Al-Gadarif,Non-pregnant: Median serum calcium concentration (mg/dL),8.9,8.8,9.1,0.074130083,,,,
+Al-Gadarif,Non-pregnant: Hypocalcaemia,0.816568047,0.736337209,0.883733779,0.037756708,,,,
+Al-Gadarif,Non-pregnant: Hypercalcaemia,0.097701149,0.040862573,0.175107143,0.029173181,,,,
+West Kourdofan,Child: Median serum calcium concentration (mg/dL),9.1,9,9.2,0.051891058,,,,
+West Kourdofan,Child: Hypocalcaemia,0.634615385,0.521273299,0.737453246,0.052550714,,,,
+West Kourdofan,Child: Hypercalcaemia,0.025641026,0.003073679,0.058139953,0.014233362,,,,
+West Kourdofan,Pregnant: Median serum calcium concentration (mg/dL),8.44,8,9,0.214977242,,,,
+West Kourdofan,Pregnant: Hypocalcaemia,0.790123457,0.67030323,0.901294791,0.062404079,,,,
+West Kourdofan,Pregnant: Hypercalcaemia,0.159090909,0.068778111,0.27328844,0.051020285,,,,
+West Kourdofan,Non-pregnant: Median serum calcium concentration (mg/dL),8.7,8.4,8.9,0.074130083,,,,
+West Kourdofan,Non-pregnant: Hypocalcaemia,0.881443299,0.800859729,0.945079426,0.035306001,,,,
+West Kourdofan,Non-pregnant: Hypercalcaemia,0.099415205,0.041553777,0.17260804,0.033677588,,,,
+Northern,Pregnant: Median urinary iodine concentration (microgram/L),125.34,86.663,151.84,22.7394031,,,,
+Northern,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),147.45,119.5675,163.48,12.18698572,,,,
+Northern,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),101.87,84.79225,121.66,10.1261694,,,,
+Al-Gadarif,Pregnant: Median urinary iodine concentration (microgram/L),74.33,59.01575,108.65,12.36304467,,,,
+Al-Gadarif,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),94.35,79.524,115.2,13.29152397,,,,
+Al-Gadarif,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),77.22,56.5115,93.57,10.81001942,,,,
+West Kourdofan,Pregnant: Median urinary iodine concentration (microgram/L),39.42,26.15,63.14,6.293644087,,,,
+West Kourdofan,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),56.19,43.8,70.83,8.812213673,,,,
+West Kourdofan,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),34.09,20.04,39.95,2.605672434,,,,
+River Nile,Child: Median adjusted serum haemoglobin concentration (g/dL),11,10.7,11.2,0.148260167,,,,
+River Nile,Child: Mild anaemia,0.277504105,0.221320171,0.338031217,0.029288759,,,,
+River Nile,Child: Moderate anaemia,0.267080745,0.200374358,0.32728988,0.034338167,,,,
+River Nile,Child: Severe Anaemia,0.012477718,0.002035228,0.029253168,0.006593454,,,,
+River Nile,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.1,11.6,12.4,0.22239025,,,,
+River Nile,Pregnant: Mild anaemia,0.175675676,0.072455038,0.305404279,0.055572901,,,,
+River Nile,Pregnant: Moderate anaemia,0.057471264,0,0.154995599,0.039874948,,,,
+River Nile,Pregnant: Severe Anaemia,0,0,0,0,,,,
+River Nile,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.7,12.3,12.905,0.148260167,,,,
+River Nile,Non-pregnant: Mild anaemia,0.225181598,0.168933424,0.291823127,0.032004441,,,,
+River Nile,Non-pregnant: Moderate anaemia,0.111650485,0.061938357,0.167533894,0.025277759,,,,
+River Nile,Non-pregnant: Severe Anaemia,0.005037783,0,0.018276762,0.004356469,,,,
+Sinar,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,11,11.4,0.074130083,,,,
+Sinar,Child: Mild anaemia,0.270700637,0.220625931,0.321604688,0.026482228,,,,
+Sinar,Child: Moderate anaemia,0.216088328,0.179120436,0.257074803,0.020846178,,,,
+Sinar,Child: Severe Anaemia,0.00931677,0,0.026650012,0.006539693,,,,
+Sinar,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.9,11.5475,12.2,0.074130083,,,,
+Sinar,Pregnant: Mild anaemia,0.108695652,0.039528524,0.201697649,0.036470758,,,,
+Sinar,Pregnant: Moderate anaemia,0.144067797,0.071971429,0.224605512,0.041372791,,,,
+Sinar,Pregnant: Severe Anaemia,0,0,0,0,,,,
+Sinar,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.7,12.6,12.9025,0.074130083,,,,
+Sinar,Non-pregnant: Mild anaemia,0.193905817,0.14018736,0.252559339,0.030441629,,,,
+Sinar,Non-pregnant: Moderate anaemia,0.116094987,0.071428571,0.172336873,0.024385162,,,,
+Sinar,Non-pregnant: Severe Anaemia,0.005479452,0,0.022394853,0.005972805,,,,
+North Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,10.7,11.6,0.296520334,,,,
+North Darfur,Child: Mild anaemia,0.27037037,0.215742435,0.318205641,0.027174679,,,,
+North Darfur,Child: Moderate anaemia,0.172354949,0.121635251,0.220487974,0.026013376,,,,
+North Darfur,Child: Severe Anaemia,0.020304569,0.007330534,0.036380341,0.008260768,,,,
+North Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.3,10.995,11.6525,0.148260167,,,,
+North Darfur,Pregnant: Mild anaemia,0.301075269,0.202021277,0.434003281,0.064964317,,,,
+North Darfur,Pregnant: Moderate anaemia,0.202531646,0.105263158,0.295454545,0.05389813,,,,
+North Darfur,Pregnant: Severe Anaemia,0.009433962,0,0.044005433,0.015128588,,,,
+North Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.7,12.3975,13.1,0.296520334,,,,
+North Darfur,Non-pregnant: Mild anaemia,0.179063361,0.120370128,0.237986493,0.02906206,,,,
+North Darfur,Non-pregnant: Moderate anaemia,0.165450122,0.118387909,0.22285402,0.026839043,,,,
+North Darfur,Non-pregnant: Severe Anaemia,0.020887728,0.005359791,0.044391926,0.009424459,,,,
+River Nile,Child: Median serum c-reactive protein concentration (mg/L),4.75,3.8,5.2,0.277987813,,,,
+River Nile,Child: Acute inflammation,0.437299035,0.349921603,0.511800823,0.041742868,,,,
+River Nile,Pregnant: Median serum c-reactive protein concentration (mg/L),8.8,6.6,10.1075,0.148260167,,,,
+River Nile,Pregnant: Acute inflammation,0.731707317,0.592091837,0.85726817,0.068898911,,,,
+River Nile,Non-pregnant: Median serum c-reactive protein concentration (mg/L),5.1,4.4,5.6,0.185325209,,,,
+River Nile,Non-pregnant: Acute inflammation,0.515706806,0.449375619,0.587057914,0.036970616,,,,
+Sinar,Child: Median serum c-reactive protein concentration (mg/L),3.8,3.6,4.1,0.148260167,,,,
+Sinar,Child: Acute inflammation,0.251655629,0.190879765,0.330107385,0.036258746,,,,
+Sinar,Pregnant: Median serum c-reactive protein concentration (mg/L),4.7,3.95,5.1,0.240922771,,,,
+Sinar,Pregnant: Acute inflammation,0.434343434,0.314934165,0.567505948,0.063982895,,,,
+Sinar,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.25,4,4.6,0.148260167,,,,
+Sinar,Non-pregnant: Acute inflammation,0.317365269,0.256094259,0.394153846,0.037546838,,,,
+North Darfur,Child: Median serum c-reactive protein concentration (mg/L),4.5,4.1,4.7,0.074130083,,,,
+North Darfur,Child: Acute inflammation,0.387858347,0.328496468,0.450132207,0.034374825,,,,
+North Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),5.6,4.4475,6,0.593040668,,,,
+North Darfur,Pregnant: Acute inflammation,0.548076923,0.402084515,0.682341367,0.072361593,,,,
+North Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4.2,5,0.148260167,,,,
+North Darfur,Non-pregnant: Acute inflammation,0.418478261,0.353043812,0.492894865,0.033546435,,,,
+River Nile,Child: Median adjusted serum ferritin concentration (ng/mL),7.8,6.1,10.51,0.947011816,,,,
+River Nile,Child: Iron deficiency,0.625396825,0.548865395,0.692317997,0.037960377,,,,
+River Nile,Child: Iron overload,NA,NA,NA,NA,,,,
+River Nile,Child: Iron deficiency anaemia,0.241758242,0.161826009,0.331977159,0.043245611,,24.1758242,16.1826009,33.1977159
+River Nile,Pregnant: Median adjusted serum ferritin concentration (ng/mL),12,10.2,16.185,1.300982965,,,,
+River Nile,Pregnant: Iron deficiency,0.567164179,0.41506993,0.719333333,0.081605906,,,,
+River Nile,Pregnant: Iron overload,0,0,0,0,,,,
+River Nile,Pregnant: Iron deficiency anaemia,0.181818182,0.097370427,0.311464646,0.058620022,,18.1818182,9.7370427,31.1464646
+River Nile,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),12.1,9.6,16.64,1.53634598,,,,
+River Nile,Non-pregnant: Iron deficiency,0.546511628,0.467459679,0.621146684,0.044260309,,,,
+River Nile,Non-pregnant: Iron overload,0,0,0.003453106,0,,,,
+River Nile,Non-pregnant: Iron deficiency anaemia,0.223140496,0.163050038,0.295543981,0.036186122,,22.3140496,16.3050038,29.5543981
+Sinar,Child: Median adjusted serum ferritin concentration (ng/mL),10.595,7.95,15.4,1.764295987,,,,
+Sinar,Child: Iron deficiency,0.523648649,0.437478147,0.607420946,0.041151658,,,,
+Sinar,Child: Iron overload,NA,NA,NA,NA,,,,
+Sinar,Child: Iron deficiency anaemia,0.191588785,0.139349629,0.251199152,0.028897291,,19.1588785,13.9349629,25.1199152
+Sinar,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.14,8.1,14.43325,2.08676185,,,,
+Sinar,Pregnant: Iron deficiency,0.634408602,0.519111927,0.775692112,0.0696353,,,,
+Sinar,Pregnant: Iron overload,0,0,0.029780322,0.007450448,,,,
+Sinar,Pregnant: Iron deficiency anaemia,0.147368421,0.066594203,0.241574496,0.045685089,,14.7368421,6.6594203,24.1574496
+Sinar,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.865,17.735875,24.2,2.149772421,,,,
+Sinar,Non-pregnant: Iron deficiency,0.437308869,0.352435897,0.527336581,0.047295473,,,,
+Sinar,Non-pregnant: Iron overload,0.018237082,0.003203602,0.042868729,0.00990668,,,,
+Sinar,Non-pregnant: Iron deficiency anaemia,0.142857143,0.099709218,0.190392597,0.022148574,,14.2857143,9.9709218,19.0392597
+North Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),13.1,10.27,16.2,1.567851265,,,,
+North Darfur,Child: Iron deficiency,0.46985447,0.399950739,0.532903698,0.033267698,,,,
+North Darfur,Child: Iron overload,NA,NA,NA,NA,,,,
+North Darfur,Child: Iron deficiency anaemia,0.251851852,0.198878495,0.311101787,0.031293665,,25.1851852,19.8878495,31.1101787
+North Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),14.755,9.36,24.985,1.334341502,,,,
+North Darfur,Pregnant: Iron deficiency,0.528089888,0.377638889,0.6844,0.079071752,,,,
+North Darfur,Pregnant: Iron overload,0,0,0.034502807,0.007339612,,,,
+North Darfur,Pregnant: Iron deficiency anaemia,0.279069767,0.179905925,0.388944444,0.060332372,,27.9069767,17.9905925,38.8944444
+North Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),22.4,17.0285,24.76825,2.594552921,,,,
+North Darfur,Non-pregnant: Iron deficiency,0.403899721,0.336152451,0.486365754,0.041175827,,,,
+North Darfur,Non-pregnant: Iron overload,0.005617978,0,0.021863928,0.005714425,,,,
+North Darfur,Non-pregnant: Iron deficiency anaemia,0.2,0.145753618,0.25834211,0.028674483,,20,14.5753618,25.834211
+River Nile,Child: Median serum calcium concentration (mg/dL),9.8,9.7,10,0.074130083,,,,
+River Nile,Child: Hypocalcaemia,0.253846154,0.177964594,0.318033875,0.035557127,,,,
+River Nile,Child: Hypercalcaemia,0.098976109,0.058771242,0.148835157,0.02327664,,,,
+River Nile,Pregnant: Median serum calcium concentration (mg/dL),9.2,8.5,9.4,0.370650417,,,,
+River Nile,Pregnant: Hypocalcaemia,0.838709677,0.651565217,0.964285714,0.081560699,,,,
+River Nile,Pregnant: Hypercalcaemia,0.172413793,0.035652709,0.348176718,0.074727907,,,,
+River Nile,Non-pregnant: Median serum calcium concentration (mg/dL),9.35,9.2,9.5,0.074130083,,,,
+River Nile,Non-pregnant: Hypocalcaemia,0.41025641,0.281038408,0.525566369,0.065473975,,,,
+River Nile,Non-pregnant: Hypercalcaemia,0.5,0.373104167,0.609522233,0.057499744,,,,
+Sinar,Child: Median serum calcium concentration (mg/dL),8.9,8.7975,9.1525,0.148260167,,,,
+Sinar,Child: Hypocalcaemia,0.661237785,0.564528142,0.757527025,0.048920618,,,,
+Sinar,Child: Hypercalcaemia,0.067484663,0.026576684,0.118647116,0.023853991,,,,
+Sinar,Pregnant: Median serum calcium concentration (mg/dL),8.6,8.3975,8.8,0.074130083,,,,
+Sinar,Pregnant: Hypocalcaemia,0.833333333,0.712246707,0.920681606,0.050109186,,,,
+Sinar,Pregnant: Hypercalcaemia,0.161764706,0.065520888,0.275862069,0.054602325,,,,
+Sinar,Non-pregnant: Median serum calcium concentration (mg/dL),8.7,8.6,8.8,0,,,,
+Sinar,Non-pregnant: Hypocalcaemia,0.822727273,0.72934311,0.895334881,0.040351295,,,,
+Sinar,Non-pregnant: Hypercalcaemia,0.153153153,0.092162867,0.237669999,0.036036268,,,,
+North Darfur,Child: Median serum calcium concentration (mg/dL),9.1,9,9.3,0,,,,
+North Darfur,Child: Hypocalcaemia,0.62472885,0.540811594,0.698817828,0.035796659,,,,
+North Darfur,Child: Hypercalcaemia,0.004524887,0,0.019150978,0.004836272,,,,
+North Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.5,8.2,8.8,0.074130083,,,,
+North Darfur,Pregnant: Hypocalcaemia,0.895522388,0.785559006,0.969254079,0.047335193,,,,
+North Darfur,Pregnant: Hypercalcaemia,0.101694915,0.030600632,0.196095938,0.042791592,,,,
+North Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.7,9,0.074130083,,,,
+North Darfur,Non-pregnant: Hypocalcaemia,0.892682927,0.824143504,0.950954597,0.033927281,,,,
+North Darfur,Non-pregnant: Hypercalcaemia,0.085714286,0.041021143,0.144293592,0.027853172,,,,
+River Nile,Pregnant: Median urinary iodine concentration (microgram/L),116.19,57.93,144.59,13.15808982,,,,
+River Nile,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),129.745,114.755,154.7975,15.84901185,,,,
+River Nile,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),97.18,66.6685,124.696,13.69738617,,,,
+Sinar,Pregnant: Median urinary iodine concentration (microgram/L),77.63,52.1515,104.04,17.10181026,,,,
+Sinar,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),74.57,56.73,106.90525,7.905973402,,,,
+Sinar,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),57,41.12,68.68,8.213613249,,,,
+North Darfur,Pregnant: Median urinary iodine concentration (microgram/L),60.095,40.472,75.25,4.503402571,,,,
+North Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),39.56,19.52,71.29,10.25960355,,,,
+North Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),42.68,26.19,60.7345,8.858544975,,,,
+Khartoum,Child: Median adjusted serum haemoglobin concentration (g/dL),11.3,11,11.605,0.074130083,,,,
+Khartoum,Child: Mild anaemia,0.202631579,0.154906676,0.261091424,0.028157092,,,,
+Khartoum,Child: Moderate anaemia,0.225419664,0.16650165,0.292752268,0.035573922,,,,
+Khartoum,Child: Severe Anaemia,0.017582418,0.002426598,0.045059795,0.010700233,,,,
+Khartoum,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),12,11.5975,12.2025,0.037065042,,,,
+Khartoum,Pregnant: Mild anaemia,0.2125,0.069767442,0.375138889,0.072281933,,,,
+Khartoum,Pregnant: Moderate anaemia,0.047058824,0,0.122449139,0.031742954,,,,
+Khartoum,Pregnant: Severe Anaemia,0,0,0,0,,,,
+Khartoum,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.2,13,13.4,0.074130083,,,,
+Khartoum,Non-pregnant: Mild anaemia,0.131964809,0.088990465,0.189631527,0.026349126,,,,
+Khartoum,Non-pregnant: Moderate anaemia,0.057575758,0.023705164,0.091865819,0.019280632,,,,
+Khartoum,Non-pregnant: Severe Anaemia,0.00536193,0,0.024764056,0.008039611,,,,
+Blue Nile,Child: Median adjusted serum haemoglobin concentration (g/dL),10.9,10.7,11.1,0.148260167,,,,
+Blue Nile,Child: Mild anaemia,0.275555556,0.230413844,0.315257406,0.022513754,,,,
+Blue Nile,Child: Moderate anaemia,0.312217195,0.263678028,0.368670648,0.028032789,,,,
+Blue Nile,Child: Severe Anaemia,0.021103896,0.00756734,0.038975196,0.008293154,,,,
+Blue Nile,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.3,11.1,11.8,0.148260167,,,,
+Blue Nile,Pregnant: Mild anaemia,0.336956522,0.239100519,0.436385512,0.054803865,,,,
+Blue Nile,Pregnant: Moderate anaemia,0.170212766,0.077698413,0.290785432,0.055346545,,,,
+Blue Nile,Pregnant: Severe Anaemia,0,0,0.041688596,0.013540024,,,,
+Blue Nile,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.5,12.2,12.8,0.074130083,,,,
+Blue Nile,Non-pregnant: Mild anaemia,0.226804124,0.152606264,0.295603284,0.038998141,,,,
+Blue Nile,Non-pregnant: Moderate anaemia,0.147945205,0.100186012,0.190114891,0.022879627,,,,
+Blue Nile,Non-pregnant: Severe Anaemia,0.005797101,0,0.021685794,0.006168761,,,,
+South Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),11.6,11.3,11.9,0.074130083,,,,
+South Darfur,Child: Mild anaemia,0.209302326,0.157979377,0.272972973,0.030972476,,,,
+South Darfur,Child: Moderate anaemia,0.193277311,0.133718338,0.259503518,0.035843541,,,,
+South Darfur,Child: Severe Anaemia,0.015706806,0.002559354,0.03504884,0.008835252,,,,
+South Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.55,11.2,12,0.370650417,,,,
+South Darfur,Pregnant: Mild anaemia,0.195121951,0.101123596,0.322376171,0.054731174,,,,
+South Darfur,Pregnant: Moderate anaemia,0.164705882,0.065705128,0.274043098,0.055597563,,,,
+South Darfur,Pregnant: Severe Anaemia,0.048780488,0.010616587,0.126582278,0.029282341,,,,
+South Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.9,12.7,13.0025,0.074130083,,,,
+South Darfur,Non-pregnant: Mild anaemia,0.20754717,0.151816511,0.269986386,0.026028308,,,,
+South Darfur,Non-pregnant: Moderate anaemia,0.103825137,0.064804396,0.150646205,0.022762895,,,,
+South Darfur,Non-pregnant: Severe Anaemia,0.005899705,0,0.023064808,0.006243984,,,,
+Khartoum,Child: Median serum c-reactive protein concentration (mg/L),4.2,3.7,4.8,0.22239025,,,,
+Khartoum,Child: Acute inflammation,0.337531486,0.275223038,0.405082336,0.037361296,,,,
+Khartoum,Pregnant: Median serum c-reactive protein concentration (mg/L),4.6,3.9,4.7,0.259455292,,,,
+Khartoum,Pregnant: Acute inflammation,0.337349398,0.228898451,0.465799087,0.061908916,,,,
+Khartoum,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4,5.005,0.22239025,,,,
+Khartoum,Non-pregnant: Acute inflammation,0.416129032,0.340985139,0.500069252,0.042764527,,,,
+Blue Nile,Child: Median serum c-reactive protein concentration (mg/L),2.9,2.4,3.4,0.22239025,,,,
+Blue Nile,Child: Acute inflammation,0.216949153,0.161877983,0.281975911,0.032305333,,,,
+Blue Nile,Pregnant: Median serum c-reactive protein concentration (mg/L),3.2,2.6,4.8,0.574508147,,,,
+Blue Nile,Pregnant: Acute inflammation,0.328358209,0.168365964,0.482777993,0.072624817,,,,
+Blue Nile,Non-pregnant: Median serum c-reactive protein concentration (mg/L),2.7,2.195,3.1,0.148260167,,,,
+Blue Nile,Non-pregnant: Acute inflammation,0.193820225,0.141410706,0.249401996,0.027256066,,,,
+South Darfur,Child: Median serum c-reactive protein concentration (mg/L),5,4.4,5.5,0.296520334,,,,
+South Darfur,Child: Acute inflammation,0.49137931,0.429440833,0.564021978,0.032872546,,,,
+South Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),5.2,4.4,6.2,0.370650417,,,,
+South Darfur,Pregnant: Acute inflammation,0.511111111,0.374671053,0.655555556,0.070817621,,,,
+South Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.85,4.1,5.3,0.296520334,,,,
+South Darfur,Non-pregnant: Acute inflammation,0.478114478,0.410076807,0.547294456,0.03864319,,,,
+Khartoum,Child: Median adjusted serum ferritin concentration (ng/mL),8.4,6.11,10.6525,1.297276461,,,,
+Khartoum,Child: Iron deficiency,0.602446483,0.530491748,0.674417665,0.032303484,,,,
+Khartoum,Child: Iron overload,NA,NA,NA,NA,,,,
+Khartoum,Child: Iron deficiency anaemia,0.313019391,0.23863484,0.398334131,0.039764858,,31.3019391,23.863484,39.8334131
+Khartoum,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.1,8.5,20.796,2.06081632,,,,
+Khartoum,Pregnant: Iron deficiency,0.573529412,0.430194093,0.716479368,0.077898065,,,,
+Khartoum,Pregnant: Iron overload,0,0,0,0,,,,
+Khartoum,Pregnant: Iron deficiency anaemia,0.126582278,0.042063922,0.228220402,0.046259655,,12.6582278,4.2063922,22.8220402
+Khartoum,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),16.8325,13.79,20.1575,1.75873623,,,,
+Khartoum,Non-pregnant: Iron deficiency,0.46749226,0.380999901,0.553221788,0.044720805,,,,
+Khartoum,Non-pregnant: Iron overload,0.006756757,0,0.028847889,0.006993264,,,,
+Khartoum,Non-pregnant: Iron deficiency anaemia,0.12,0.076675391,0.17120354,0.022849724,,12,7.6675391,17.120354
+Blue Nile,Child: Median adjusted serum ferritin concentration (ng/mL),15.3,12.6,19.2,0.898827262,,,,
+Blue Nile,Child: Iron deficiency,0.37037037,0.29087344,0.467175882,0.043453276,,,,
+Blue Nile,Child: Iron overload,NA,NA,NA,NA,,,,
+Blue Nile,Child: Iron deficiency anaemia,0.173913043,0.108132045,0.248093099,0.034370766,,17.3913043,10.8132045,24.8093099
+Blue Nile,Pregnant: Median adjusted serum ferritin concentration (ng/mL),24.15,13.7,61,14.99651589,,,,
+Blue Nile,Pregnant: Iron deficiency,0.454545455,0.315012743,0.627151515,0.080754926,,,,
+Blue Nile,Pregnant: Iron overload,0,0,0.053777972,0.010822487,,,,
+Blue Nile,Pregnant: Iron deficiency anaemia,0.212765957,0.098718465,0.328606965,0.053677236,,21.2765957,9.8718465,32.8606965
+Blue Nile,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),27.95,23.995,31.3,1.019288648,,,,
+Blue Nile,Non-pregnant: Iron deficiency,0.363013699,0.275304678,0.478123659,0.050107508,,,,
+Blue Nile,Non-pregnant: Iron overload,0.029810298,0.005412088,0.066167638,0.016124757,,,,
+Blue Nile,Non-pregnant: Iron deficiency anaemia,0.14921466,0.097765363,0.204055988,0.025968231,,14.921466,9.7765363,20.4055988
+South Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),14.8,11.57,17.6,1.219439873,,,,
+South Darfur,Child: Iron deficiency,0.403125,0.325650881,0.473219527,0.036214651,,,,
+South Darfur,Child: Iron overload,NA,NA,NA,NA,,,,
+South Darfur,Child: Iron deficiency anaemia,0.186170213,0.127717391,0.246354316,0.03397404,,18.6170213,12.7717391,24.6354316
+South Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),17.0525,12.2,28.145,3.387744815,,,,
+South Darfur,Pregnant: Iron deficiency,0.541666667,0.382022472,0.72095967,0.093570193,,,,
+South Darfur,Pregnant: Iron overload,0.037037037,0,0.101316168,0.026488261,,,,
+South Darfur,Pregnant: Iron deficiency anaemia,0.134020619,0.053763441,0.228342079,0.049975337,,13.4020619,5.3763441,22.8342079
+South Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),17.44,12.7,22.5,2.283206571,,,,
+South Darfur,Non-pregnant: Iron deficiency,0.582633053,0.479760933,0.710794672,0.056690739,,,,
+South Darfur,Non-pregnant: Iron overload,0.055232558,0.024816078,0.091266858,0.018306489,,,,
+South Darfur,Non-pregnant: Iron deficiency anaemia,0.156069364,0.10878008,0.216976103,0.027620518,,15.6069364,10.878008,21.6976103
+Khartoum,Child: Median serum calcium concentration (mg/dL),NA,NA,NA,NA,,,,
+Khartoum,Child: Hypocalcaemia,NA,NA,NA,NA,,,,
+Khartoum,Child: Hypercalcaemia,NA,NA,NA,NA,,,,
+Khartoum,Pregnant: Median serum calcium concentration (mg/dL),NA,NA,NA,NA,,,,
+Khartoum,Pregnant: Hypocalcaemia,NA,NA,NA,NA,,,,
+Khartoum,Pregnant: Hypercalcaemia,NA,NA,NA,NA,,,,
+Khartoum,Non-pregnant: Median serum calcium concentration (mg/dL),NA,NA,NA,NA,,,,
+Khartoum,Non-pregnant: Hypocalcaemia,NA,NA,NA,NA,,,,
+Khartoum,Non-pregnant: Hypercalcaemia,NA,NA,NA,NA,,,,
+Blue Nile,Child: Median serum calcium concentration (mg/dL),9.4,9.2,9.5,0.092662604,,,,
+Blue Nile,Child: Hypocalcaemia,0.463114754,0.387060117,0.538960062,0.038919675,,,,
+Blue Nile,Child: Hypercalcaemia,0.097087379,0.053682702,0.146458295,0.023003966,,,,
+Blue Nile,Pregnant: Median serum calcium concentration (mg/dL),8.2,8,8.4,0.148260167,,,,
+Blue Nile,Pregnant: Hypocalcaemia,0.929824561,0.819909091,1,0.048542993,,,,
+Blue Nile,Pregnant: Hypercalcaemia,0.06122449,0,0.163934426,0.042752555,,,,
+Blue Nile,Non-pregnant: Median serum calcium concentration (mg/dL),8.9,8.7,9.1,0.148260167,,,,
+Blue Nile,Non-pregnant: Hypocalcaemia,0.851282051,0.784628968,0.913915046,0.038551886,,,,
+Blue Nile,Non-pregnant: Hypercalcaemia,0.108108108,0.04905776,0.178054549,0.037932376,,,,
+South Darfur,Child: Median serum calcium concentration (mg/dL),9.2,9,9.3025,0.074130083,,,,
+South Darfur,Child: Hypocalcaemia,0.56996587,0.477307466,0.640045249,0.041130936,,,,
+South Darfur,Child: Hypercalcaemia,0.029850746,0.006995614,0.06368178,0.013762611,,,,
+South Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.5,8.2,8.8,0.055597563,,,,
+South Darfur,Pregnant: Hypocalcaemia,0.828571429,0.677394541,0.948319696,0.071486221,,,,
+South Darfur,Pregnant: Hypercalcaemia,0.112903226,0.033253968,0.22962699,0.055416863,,,,
+South Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.6,8.9,0.074130083,,,,
+South Darfur,Non-pregnant: Hypocalcaemia,0.802259887,0.711709466,0.881128151,0.042358448,,,,
+South Darfur,Non-pregnant: Hypercalcaemia,0.193877551,0.11763325,0.284922728,0.044304115,,,,
+Khartoum,Pregnant: Median urinary iodine concentration (microgram/L),182.04,81.25875,213.45,45.10074278,,,,
+Khartoum,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),166.01,118.07625,204.16,27.40218535,,,,
+Khartoum,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),110.81,89.875,155.51625,21.4013551,,,,
+Blue Nile,Pregnant: Median urinary iodine concentration (microgram/L),78.32,45.86,115.38,15.70816469,,,,
+Blue Nile,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),125.52,83.95,161.471,10.84152471,,,,
+Blue Nile,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),77.1,57.55,98.5605,16.52915536,,,,
+South Darfur,Pregnant: Median urinary iodine concentration (microgram/L),49.78,33.721,76.53,18.28047858,,,,
+South Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),67.84,37.86,129.82125,24.55188365,,,,
+South Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),63.81,46.81825,97.5205,11.04538244,,,,
+Al-Gazeera,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,10.8475,11.4,0.148260167,,,,
+Al-Gazeera,Child: Mild anaemia,0.247844828,0.194811439,0.303251866,0.026725086,,,,
+Al-Gazeera,Child: Moderate anaemia,0.22519084,0.174874485,0.277662005,0.025477099,,,,
+Al-Gazeera,Child: Severe Anaemia,0.00660066,0,0.018532442,0.005250286,,,,
+Al-Gazeera,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.6,11.4,12,0.22239025,,,,
+Al-Gazeera,Pregnant: Mild anaemia,0.261538462,0.164863445,0.352561259,0.045141996,,,,
+Al-Gazeera,Pregnant: Moderate anaemia,0.081300813,0.029165798,0.153912467,0.032509482,,,,
+Al-Gazeera,Pregnant: Severe Anaemia,0,0,0,0,,,,
+Al-Gazeera,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13,12.7,13.3,0.148260167,,,,
+Al-Gazeera,Non-pregnant: Mild anaemia,0.181818182,0.126523742,0.244661283,0.031147425,,,,
+Al-Gazeera,Non-pregnant: Moderate anaemia,0.075601375,0.035896359,0.119067053,0.022227368,,,,
+Al-Gazeera,Non-pregnant: Severe Anaemia,0,0,0,0,,,,
+White Nile,Child: Median adjusted serum haemoglobin concentration (g/dL),11.4,11.1,11.6,0.092662604,,,,
+White Nile,Child: Mild anaemia,0.256410256,0.20566197,0.304058092,0.02598166,,,,
+White Nile,Child: Moderate anaemia,0.167714885,0.108979647,0.232215564,0.030703358,,,,
+White Nile,Child: Severe Anaemia,0.011764706,0,0.033190163,0.008415082,,,,
+White Nile,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.8,11.5,12.3,0.148260167,,,,
+White Nile,Pregnant: Mild anaemia,0.162162162,0.095511167,0.239715963,0.039733477,,,,
+White Nile,Pregnant: Moderate anaemia,0.057324841,0.018981371,0.120620088,0.025725031,,,,
+White Nile,Pregnant: Severe Anaemia,0,0,0,0,,,,
+White Nile,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.9,12.7,13,0.074130083,,,,
+White Nile,Non-pregnant: Mild anaemia,0.144385027,0.096685083,0.200646013,0.030027876,,,,
+White Nile,Non-pregnant: Moderate anaemia,0.075,0.039085888,0.121503435,0.020443958,,,,
+White Nile,Non-pregnant: Severe Anaemia,0,0,0.008752825,0.001987402,,,,
+Central Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),11.1,10.5475,11.8,0.444780501,,,,
+Central Darfur,Child: Mild anaemia,0.249240122,0.19558131,0.304622298,0.03028059,,,,
+Central Darfur,Child: Moderate anaemia,0.194373402,0.117153085,0.287411223,0.043367468,,,,
+Central Darfur,Child: Severe Anaemia,0.00591716,0,0.025461936,0.007048629,,,,
+Central Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),10.6,9.7,11.5,0.555975626,,,,
+Central Darfur,Pregnant: Mild anaemia,0.322033898,0.183169889,0.474495056,0.083245828,,,,
+Central Darfur,Pregnant: Moderate anaemia,0.256198347,0.157843137,0.350277778,0.052283398,,,,
+Central Darfur,Pregnant: Severe Anaemia,0,0,0.038666121,0.008236676,,,,
+Central Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.3,11.6,12.9,0.444780501,,,,
+Central Darfur,Non-pregnant: Mild anaemia,0.20212766,0.14657715,0.259409913,0.029814735,,,,
+Central Darfur,Non-pregnant: Moderate anaemia,0.156462585,0.10465991,0.219378298,0.026522581,,,,
+Central Darfur,Non-pregnant: Severe Anaemia,0.003717472,0,0.023898995,0.008355612,,,,
+Al-Gazeera,Child: Median serum c-reactive protein concentration (mg/L),1.7,1.2,2,0.111195125,,,,
+Al-Gazeera,Child: Acute inflammation,0.178217822,0.123075173,0.239596787,0.028609058,,,,
+Al-Gazeera,Pregnant: Median serum c-reactive protein concentration (mg/L),2.6,1.6,3.3,0.074130083,,,,
+Al-Gazeera,Pregnant: Acute inflammation,0.150442478,0.070205966,0.241699725,0.050211984,,,,
+Al-Gazeera,Non-pregnant: Median serum c-reactive protein concentration (mg/L),1.85,1.4,2.605,0.259455292,,,,
+Al-Gazeera,Non-pregnant: Acute inflammation,0.179591837,0.124880268,0.249149902,0.037281813,,,,
+White Nile,Child: Median serum c-reactive protein concentration (mg/L),3,2.8,3.2525,0.129727646,,,,
+White Nile,Child: Acute inflammation,0.146153846,0.10719329,0.188412715,0.020196613,,,,
+White Nile,Pregnant: Median serum c-reactive protein concentration (mg/L),4.2,3.7,4.9,0.22239025,,,,
+White Nile,Pregnant: Acute inflammation,0.357664234,0.26387012,0.44675482,0.046840732,,,,
+White Nile,Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.05,2.9,3.5,0.185325209,,,,
+White Nile,Non-pregnant: Acute inflammation,0.193029491,0.132975357,0.266385583,0.034886273,,,,
+Central Darfur,Child: Median serum c-reactive protein concentration (mg/L),5.4,5.1,6.105,0.296520334,,,,
+Central Darfur,Child: Acute inflammation,0.581395349,0.510656278,0.645916499,0.033997482,,,,
+Central Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),6.45,5,8.025,0.889561002,,,,
+Central Darfur,Pregnant: Acute inflammation,0.6,0.478211462,0.714285714,0.062851873,,,,
+Central Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),5.2,4.9,6,0.185325209,,,,
+Central Darfur,Non-pregnant: Acute inflammation,0.53030303,0.426721382,0.6232851,0.054836137,,,,
+Al-Gazeera,Child: Median adjusted serum ferritin concentration (ng/mL),9.3,6.295,12.0325,1.445536628,,,,
+Al-Gazeera,Child: Iron deficiency,0.56870229,0.472598588,0.668021047,0.047997077,,,,
+Al-Gazeera,Child: Iron overload,NA,NA,NA,NA,,,,
+Al-Gazeera,Child: Iron deficiency anaemia,0.210106383,0.155994703,0.277368358,0.030322215,,21.0106383,15.5994703,27.7368358
+Al-Gazeera,Pregnant: Median adjusted serum ferritin concentration (ng/mL),14.2,10.698,19.525,1.363993536,,,,
+Al-Gazeera,Pregnant: Iron deficiency,0.540983607,0.410563187,0.679631068,0.065769329,,,,
+Al-Gazeera,Pregnant: Iron overload,0,0,0.041684174,0.012053672,,,,
+Al-Gazeera,Pregnant: Iron deficiency anaemia,0.201550388,0.126721748,0.295123787,0.044713227,,20.1550388,12.6721748,29.5123787
+Al-Gazeera,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),17,13.1,21.3,1.553025249,,,,
+Al-Gazeera,Non-pregnant: Iron deficiency,0.46122449,0.366122583,0.547311321,0.043870169,,,,
+Al-Gazeera,Non-pregnant: Iron overload,0,0,0.011284628,0,,,,
+Al-Gazeera,Non-pregnant: Iron deficiency anaemia,0.12585034,0.077179487,0.178810705,0.025477204,,12.585034,7.7179487,17.8810705
+White Nile,Child: Median adjusted serum ferritin concentration (ng/mL),10.65,8.2,13.0025,0.856202464,,,,
+White Nile,Child: Iron deficiency,0.517671518,0.452103041,0.590257085,0.035276619,,,,
+White Nile,Child: Iron overload,NA,NA,NA,NA,,,,
+White Nile,Child: Iron deficiency anaemia,0.223502304,0.174930513,0.278850724,0.028690305,,22.3502304,17.4930513,27.8850724
+White Nile,Pregnant: Median adjusted serum ferritin concentration (ng/mL),13.975,12.5,20.392125,2.047843556,,,,
+White Nile,Pregnant: Iron deficiency,0.531746032,0.421336164,0.664497717,0.055598779,,,,
+White Nile,Pregnant: Iron overload,0,0,0.029651908,0.005552893,,,,
+White Nile,Pregnant: Iron deficiency anaemia,0.1,0.041903693,0.170153583,0.031100272,,10,4.1903693,17.0153583
+White Nile,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),17.03,14,19.825,1.482601669,,,,
+White Nile,Non-pregnant: Iron deficiency,0.465425532,0.3931901,0.54169505,0.039054216,,,,
+White Nile,Non-pregnant: Iron overload,0.003003003,0,0.016999582,0.006134915,,,,
+White Nile,Non-pregnant: Iron deficiency anaemia,0.099447514,0.06026887,0.143721213,0.019693005,,9.9447514,6.026887,14.3721213
+Central Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),13.5,10.0945,16.44775,2.705748047,,,,
+Central Darfur,Child: Iron deficiency,0.449324324,0.370158503,0.543284467,0.04408248,,,,
+Central Darfur,Child: Iron overload,NA,NA,NA,NA,,,,
+Central Darfur,Child: Iron deficiency anaemia,0.190735695,0.123553036,0.263678736,0.035503302,,19.0735695,12.3553036,26.3678736
+Central Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),14.5,10.4,17.535375,1.493721182,,,,
+Central Darfur,Pregnant: Iron deficiency,0.761904762,0.533399646,0.981672113,0.112329744,,,,
+Central Darfur,Pregnant: Iron overload,0.073170732,0.014084507,0.143161094,0.0340186,,,,
+Central Darfur,Pregnant: Iron deficiency anaemia,0.277777778,0.164109684,0.409015823,0.062813048,,27.7777778,16.4109684,40.9015823
+Central Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.3,18.6,24.375,1.356580528,,,,
+Central Darfur,Non-pregnant: Iron deficiency,0.328947368,0.24107937,0.410721618,0.044192285,,,,
+Central Darfur,Non-pregnant: Iron overload,0,0,0,0,,,,
+Central Darfur,Non-pregnant: Iron deficiency anaemia,0.103053435,0.059988048,0.156941924,0.025055283,,10.3053435,5.9988048,15.6941924
+Al-Gazeera,Child: Median serum calcium concentration (mg/dL),10,9.9,10.1,0.074130083,,,,
+Al-Gazeera,Child: Hypocalcaemia,0.150501672,0.09485979,0.209873647,0.030554054,,,,
+Al-Gazeera,Child: Hypercalcaemia,0.136363636,0.075968519,0.20582571,0.033922686,,,,
+Al-Gazeera,Pregnant: Median serum calcium concentration (mg/dL),9.2,9.1,9.4025,0.074130083,,,,
+Al-Gazeera,Pregnant: Hypocalcaemia,0.603448276,0.371190476,0.796507064,0.118185489,,,,
+Al-Gazeera,Pregnant: Hypercalcaemia,0.289473684,0.117647059,0.5,0.098864783,,,,
+Al-Gazeera,Non-pregnant: Median serum calcium concentration (mg/dL),9.7,9.5,9.8,0.074130083,,,,
+Al-Gazeera,Non-pregnant: Hypocalcaemia,0.178947368,0.089169255,0.274344959,0.046966008,,,,
+Al-Gazeera,Non-pregnant: Hypercalcaemia,0.747368421,0.616001802,0.845586881,0.061855765,,,,
+White Nile,Child: Median serum calcium concentration (mg/dL),9.3,9.1,9.4,0.074130083,,,,
+White Nile,Child: Hypocalcaemia,0.577272727,0.496227284,0.652324495,0.040854807,,,,
+White Nile,Child: Hypercalcaemia,0.013192612,0,0.042483161,0.012483633,,,,
+White Nile,Pregnant: Median serum calcium concentration (mg/dL),8.5,8.4,8.9,0.148260167,,,,
+White Nile,Pregnant: Hypocalcaemia,0.845238095,0.718930381,0.934609727,0.054727249,,,,
+White Nile,Pregnant: Hypercalcaemia,0.102040816,0.036970899,0.19627451,0.041780278,,,,
+White Nile,Non-pregnant: Median serum calcium concentration (mg/dL),8.9,8.8,9,0,,,,
+White Nile,Non-pregnant: Hypocalcaemia,0.832460733,0.754521768,0.905080404,0.041468684,,,,
+White Nile,Non-pregnant: Hypercalcaemia,0.113300493,0.053524436,0.182022145,0.030472892,,,,
+Central Darfur,Child: Median serum calcium concentration (mg/dL),9.8,9.6,9.9,0.074130083,,,,
+Central Darfur,Child: Hypocalcaemia,0.333333333,0.243215744,0.440873515,0.050992551,,,,
+Central Darfur,Child: Hypercalcaemia,0.159292035,0.089318396,0.220471432,0.036638937,,,,
+Central Darfur,Pregnant: Median serum calcium concentration (mg/dL),9.25,8.9,9.6,0.370650417,,,,
+Central Darfur,Pregnant: Hypocalcaemia,0.625,0.384432234,0.857763975,0.130499834,,,,
+Central Darfur,Pregnant: Hypercalcaemia,0.32,0.099545455,0.571428571,0.116811041,,,,
+Central Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),9.6,9.2,9.8,0.20385773,,,,
+Central Darfur,Non-pregnant: Hypocalcaemia,0.397260274,0.254530046,0.556834416,0.07253817,,,,
+Central Darfur,Non-pregnant: Hypercalcaemia,0.537190083,0.364677177,0.677807646,0.084199717,,,,
+Al-Gazeera,Pregnant: Median urinary iodine concentration (microgram/L),100.325,76.26175,124.667,10.54871088,,,,
+Al-Gazeera,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),102.22,81.0685,126.75,12.46682679,,,,
+Al-Gazeera,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),82.54,65.87375,97.58,7.794778277,,,,
+White Nile,Pregnant: Median urinary iodine concentration (microgram/L),124.04,82.27,128.82,10.11134339,,,,
+White Nile,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),101.82,74.3145,138.81,11.42900562,,,,
+White Nile,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),99.2,70.32,126.803,7.244362407,,,,
+Central Darfur,Pregnant: Median urinary iodine concentration (microgram/L),30.42,19.9905,45.77,8.53422586,,,,
+Central Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),34.32,11.7465,67.494,12.09988287,,,,
+Central Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),20.15,10.64225,24.12325,3.128289522,,,,
+Red Sea,Child: Median adjusted serum haemoglobin concentration (g/dL),11,10.8,11.3,0.148260167,,,,
+Red Sea,Child: Mild anaemia,0.230514096,0.194129245,0.275822312,0.020223289,,,,
+Red Sea,Child: Moderate anaemia,0.285472973,0.214770932,0.350305109,0.033411524,,,,
+Red Sea,Child: Severe Anaemia,0.032733224,0.014095925,0.059016687,0.011460194,,,,
+Red Sea,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.6,10.79,12,0.259455292,,,,
+Red Sea,Pregnant: Mild anaemia,0.183333333,0.05758547,0.317176959,0.067974571,,,,
+Red Sea,Pregnant: Moderate anaemia,0.244444444,0.130296022,0.367346939,0.064086235,,,,
+Red Sea,Pregnant: Severe Anaemia,0,0,0.043478261,0,,,,
+Red Sea,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.4,12,12.6,0.148260167,,,,
+Red Sea,Non-pregnant: Mild anaemia,0.227699531,0.166228901,0.299067507,0.036856465,,,,
+Red Sea,Non-pregnant: Moderate anaemia,0.211764706,0.155997983,0.269069062,0.030517775,,,,
+Red Sea,Non-pregnant: Severe Anaemia,0.023310023,0.006769878,0.048839907,0.010563548,,,,
+North Kourdofan,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,11,11.4025,0.074130083,,,,
+North Kourdofan,Child: Mild anaemia,0.228276878,0.189059584,0.274368713,0.024593794,,,,
+North Kourdofan,Child: Moderate anaemia,0.265337423,0.218662383,0.313431215,0.023068809,,,,
+North Kourdofan,Child: Severe Anaemia,0.022156573,0.007199393,0.043674497,0.009701257,,,,
+North Kourdofan,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.7,11.4,11.9,0.185325209,,,,
+North Kourdofan,Pregnant: Mild anaemia,0.208633094,0.134228188,0.299215472,0.043751244,,,,
+North Kourdofan,Pregnant: Moderate anaemia,0.173333333,0.087750582,0.267270773,0.042593211,,,,
+North Kourdofan,Pregnant: Severe Anaemia,0,0,0.027595785,0.005746518,,,,
+North Kourdofan,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13,12.7,13.2,0.074130083,,,,
+North Kourdofan,Non-pregnant: Mild anaemia,0.168618267,0.132170305,0.211837588,0.022196698,,,,
+North Kourdofan,Non-pregnant: Moderate anaemia,0.123515439,0.076894657,0.176493213,0.024029868,,,,
+North Kourdofan,Non-pregnant: Severe Anaemia,0.014388489,0.002474335,0.033183254,0.007213567,,,,
+East Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),10.6,10.3975,10.9,0.148260167,,,,
+East Darfur,Child: Mild anaemia,0.278846154,0.203993759,0.346437866,0.038948627,,,,
+East Darfur,Child: Moderate anaemia,0.360927152,0.277494853,0.452014504,0.040679531,,,,
+East Darfur,Child: Severe Anaemia,0.020648968,0.00298202,0.042747288,0.012010324,,,,
+East Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.1,10.7,11.2,0.074130083,,,,
+East Darfur,Pregnant: Mild anaemia,0.389312977,0.263884112,0.52957669,0.061008552,,,,
+East Darfur,Pregnant: Moderate anaemia,0.185483871,0.105172414,0.314107977,0.053225478,,,,
+East Darfur,Pregnant: Severe Anaemia,0.008928571,0,0.056212205,0.016175761,,,,
+East Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.5,12.2,12.7,0.148260167,,,,
+East Darfur,Non-pregnant: Mild anaemia,0.173553719,0.12529625,0.228744558,0.025517884,,,,
+East Darfur,Non-pregnant: Moderate anaemia,0.208,0.1521049,0.262000083,0.031806901,,,,
+East Darfur,Non-pregnant: Severe Anaemia,0.027700831,0.005777044,0.059356902,0.013540834,,,,
+Red Sea,Child: Median serum c-reactive protein concentration (mg/L),3.9,3.2475,4.3,0.22239025,,,,
+Red Sea,Child: Acute inflammation,0.321428571,0.255698833,0.394513889,0.035247172,,,,
+Red Sea,Pregnant: Median serum c-reactive protein concentration (mg/L),3.3,2.7,4.5,0.296520334,,,,
+Red Sea,Pregnant: Acute inflammation,0.195121951,0.071428571,0.349137284,0.08225082,,,,
+Red Sea,Non-pregnant: Median serum c-reactive protein concentration (mg/L),3.8,3.2,4.4025,0.148260167,,,,
+Red Sea,Non-pregnant: Acute inflammation,0.358543417,0.291354204,0.445129667,0.043226878,,,,
+North Kourdofan,Child: Median serum c-reactive protein concentration (mg/L),2.4,2.2,2.8,0.096369109,,,,
+North Kourdofan,Child: Acute inflammation,0.179104478,0.113091161,0.246472634,0.036077344,,,,
+North Kourdofan,Pregnant: Median serum c-reactive protein concentration (mg/L),4.1,3.1125,4.83,0.352117896,,,,
+North Kourdofan,Pregnant: Acute inflammation,0.360544218,0.24599827,0.475988732,0.061567194,,,,
+North Kourdofan,Non-pregnant: Median serum c-reactive protein concentration (mg/L),2.52,2.12925,3.152,0.311346351,,,,
+North Kourdofan,Non-pregnant: Acute inflammation,0.244837758,0.188920866,0.304263351,0.031866083,,,,
+East Darfur,Child: Median serum c-reactive protein concentration (mg/L),4.9,4.5,5.6,0.296520334,,,,
+East Darfur,Child: Acute inflammation,0.478114478,0.410252572,0.547253849,0.034359948,,,,
+East Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4,5.11,0.148260167,,,,
+East Darfur,Pregnant: Acute inflammation,0.404761905,0.306281526,0.514317757,0.052425037,,,,
+East Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.7,4.1,5.2025,0.296520334,,,,
+East Darfur,Non-pregnant: Acute inflammation,0.465116279,0.388516583,0.538565489,0.041452375,,,,
+Red Sea,Child: Median adjusted serum ferritin concentration (ng/mL),5.9,4.9,8.62,1.287083574,,,,
+Red Sea,Child: Iron deficiency,0.679282869,0.585397401,0.747480586,0.039825936,,,,
+Red Sea,Child: Iron overload,NA,NA,NA,NA,,,,
+Red Sea,Child: Iron deficiency anaemia,0.375,0.294833203,0.450824611,0.04046412,,37.5,29.4833203,45.0824611
+Red Sea,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.3,5.4,16.3,2.223902504,,,,
+Red Sea,Pregnant: Iron deficiency,0.645833333,0.449868421,0.789622642,0.090402541,,,,
+Red Sea,Pregnant: Iron overload,0,0,0,0,,,,
+Red Sea,Pregnant: Iron deficiency anaemia,0.318181818,0.166472868,0.480038462,0.075430611,,31.8181818,16.6472868,48.0038462
+Red Sea,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),10.65,8.1425,12.6,0.963691085,,,,
+Red Sea,Non-pregnant: Iron deficiency,0.637566138,0.555540581,0.720700576,0.040945841,,,,
+Red Sea,Non-pregnant: Iron overload,0,0,0,0,,,,
+Red Sea,Non-pregnant: Iron deficiency anaemia,0.347258486,0.276830136,0.432500467,0.035139833,,34.7258486,27.6830136,43.2500467
+North Kourdofan,Child: Median adjusted serum ferritin concentration (ng/mL),6.4,6,7.5,0.407715459,,,,
+North Kourdofan,Child: Iron deficiency,0.652866242,0.57738172,0.722979759,0.039926737,,,,
+North Kourdofan,Child: Iron overload,NA,NA,NA,NA,,,,
+North Kourdofan,Child: Iron deficiency anaemia,0.210970464,0.160938954,0.262675777,0.028331204,,21.0970464,16.0938954,26.2675777
+North Kourdofan,Pregnant: Median adjusted serum ferritin concentration (ng/mL),6.8,6,15.37,1.782828507,,,,
+North Kourdofan,Pregnant: Iron deficiency,0.62295082,0.495150912,0.75442865,0.063322465,,,,
+North Kourdofan,Pregnant: Iron overload,0,0,0.017391304,0,,,,
+North Kourdofan,Pregnant: Iron deficiency anaemia,0.217687075,0.131439394,0.330204669,0.048433721,,21.7687075,13.1439394,33.0204669
+North Kourdofan,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),15.1,11.2,17.888125,2.075642337,,,,
+North Kourdofan,Non-pregnant: Iron deficiency,0.513274336,0.430657335,0.600536932,0.046310812,,,,
+North Kourdofan,Non-pregnant: Iron overload,0.008356546,0,0.027111708,0.006680629,,,,
+North Kourdofan,Non-pregnant: Iron deficiency anaemia,0.172236504,0.124593391,0.226622977,0.026239451,,17.2236504,12.4593391,22.6622977
+East Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),13.3,10.954375,15.929375,0.98129698,,,,
+East Darfur,Child: Iron deficiency,0.445859873,0.378740993,0.518646809,0.036528287,,,,
+East Darfur,Child: Iron overload,NA,NA,NA,NA,,,,
+East Darfur,Child: Iron deficiency anaemia,0.300940439,0.21871854,0.373841463,0.040352084,,30.0940439,21.871854,37.3841463
+East Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),8.5,7.3,13.3,2.831769189,,,,
+East Darfur,Pregnant: Iron deficiency,0.693548387,0.551360784,0.881141692,0.07471072,,,,
+East Darfur,Pregnant: Iron overload,0.02,0,0.068405541,0.018665232,,,,
+East Darfur,Pregnant: Iron deficiency anaemia,0.390909091,0.275767596,0.541260504,0.067916289,,39.0909091,27.5767596,54.1260504
+East Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),19.5,14.814625,24.505,3.81028629,,,,
+East Darfur,Non-pregnant: Iron deficiency,0.490304709,0.40664083,0.574807709,0.041165101,,,,
+East Darfur,Non-pregnant: Iron overload,0.020895522,0.003089105,0.042971459,0.010689839,,,,
+East Darfur,Non-pregnant: Iron deficiency anaemia,0.1966759,0.141948912,0.25,0.028151549,,19.66759,14.1948912,25
+Red Sea,Child: Median serum calcium concentration (mg/dL),9.7,9.5,9.9,0.074130083,,,,
+Red Sea,Child: Hypocalcaemia,0.381294964,0.30260409,0.472161673,0.047006349,,,,
+Red Sea,Child: Hypercalcaemia,0.093959732,0.050468692,0.13474223,0.020731623,,,,
+Red Sea,Pregnant: Median serum calcium concentration (mg/dL),9.3,8.9,9.8,0.22239025,,,,
+Red Sea,Pregnant: Hypocalcaemia,0.4375,0.206551724,0.690357599,0.128683945,,,,
+Red Sea,Pregnant: Hypercalcaemia,0.5,0.249404762,0.709907834,0.108106372,,,,
+Red Sea,Non-pregnant: Median serum calcium concentration (mg/dL),9.4,9.3,9.7,0.111195125,,,,
+Red Sea,Non-pregnant: Hypocalcaemia,0.422330097,0.295327559,0.562493699,0.062116345,,,,
+Red Sea,Non-pregnant: Hypercalcaemia,0.495145631,0.377737056,0.620243298,0.059607553,,,,
+North Kourdofan,Child: Median serum calcium concentration (mg/dL),8.98,8.84425,9.1,0.074130083,,,,
+North Kourdofan,Child: Hypocalcaemia,0.69874477,0.59252818,0.790393013,0.055577452,,,,
+North Kourdofan,Child: Hypercalcaemia,0.074235808,0.031395953,0.13009022,0.026695783,,,,
+North Kourdofan,Pregnant: Median serum calcium concentration (mg/dL),8,7.87,8.3015,0.111195125,,,,
+North Kourdofan,Pregnant: Hypocalcaemia,0.93495935,0.851875,0.990393687,0.035646898,,,,
+North Kourdofan,Pregnant: Hypercalcaemia,0.060606061,0.008849558,0.144560211,0.03681142,,,,
+North Kourdofan,Non-pregnant: Median serum calcium concentration (mg/dL),8.6,8.4,8.60575,0.074130083,,,,
+North Kourdofan,Non-pregnant: Hypocalcaemia,0.885813149,0.816162626,0.941534213,0.026904844,,,,
+North Kourdofan,Non-pregnant: Hypercalcaemia,0.102362205,0.062013902,0.156042785,0.030177477,,,,
+East Darfur,Child: Median serum calcium concentration (mg/dL),9.2,9,9.4,0.148260167,,,,
+East Darfur,Child: Hypocalcaemia,0.557093426,0.466429699,0.631440285,0.043366108,,,,
+East Darfur,Child: Hypercalcaemia,0.059800664,0.022800823,0.101386478,0.02172201,,,,
+East Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.9,8.5,9.1,0.148260167,,,,
+East Darfur,Pregnant: Hypocalcaemia,0.796610169,0.633188406,0.93483835,0.093379622,,,,
+East Darfur,Pregnant: Hypercalcaemia,0.183333333,0.067632586,0.312546642,0.067719042,,,,
+East Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.6,8.9,0.074130083,,,,
+East Darfur,Non-pregnant: Hypocalcaemia,0.820627803,0.712526369,0.905014611,0.044572315,,,,
+East Darfur,Non-pregnant: Hypercalcaemia,0.164893617,0.081264208,0.28020765,0.048326398,,,,
+Red Sea,Pregnant: Median urinary iodine concentration (microgram/L),199.275,126.221,247.49,53.06972676,,,,
+Red Sea,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),257.79,236,270.41975,11.60135806,,,,
+Red Sea,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),194.52,181.45175,207.68,0.681996768,,,,
+North Kourdofan,Pregnant: Median urinary iodine concentration (microgram/L),99.39,84.83,123.2585,9.948257202,,,,
+North Kourdofan,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),90.79,61.293,118.86,18.10256638,,,,
+North Kourdofan,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),75.07,69.1755,92.624,3.713917182,,,,
+East Darfur,Pregnant: Median urinary iodine concentration (microgram/L),18.83,11.47,27.51275,4.603478184,,,,
+East Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),44.74,21.01425,63.33,9.44046613,,,,
+East Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),10.42,0,26.7865,9.325564501,,,,
+Kassala,Child: Median adjusted serum haemoglobin concentration (g/dL),11.2,10.9,11.4,0.074130083,,,,
+Kassala,Child: Mild anaemia,0.223433243,0.179709696,0.266005812,0.021751008,,,,
+Kassala,Child: Moderate anaemia,0.282548476,0.237890878,0.335677279,0.024224645,,,,
+Kassala,Child: Severe Anaemia,0.01986755,0.006811526,0.036015061,0.007261902,,,,
+Kassala,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.4,11.1,11.9,0.518910584,,,,
+Kassala,Pregnant: Mild anaemia,0.257575758,0.142637363,0.388924964,0.065144619,,,,
+Kassala,Pregnant: Moderate anaemia,0.189655172,0.088235294,0.32202381,0.05551172,,,,
+Kassala,Pregnant: Severe Anaemia,0,0,0.051203635,0.012564421,,,,
+Kassala,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.6,12.2,12.7,0.074130083,,,,
+Kassala,Non-pregnant: Mild anaemia,0.214442013,0.168601988,0.268321445,0.026672273,,,,
+Kassala,Non-pregnant: Moderate anaemia,0.165865385,0.112816317,0.219192991,0.025804949,,,,
+Kassala,Non-pregnant: Severe Anaemia,0.016091954,0.002357116,0.035327134,0.007452507,,,,
+South Kourdofan,Child: Median adjusted serum haemoglobin concentration (g/dL),11.5,11.395,11.6,0.074130083,,,,
+South Kourdofan,Child: Mild anaemia,0.213675214,0.15924984,0.268321445,0.026785118,,,,
+South Kourdofan,Child: Moderate anaemia,0.242857143,0.187778756,0.301224423,0.031484824,,,,
+South Kourdofan,Child: Severe Anaemia,0.026960784,0.010539283,0.046082949,0.008770231,,,,
+South Kourdofan,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),11.4,11,11.6,0.22239025,,,,
+South Kourdofan,Pregnant: Mild anaemia,0.280701754,0.190048209,0.396256364,0.051738764,,,,
+South Kourdofan,Pregnant: Moderate anaemia,0.201612903,0.10087156,0.31181073,0.054864994,,,,
+South Kourdofan,Pregnant: Severe Anaemia,0.033613445,0,0.079273504,0.022690453,,,,
+South Kourdofan,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.1,12.9,13.35,0.074130083,,,,
+South Kourdofan,Non-pregnant: Mild anaemia,0.181598063,0.131714932,0.230990128,0.023567767,,,,
+South Kourdofan,Non-pregnant: Moderate anaemia,0.108747045,0.066448943,0.152277817,0.020954656,,,,
+South Kourdofan,Non-pregnant: Severe Anaemia,0.005037783,0,0.019308278,0.005382531,,,,
+West Darfur,Child: Median adjusted serum haemoglobin concentration (g/dL),12,11.9,12.1,0,,,,
+West Darfur,Child: Mild anaemia,0.15716753,0.117325566,0.191779579,0.018969373,,,,
+West Darfur,Child: Moderate anaemia,0.164874552,0.123336773,0.219390245,0.02261124,,,,
+West Darfur,Child: Severe Anaemia,0.004739336,0,0.013725676,0.004446241,,,,
+West Darfur,Pregnant: Median adjusted serum haemoglobin concentration (g/dL),12.1,11.8,12.6,0.074130083,,,,
+West Darfur,Pregnant: Mild anaemia,0.108433735,0.04384058,0.193627065,0.037625477,,,,
+West Darfur,Pregnant: Moderate anaemia,0.112244898,0.047591036,0.2,0.03658094,,,,
+West Darfur,Pregnant: Severe Anaemia,0.02970297,0,0.083333333,0.019282533,,,,
+West Darfur,Non-pregnant: Median adjusted serum haemoglobin concentration (g/dL),13.2,13,13.4,0.148260167,,,,
+West Darfur,Non-pregnant: Mild anaemia,0.143518519,0.097446899,0.192181875,0.025208291,,,,
+West Darfur,Non-pregnant: Moderate anaemia,0.107305936,0.070037166,0.148938572,0.021119371,,,,
+West Darfur,Non-pregnant: Severe Anaemia,0,0,0.009030367,0.001684775,,,,
+Kassala,Child: Median serum c-reactive protein concentration (mg/L),5.4,4.9,5.9,0.148260167,,,,
+Kassala,Child: Acute inflammation,0.572727273,0.492186605,0.655542102,0.043313661,,,,
+Kassala,Pregnant: Median serum c-reactive protein concentration (mg/L),4.9,3.7,5.9,0.889561002,,,,
+Kassala,Pregnant: Acute inflammation,0.473684211,0.303544372,0.679017857,0.102081813,,,,
+Kassala,Non-pregnant: Median serum c-reactive protein concentration (mg/L),5.2,4.7,6,0.370650417,,,,
+Kassala,Non-pregnant: Acute inflammation,0.510835913,0.401255951,0.619244196,0.066056288,,,,
+South Kourdofan,Child: Median serum c-reactive protein concentration (mg/L),2,1.6995,2.40175,0.209417486,,,,
+South Kourdofan,Child: Acute inflammation,0.193181818,0.133942104,0.244856159,0.02778451,,,,
+South Kourdofan,Pregnant: Median serum c-reactive protein concentration (mg/L),2.72,1.6,4.62,1.356580528,,,,
+South Kourdofan,Pregnant: Acute inflammation,0.285714286,0.171357143,0.420633628,0.06772198,,,,
+South Kourdofan,Non-pregnant: Median serum c-reactive protein concentration (mg/L),1.945,1.46,2.4,0.200151225,,,,
+South Kourdofan,Non-pregnant: Acute inflammation,0.15625,0.103987745,0.218312131,0.029638407,,,,
+West Darfur,Child: Median serum c-reactive protein concentration (mg/L),3.7,3.4975,4.3,0.22239025,,,,
+West Darfur,Child: Acute inflammation,0.37716263,0.319909387,0.437264245,0.033813387,,,,
+West Darfur,Pregnant: Median serum c-reactive protein concentration (mg/L),5.1,3.095,6.5,0.741300835,,,,
+West Darfur,Pregnant: Acute inflammation,0.520833333,0.389473684,0.629306207,0.058448824,,,,
+West Darfur,Non-pregnant: Median serum c-reactive protein concentration (mg/L),4.6,4.1,5.0525,0.240922771,,,,
+West Darfur,Non-pregnant: Acute inflammation,0.440604752,0.379210568,0.5,0.030374609,,,,
+Kassala,Child: Median adjusted serum ferritin concentration (ng/mL),6.2,4.5475,8.908125,1.356580528,,,,
+Kassala,Child: Iron deficiency,0.677053824,0.586717296,0.758655623,0.041180959,,,,
+Kassala,Child: Iron overload,NA,NA,NA,NA,,,,
+Kassala,Child: Iron deficiency anaemia,0.250957854,0.172804168,0.338712599,0.041042123,,25.0957854,17.2804168,33.8712599
+Kassala,Pregnant: Median adjusted serum ferritin concentration (ng/mL),5.395,3.77,8.905,0.626399205,,,,
+Kassala,Pregnant: Iron deficiency,0.754385965,0.606462066,0.886792453,0.066883852,,,,
+Kassala,Pregnant: Iron overload,0,0,0,0,,,,
+Kassala,Pregnant: Iron deficiency anaemia,0.409836066,0.274182501,0.569472934,0.078316159,,40.9836066,27.4182501,56.9472934
+Kassala,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),12,9.5,15.1,1.089712227,,,,
+Kassala,Non-pregnant: Iron deficiency,0.563380282,0.474243685,0.644688826,0.045542603,,,,
+Kassala,Non-pregnant: Iron overload,0,0,0.011274026,0.002212858,,,,
+Kassala,Non-pregnant: Iron deficiency anaemia,0.271428571,0.196652263,0.353106414,0.040601609,,27.1428571,19.6652263,35.3106414
+South Kourdofan,Child: Median adjusted serum ferritin concentration (ng/mL),11.3,7.4,14.82325,1.905143145,,,,
+South Kourdofan,Child: Iron deficiency,0.514672686,0.442967653,0.600045872,0.043044233,,,,
+South Kourdofan,Child: Iron overload,NA,NA,NA,NA,,,,
+South Kourdofan,Child: Iron deficiency anaemia,0.271889401,0.204779658,0.33652272,0.035041316,,,,
+South Kourdofan,Pregnant: Median adjusted serum ferritin concentration (ng/mL),10.4,6.24,18.1,2.368456167,,,,
+South Kourdofan,Pregnant: Iron deficiency,0.673076923,0.499793388,0.872625843,0.097276858,,,,
+South Kourdofan,Pregnant: Iron overload,0.027027027,0,0.075502461,0.018594552,,,,
+South Kourdofan,Pregnant: Iron deficiency anaemia,0.276422764,0.156786598,0.401650835,0.061078073,,,,
+South Kourdofan,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),20.54,14.8875,27.30325,3.039333422,,,,
+South Kourdofan,Non-pregnant: Iron deficiency,0.423728814,0.349665489,0.509993034,0.044058433,,,,
+South Kourdofan,Non-pregnant: Iron overload,0.00308642,0,0.015497022,0.004845103,,,,
+South Kourdofan,Non-pregnant: Iron deficiency anaemia,0.171745152,0.119397303,0.229119789,0.027383195,,,,
+West Darfur,Child: Median adjusted serum ferritin concentration (ng/mL),20.1,17.293,24.5,1.564144761,,,,
+West Darfur,Child: Iron deficiency,0.285968028,0.231831619,0.341852928,0.028358071,,,,
+West Darfur,Child: Iron overload,NA,NA,NA,NA,,,,
+West Darfur,Child: Iron deficiency anaemia,0.109195402,0.07355222,0.146098571,0.018829758,,,,
+West Darfur,Pregnant: Median adjusted serum ferritin concentration (ng/mL),32.8,21.3,38.155,3.902948895,,,,
+West Darfur,Pregnant: Iron deficiency,0.254545455,0.136837607,0.410739319,0.067679822,,,,
+West Darfur,Pregnant: Iron overload,0,0,0.033618166,0.007339612,,,,
+West Darfur,Pregnant: Iron deficiency anaemia,0.034883721,0,0.103513957,0.027063364,,,,
+West Darfur,Non-pregnant: Median adjusted serum ferritin concentration (ng/mL),30.5825,22.895,34.06,3.113463506,,,,
+West Darfur,Non-pregnant: Iron deficiency,0.282460137,0.224497071,0.356691017,0.031664598,,,,
+West Darfur,Non-pregnant: Iron overload,0.00856531,0,0.024093515,0.006160468,,,,
+West Darfur,Non-pregnant: Iron deficiency anaemia,0.097826087,0.064865868,0.134660316,0.019471987,,,,
+Kassala,Child: Median serum calcium concentration (mg/dL),9.4,9.2,9.6,0.148260167,,,,
+Kassala,Child: Hypocalcaemia,0.473684211,0.36769958,0.579938957,0.049172466,,,,
+Kassala,Child: Hypercalcaemia,0.095679012,0.046408752,0.171949308,0.031746126,,,,
+Kassala,Pregnant: Median serum calcium concentration (mg/dL),9.25,8.6,9.6,0.185325209,,,,
+Kassala,Pregnant: Hypocalcaemia,0.621621622,0.4059375,0.823529412,0.112345051,,,,
+Kassala,Pregnant: Hypercalcaemia,0.3,0.132916667,0.500925926,0.098113346,,,,
+Kassala,Non-pregnant: Median serum calcium concentration (mg/dL),9.2,8.9,9.3,0.074130083,,,,
+Kassala,Non-pregnant: Hypocalcaemia,0.651851852,0.505753798,0.772760907,0.069400045,,,,
+Kassala,Non-pregnant: Hypercalcaemia,0.32,0.218303457,0.455895263,0.05953303,,,,
+South Kourdofan,Child: Median serum calcium concentration (mg/dL),9.2,9,9.36125,0.0889561,,,,
+South Kourdofan,Child: Hypocalcaemia,0.617721519,0.530740399,0.704759282,0.04552829,,,,
+South Kourdofan,Child: Hypercalcaemia,0.026392962,0.005010044,0.055993961,0.013339604,,,,
+South Kourdofan,Pregnant: Median serum calcium concentration (mg/dL),8.07,7.8975,8.29525,0.059304067,,,,
+South Kourdofan,Pregnant: Hypocalcaemia,0.987951807,0.940365961,1,0.019254567,,,,
+South Kourdofan,Pregnant: Hypercalcaemia,0,0,0,0,,,,
+South Kourdofan,Non-pregnant: Median serum calcium concentration (mg/dL),8.6,8.45,8.71,0.022239025,,,,
+South Kourdofan,Non-pregnant: Hypocalcaemia,0.921568627,0.851727333,0.976390831,0.035594804,,,,
+South Kourdofan,Non-pregnant: Hypercalcaemia,0.076595745,0.023900982,0.156838794,0.033308747,,,,
+West Darfur,Child: Median serum calcium concentration (mg/dL),9.2,9.1,9.4,0.074130083,,,,
+West Darfur,Child: Hypocalcaemia,0.571084337,0.49138022,0.631403734,0.033102112,,,,
+West Darfur,Child: Hypercalcaemia,0.073710074,0.042048193,0.106555072,0.015689724,,,,
+West Darfur,Pregnant: Median serum calcium concentration (mg/dL),8.6,8.3,8.9,0.148260167,,,,
+West Darfur,Pregnant: Hypocalcaemia,0.875,0.762635973,0.961105754,0.057601734,,,,
+West Darfur,Pregnant: Hypercalcaemia,0.118644068,0.019588989,0.237328491,0.054231377,,,,
+West Darfur,Non-pregnant: Median serum calcium concentration (mg/dL),8.8,8.6,9,0.129727646,,,,
+West Darfur,Non-pregnant: Hypocalcaemia,0.8,0.727889499,0.861821864,0.032797525,,,,
+West Darfur,Non-pregnant: Hypercalcaemia,0.175097276,0.11763325,0.252035936,0.034892175,,,,
+Kassala,Pregnant: Median urinary iodine concentration (microgram/L),109.05,83.87,185.11925,29.84477161,,,,
+Kassala,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),183.87,136.24875,227.132,17.54659076,,,,
+Kassala,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),120.44,97.288,158.48,8.130216905,,,,
+South Kourdofan,Pregnant: Median urinary iodine concentration (microgram/L),41.38,17.55,62.0825,15.39681834,,,,
+South Kourdofan,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),33.82,19.35,60.99,13.97166748,,,,
+South Kourdofan,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),34.67,24.7895,46.55,5.743228217,,,,
+West Darfur,Pregnant: Median urinary iodine concentration (microgram/L),18.98,9.4395,61.79,16.43463951,,,,
+West Darfur,Non-pregnant non-lactating: Median urinary iodine concentration (microgram/L),23.13,8.8,44.61,8.873370991,,,,
+West Darfur,Non-pregnant lactating: Median urinary iodine concentration (microgram/L),35.9,8.4995,55.114,13.35082803,,,,

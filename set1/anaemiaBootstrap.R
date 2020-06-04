@@ -1,6 +1,6 @@
 ## Bootstrap anaemia indicators ################################################
   
-## Subset indicators to 3 states data - State 1, 7, 13
+## Subset indicators to 3 states data
 subDF <- subset(indicators, stateID %in% STATES)
   
 ## Create anaemia indicator groups
@@ -12,7 +12,7 @@ subDF$indicatorGroup <- ifelse(subDF$ageGrp == 1, "Child",
 stateNames <- unique(locNames$state[locNames$stateID %in% STATES])
   
 ## indicator name vector
-params <- c("adjHb", "AN1", "AN2", "AN3")
+params <- c("adjHb", "AN0", "AN1", "AN2", "AN3")
   
 ## Create empty data.frame for concatenating boot results
 bootDF <- data.frame(matrix(nrow = REPLICATES, 
@@ -86,10 +86,11 @@ names(xx) <- c("estimate", "lcl", "ucl", "sd")
 ## Get admin and identifying data
 yy <- stringr::str_split(string = row.names(xx), pattern = "_", simplify = TRUE)
 
-indicatorName <- ifelse(yy[ , 3] == "AN1", "Mild anaemia",
+indicatorName <- ifelse(yy[ , 3] == "AN0", "Any anaemia", 
+                        ifelse(yy[ , 3] == "AN1", "Mild anaemia",
                         ifelse(yy[ , 3] == "AN2", "Moderate anaemia", 
                                ifelse(yy[ , 3] == "AN3", "Severe Anaemia", 
-                                      "Median adjusted serum haemoglobin concentration (g/dL)")))
+                                      "Median adjusted serum haemoglobin concentration (g/dL)"))))
 
 anaemiaResults <- data.frame(State = yy[ , 1],
                              Indicator = paste(yy[ , 2], indicatorName, sep = ": "),
